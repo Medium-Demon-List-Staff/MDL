@@ -84,6 +84,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "FBITB",
+            "link": "https://www.youtube.com/watch?v=Fjdl2-TA7DI",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
