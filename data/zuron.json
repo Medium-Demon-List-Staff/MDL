@@ -90,6 +90,12 @@
             "link": "https://www.youtube.com/watch?v=Fjdl2-TA7DI",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
