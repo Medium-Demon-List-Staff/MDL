@@ -1,1 +1,66 @@
-
+{
+    "id": 57334967,
+    "name": "True Calamity",
+    "author": "Subwoofer",
+    "creators": [],
+    "verifier": "Subwoofer",
+    "verification": "https://youtu.be/SgrPOMGwU7I?si=iOgHqBFd1-KNbi5_",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Dwibble",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "AlphaToast",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+    ]
+}
