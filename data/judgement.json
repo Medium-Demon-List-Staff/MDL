@@ -1,0 +1,48 @@
+{
+    "id": 59391556,
+    "name": "Judgement",
+    "author": "Subwoofer",
+    "creators": [],
+    "verifier": "Subwoofer",
+    "verification": "https://youtu.be/r025bj54oJs?si=KM9c1o4pcnnEuzpj",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Dwibble",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
