@@ -8,4 +8,52 @@
     "showcase": "",
     "percentToQualify": 100,
     "records": [
+        {,
+            {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+            },
         {
+            "user": "RelieV",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "c",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Brachiozaur",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "aerialshard",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "n0r1zz",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
