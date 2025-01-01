@@ -1,0 +1,28 @@
+{
+    "id": 20980504,
+    "name": "Frozen Peak",
+    "author": "EpicLucas",
+    "creators": [],
+    "verifier": "EpicLucas",
+    "verification": "https://youtu.be/Y1T-W33NaA4?si=Dq7UYB5v_KB_jmcS",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "n0r1zz",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "shenanigans",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
