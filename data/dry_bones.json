@@ -1,11 +1,19 @@
 {
-    "id": 52663172,
-    "name": "Crisis Complex",
-    "author": "Lemons",
+    "id": 91534923,
+    "name": "Dry Bones",
+    "author": "Whlt",
     "creators": [],
-    "verifier": "Lemons",
-    "verification": "https://youtu.be/CWBt-DdHbc0?si=y6-7a65WpnMY2b6D",
+    "verifier": "Wulzy",
+    "verification": "https://youtu.be/wQ8KVg5dZRw?si=_G066NczyNTILoDN",
     "showcase": "",
     "percentToQualify": 100,
     "records": [
-            {
+            {,
+                {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+                }
+            ]
+        }
