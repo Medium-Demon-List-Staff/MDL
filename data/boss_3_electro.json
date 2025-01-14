@@ -1,0 +1,42 @@
+{
+    "id": 45479009,
+    "name": "BOSS 3 Electro",
+    "author": "Xender Game",
+    "creators": [],
+    "verifier": "Xender Game",
+    "verification": "https://youtu.be/OfsMqyw5cqA?si=5e3CeIKJpbSwCjeO",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "A05Polzar",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
