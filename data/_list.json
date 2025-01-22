@@ -34,6 +34,7 @@
     "judgement",
     "galaxy_way",
     "dark_matter",
+    "blood_sacrifice",
     "aspect",
     "chronos",
     "beyond",
@@ -45,6 +46,7 @@
     "frozen_peak",
     "kepcep",
     "skullbreaker",
+    "dormant",
     "boss_3_electro",
     "que",
     "dark_heaven",
@@ -70,7 +72,5 @@
     "pigstep",
     "snow_temple",
     "the_end",
-    "emergence",
-    "the_future_lab",
-    "lost_lazors"
+    "emergence"
 ]
