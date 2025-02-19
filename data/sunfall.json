@@ -1,0 +1,48 @@
+{
+    "id": 91674875,
+    "name": "Sunfall",
+    "author": "Zhorox",
+    "creators": [],
+    "verifier": "Zhorox",
+    "verification": "https://youtu.be/LEGpHoZlM2M?si=j7USFRtBhA5ljYQH",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "A05Polzar",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "shenanigans",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
