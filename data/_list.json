@@ -32,6 +32,7 @@
     "simulation_swarm",
     "judgement",
     "galaxy_way",
+    "gerbil",
     "dark_matter",
     "blood_sacrifice",
     "aspect",
@@ -71,6 +72,5 @@
     "the_prophetius",
     "pigstep",
     "snow_temple",
-    "the_end",
-    "emergence"
+    "the_end"
 ]
