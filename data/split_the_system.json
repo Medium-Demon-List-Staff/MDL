@@ -1,0 +1,54 @@
+{
+    "id": 13239769,
+    "name": "Split the System",
+    "author": "EthanLX",
+    "creators": [],
+    "verifier": "EthanLX",
+    "verification": "https://youtu.be/o8HuDYP04CM?si=UWZdqAGtnWxExyyu",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "rohanis0000",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "A05Polzar",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
