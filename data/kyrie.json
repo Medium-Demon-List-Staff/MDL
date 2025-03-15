@@ -1,0 +1,48 @@
+{
+    "id": 106727452,
+    "name": "Kyrie",
+    "author": "vohanxz",
+    "creators": [],
+    "verifier": "vohanxz",
+    "verification": "https://youtu.be/sX6H_z6XiZA?si=eM5Gugp9Vnoo57n2",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "NormalJkb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "ButterFish",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
