@@ -1,4 +1,4 @@
-{
+u{
     "id": 57406880,
     "name": "Kepcep",
     "author": "Rokioto",
@@ -119,6 +119,12 @@
         {
             "user": "Acekeny",
             "link": "https://www.youtube.com/watch?v=3y_VCYLcl7E",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "SheepyBoy",
+            "link": "https://youtu.be/mtdelFWq-Qc",
             "percent": 100,
             "hz": 360
         }
