@@ -1,0 +1,42 @@
+{
+    "id": 14649393,
+    "name": "SheolZ",
+    "author": "xtobe5",
+    "creators": [],
+    "verifier": "xtobe5",
+    "verification": "https://youtu.be/JYXfFBxR80s?si=JarruJPOnY-Zj6ul",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "ButterFish",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
