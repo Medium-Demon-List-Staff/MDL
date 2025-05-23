@@ -1,0 +1,36 @@
+{
+    "id": 88785961,
+    "name": "Redlight Blacklight",
+    "author": "Raivolt",
+    "creators": [],
+    "verifier": "Raivolt",
+    "verification": "https://youtu.be/UDeuiqUMHjY?si=F13-D6LrjkSzoUwB",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Fawxu",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "kubalolxd7",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
