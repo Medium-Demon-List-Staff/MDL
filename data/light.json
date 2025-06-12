@@ -1,0 +1,24 @@
+{
+    "id": 60151777,
+    "name": "Light",
+    "author": "Krawler",
+    "creators": [],
+    "verifier": "Krawler",
+    "verification": "https://youtu.be/8_ox7DNPmYg?si=O9kL0lRGcDTYThE_",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "kubalolxd7",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
