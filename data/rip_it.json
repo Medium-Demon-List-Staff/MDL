@@ -1,0 +1,60 @@
+{
+    "id": ,
+    "name": "Rip It",
+    "author": "Sunnet and Star77",
+    "creators": [],
+    "verifier": "Galzo",
+    "verification": "https://youtu.be/zlfEoASJank?si=-35rUchpyVcogr8N",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "TheoSi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Acekeny",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "kilodiv",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "Kuba",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      },
+      {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
