@@ -1,0 +1,24 @@
+{
+    "id": ,
+    "name": "Area Nys15",
+    "author": "gw nys15",
+    "creators": [],
+    "verifier": "gw nys15",
+    "verification": "https://youtu.be/qCJLUtfmYj8?si=W9igZRi4bQAA6g6X",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "FBITB",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
