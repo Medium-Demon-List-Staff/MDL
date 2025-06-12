@@ -1,0 +1,24 @@
+{
+    "id": 103350344,
+    "name": "Golden Hope",
+    "author": "Magpipe",
+    "creators": [],
+    "verifier": "Magpipe",
+    "verification": "https://youtu.be/xUGjF1a6YUM?si=_6jZoByqvJe2e3Pg",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "kubalolxd7",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+      }
+    ]
+}
