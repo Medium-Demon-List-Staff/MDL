@@ -139,6 +139,12 @@
             "link": "https://www.youtube.com/watch?v=bBzJLZtO1pg",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Sir_Manface",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
