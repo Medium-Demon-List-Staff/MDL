@@ -1,1 +1,42 @@
-
+{
+    "id": 75673707,
+    "name": "Sin",
+    "author": "xdGamers2856",
+    "creators": [],
+    "verifier": "xdGamsers2856",
+    "verification": "https://youtu.be/xcec_L4bY_o?si=ewb57V6Hxoynyyr0",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "kuba",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Bottomless",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
