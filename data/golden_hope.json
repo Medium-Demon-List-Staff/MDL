@@ -51,7 +51,7 @@
             "hz": 360
         },
         {
-            "user": "A05Pulzar",
+            "user": "A05Polzar",
             "link": "https://youtu.be/spSIt-mSuUI?si=_YUvb1NAvF4TY9ht",
             "percent": 100,
             "hz": 360
@@ -76,6 +76,12 @@
         },
         {
             "user": "bootyless",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
             "link": "",
             "percent": 100,
             "hz": 360
