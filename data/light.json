@@ -1,6 +1,6 @@
 {
     "id": 60151777,
-    "name": "Light",
+    "name": "LIGHT",
     "author": "Krawler",
     "creators": [],
     "verifier": "Krawler",
@@ -46,6 +46,12 @@
         },
         {
             "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
             "link": "",
             "percent": 100,
             "hz": 360
