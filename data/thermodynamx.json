@@ -1,0 +1,54 @@
+{
+    "id": 38919484,
+    "name": "Thermodynamix",
+    "author": "CastriX",
+    "creators": ["CastriX"],
+    "verifier": "Dorami",
+    "verification": "https://youtu.be/phnLWMqg4Yo",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Butterfish",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "mk4578",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
