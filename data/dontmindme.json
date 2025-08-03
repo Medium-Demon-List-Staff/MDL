@@ -8,5 +8,11 @@
     "showcase": "",
     "percentToQualify": 100,
     "records": [
+        {
+            "user": "Yoloplex",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
