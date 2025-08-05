@@ -561,6 +561,12 @@
             "hz": 360
         },
         {
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
             "user": "Jarzst",
             "link": "",
             "percent": 100,
@@ -568,5 +574,6 @@
         }
     ]
 }
+
 
 
