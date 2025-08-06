@@ -9,7 +9,19 @@
     "percentToQualify": 100,
     "records": [
         {
-            "user": "Test Man",
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
             "link": "",
             "percent": 100,
             "hz": 360
