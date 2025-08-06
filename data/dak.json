@@ -9,7 +9,13 @@
     "percentToQualify": 100,
     "records": [
         {
-            "user": "Test Man",
+            "user": "AceK58",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
             "link": "",
             "percent": 100,
             "hz": 360
