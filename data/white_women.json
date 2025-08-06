@@ -9,7 +9,55 @@
     "percentToQualify": 100,
     "records": [
         {
-            "user": "Test Man",
+            "user": "funtrix",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Sheepyboy",
+            "link": "https://youtu.be/2fUGy0R6Nzg",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "PokemonGD",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Kz04",
+            "link": "https://youtu.be/-xCgB6IFaZI",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "kilodiv",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
             "link": "",
             "percent": 100,
             "hz": 360
