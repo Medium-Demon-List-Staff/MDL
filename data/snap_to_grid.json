@@ -9,6 +9,10 @@
     "percentToQualify": 100,
     "records": [
         {
+            "user": "Test Man",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
