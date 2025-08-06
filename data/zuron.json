@@ -8,6 +8,12 @@
     "percentToQualify": 100,
     "records": [
         {
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
             "user": "Kuba",
             "link": "",
             "percent": 100,
@@ -123,6 +129,12 @@
         },
         {
             "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Kuzdavo",
             "link": "",
             "percent": 100,
             "hz": 360
