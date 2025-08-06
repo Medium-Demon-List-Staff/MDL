@@ -1,0 +1,18 @@
+{
+    "id": 123456789,
+    "name": "SkyBreaker",
+    "author": "Enlex",
+    "creators": ["iliryanili, Morphix, GirlyDash, Pennutoh, Complexx, Terron, Xronom, ChaSe, Enlex"],
+    "verifier": "Enlex",
+    "verification": "https://youtu.be/K3XYWjVekV4",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Test Man",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
