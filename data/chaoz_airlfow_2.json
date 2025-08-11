@@ -1,0 +1,60 @@
+{
+    "id": 13493165,
+    "name": "Chaoz airflow 2",
+    "author": "Tronzeki",
+    "creators": [],
+    "verifier": "Tronzeki",
+    "verification": "https://youtu.be/qX60h6p-53A",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
