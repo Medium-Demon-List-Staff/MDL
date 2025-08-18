@@ -2,7 +2,7 @@
     "id": 51445108,
     "name": "Frametrapped",
     "author": "Whitehead",
-    "creators": [],
+    "creators": ["Whitehead, RadiationV2"],
     "verifier": "Whitehead",
     "verification": "https://youtu.be/1ZV2lPmYHGw",
     "showcase": "",
@@ -77,6 +77,12 @@
         {
             "user": "tomm",
             "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "dragnalus",
+            "link": "https://youtu.be/P3pgc5m19lQ",
             "percent": 100,
             "hz": 360
         }
