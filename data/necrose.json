@@ -1,0 +1,66 @@
+{
+    "id": 89606625,
+    "name": "NECROSE",
+    "author": "Simwamwi",
+    "creators": [],
+    "verifier": "Simwamwi",
+    "verification": "https://youtu.be/G6J_s_VNQKM",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Firebot",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "POKEMON GD",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
