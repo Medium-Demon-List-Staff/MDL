@@ -1,0 +1,60 @@
+{
+    "id": 85732550,
+    "name": "Lightopolis",
+    "author": "Belphox",
+    "creators": ["Belphox, Splinter25"],
+    "verifier": "Belphox",
+    "verification": "https://youtu.be/GBHUoTofflM",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "luczha003",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
