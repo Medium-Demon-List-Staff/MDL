@@ -20,9 +20,24 @@
         "link": "https://youtube.com/@fbitb-gd?si=pEwtmFpaT1PMNBoD"
     },
     {
-        "role": "helper",
+        "role": "admin",
         "name": "Chonkey",
         "link": "https://www.youtube.com/channel/UCfv_RvdOwqMaDateGYK__0g"
+    },
+    {
+        "role": "helper",
+        "name": "tomm",
+        "link": "https://www.youtube.com/channel/UCObExuzSHQ7Y6PK78fpos_Q"
+    },
+    {
+        "role": "helper",
+        "name": "AceK58",
+        "link": "https://www.youtube.com/channel/UCIG2MhEhOT0BfzTLl3HOp8Q"
+    },
+    {
+        "role": "helper",
+        "name": "Sheepyboy",
+        "link": "https://www.youtube.com/channel/UCvGwcjgCB0vuSR3Fy03eNIw"
     },
     {
         "role": "dev",
