@@ -14,12 +14,12 @@
             "percent": 100,
             "hz": 360
         },
-      {
+        {
             "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
             "hz": 360
-      },
+        },
         {
             "user": "FBITB",
             "link": "https://www.youtube.com/watch?v=Aw_pH30MOls",
@@ -88,6 +88,12 @@
         },
         {
             "user": "TripL",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
             "link": "",
             "percent": 100,
             "hz": 360
