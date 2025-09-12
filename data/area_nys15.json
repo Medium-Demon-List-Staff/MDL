@@ -14,12 +14,12 @@
             "percent": 100,
             "hz": 360
         },
-      {
+        {
             "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
             "hz": 360
-      },
+        },
         {
             "user": "yoshi",
             "link": "",
@@ -82,6 +82,12 @@
         },
         {
             "user": "Radanox",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
             "link": "",
             "percent": 100,
             "hz": 360
