@@ -1,0 +1,90 @@
+{
+    "id": 20785077,
+    "name": "Astronaut 13 (Dzeser)",
+    "author": "Dzeser",
+    "creators": ["Dzeser, Complex"],
+    "verifier": "Dzeser",
+    "verification": "https://youtu.be/rU0Ig4UgUW0",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Fawxu",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Synthwave",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "POKEMON GD",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
