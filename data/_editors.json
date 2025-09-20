@@ -6,11 +6,6 @@
     },
     {
         "role": "owner",
-        "name": "Angeb",
-        "link": "https://youtube.com/@angeb2756?si=xOaSRdf_USjrdbKj"
-    },
-    {
-        "role": "owner",
         "name": "kuba",
         "link": "https://youtube.com/@jacobyt664?si=hqm565AcvrDx45im"
     },
@@ -23,6 +18,11 @@
         "role": "admin",
         "name": "Chonkey",
         "link": "https://www.youtube.com/channel/UCfv_RvdOwqMaDateGYK__0g"
+    },
+    {
+        "role": "helper",
+        "name": "Angeb",
+        "link": "https://youtube.com/@angeb2756?si=xOaSRdf_USjrdbKj"
     },
     {
         "role": "helper",
