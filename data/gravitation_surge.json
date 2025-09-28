@@ -1,0 +1,72 @@
+{
+    "id": 59460566,
+    "name": "Gravitation Surge",
+    "author": "J735",
+    "creators": ["J735, rafer"],
+    "verifier": "J735",
+    "verification": "https://youtu.be/duIxjCcj9ik",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Bottomless",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
