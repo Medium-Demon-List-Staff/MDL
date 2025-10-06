@@ -1,0 +1,66 @@
+{
+    "id": 65588712,
+    "name": "Through The Top",
+    "author": "Cirtrax",
+    "creators": [],
+    "verifier": "Cirtrax",
+    "verification": "https://youtu.be/fG7KGKq2bvg",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Identity",
+            "link": "https://www.youtube.com/watch?v=AmuKCZFg6OE",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "darkyn5",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
