@@ -589,9 +589,16 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "synthwave",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
+
 
 
 
