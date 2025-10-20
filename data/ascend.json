@@ -1,0 +1,30 @@
+{
+    "id": 3273541,
+    "name": "Ascend",
+    "author": "Ggb0y",
+    "creators": [],
+    "verifier": "Ggb0y",
+    "verification": "https://youtu.be/Hvyomp1GbnA",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Bluebarracks",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Nexi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lv3plane",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
