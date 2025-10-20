@@ -1,0 +1,24 @@
+{
+    "id": 77126625,
+    "name": "GRINDA",
+    "author": "Brighty",
+    "creators": ["Brighty, Graded"],
+    "verifier": "Brighty",
+    "verification": "https://youtu.be/ArOWsxNrbl8",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
