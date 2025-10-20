@@ -1,0 +1,36 @@
+{
+    "id": 6664095,
+    "name": "The Realistic",
+    "author": "softable",
+    "creators": [],
+    "verifier": "softable",
+    "verification": "https://youtu.be/Zt62q0A00-g",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Melody3",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "cripencio99crip",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lv3plane",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
