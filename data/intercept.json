@@ -1,0 +1,36 @@
+{
+    "id": 4236336,
+    "name": "Intercept",
+    "author": "ViPriN",
+    "creators": [],
+    "verifier": "ViPriN",
+    "verification": "https://youtu.be/zVsi3Iye5b0",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Melody3",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lv3plane",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
