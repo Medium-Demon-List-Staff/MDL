@@ -1,0 +1,24 @@
+{
+    "id": 17527775,
+    "name": "Axion",
+    "author": "Hubtos",
+    "creators": [],
+    "verifier": "",
+    "verification": "https://youtu.be/akHVPdk67z8",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Melody3",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lv3plane",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
