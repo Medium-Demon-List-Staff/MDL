@@ -1,0 +1,42 @@
+{
+    "id": 10411548,
+    "name": "Electric Landscape",
+    "author": "TamaN",
+    "creators": [],
+    "verifier": "TamaN",
+    "verification": "https://youtu.be/_mrnAN-_7eQ",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Frunk",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "CoolVLAD",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Yzae",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lv3plane",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
