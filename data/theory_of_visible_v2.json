@@ -1,0 +1,66 @@
+{
+    "id": 6452955,
+    "name": "Theory of visible V2",
+    "author": "BlueLite",
+    "creators": [],
+    "verifier": "BlueLite",
+    "verification": "https://youtu.be/IsUZXiNDvJI",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Mutant",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Wolvyy",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "SmileBullet",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "glubbb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "CoolVLAD",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "olmo",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "powersplit",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Pigeon",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "koishimeltdown",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+    ]
+}
