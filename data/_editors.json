@@ -6,7 +6,7 @@
     },
     {
         "role": "owner",
-        "name": "kuba",
+        "name": "Chonkey",
         "link": "https://youtube.com/@jacobyt664?si=hqm565AcvrDx45im"
     },
     {
@@ -15,8 +15,8 @@
         "link": "https://youtube.com/@fbitb-gd?si=pEwtmFpaT1PMNBoD"
     },
     {
-        "role": "admin",
-        "name": "Chonkey",
+        "role": "helper",
+        "name": "Kuba",
         "link": "https://www.youtube.com/channel/UCfv_RvdOwqMaDateGYK__0g"
     },
     {
@@ -37,6 +37,11 @@
     {
         "role": "helper",
         "name": "Sheepyboy",
+        "link": "https://www.youtube.com/channel/UCvGwcjgCB0vuSR3Fy03eNIw"
+    },
+    {
+        "role": "helper",
+        "name": "Bobbyp02",
         "link": "https://www.youtube.com/channel/UCvGwcjgCB0vuSR3Fy03eNIw"
     },
     {
