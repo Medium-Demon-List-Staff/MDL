@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Top 5 Pack",
+        "levels": [
+            "chaoz_overdrive",
+            "happy_days",
+            "vaporize",
+            "ivashka",
+            "rainbow_force_z"
+        ],
+        "colour": "#000000"
+    },
+    {
+        "name": "MDL Alphabet",
+        "levels": [
+            "ad_honorem",
+            "blood_sacrifice",
+            "chaoz_overdrive",
+            "demon_swinging",
+            "elevation",
+            "fleeting_race",
+            "gerbil",
+            "happy_days",
+            "ivashka",
+            "judgement",
+            "key",
+            "lochness",
+            "megalovania_gdjose",  
+            "nautilus",
+            "on_pointe_rm",
+            "poison",
+            "que",
+            "rainbow_force_z",
+            "split_the_system",
+            "techno_punk",
+            "uffas",
+            "vaporize",
+            "weirdmaggedon",
+            "x_force",
+            "zo"
+        ],
+        "colour": "#000000"
+    },
+    {
+        "name": "KeiAs Pack",
+        "levels": [
+            "demon_swinging",
+            "x_force",
+            "x_club",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Old Pack",
+        "levels": [
+            "x_force",
+            "x_club",
+            "dark_matte",
+            "simg_factorial_8"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "'1.9 Pack'",
+        "levels": [
+            "artillery",
+            "total_oblivion",
+            "sharp"
+        ],
+        "colour": "#cd7f32"
+    },
+]
