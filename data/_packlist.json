@@ -65,9 +65,21 @@
             "uffas",
             "rip_it",
             "good_karma",
+            "light",
             "dry_bones",
             "balls_15",
             "eyestrike",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Megacollab Pack",
+        "levels": [
+            "chaoz_overdrive",
+            "vaporize",
+            "gerbil",
+            "dry_bones",
+            "trident",
         ],
         "colour": "#ffd700"
     },
@@ -103,14 +115,24 @@
             "melodic_travel",
         ],
         "colour": "#ffd700"
-    }
+    },
     {
-        "name": "Old Pack",
+        "name": "Memory Pack",
         "levels": [
             "x_force",
             "x_club",
-            "dark_matter",
-            "simg_factorial_8"
+            "sheolz",
+            "frame_of_mind"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "NONG Pack",
+        "levels": [
+            "good_karma",
+            "simulation_swarm",
+            "apotheose_finale",
+            "eff"
         ],
         "colour": "#c0c0c0"
     },
@@ -122,6 +144,27 @@
             "boss_3_electro",
             "balls_15",
             "rainbow_dust_v2"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Old Pack",
+        "levels": [
+            "x_force",
+            "x_club",
+            "dark_matter",
+            "simg_factorial_8"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Popular Pack",
+        "levels": [
+            "crisis_complex",
+            "ad_honorem",
+            "resurrection",
+            "biru",
+            "dry_bones"
         ],
         "colour": "#c0c0c0"
     },
@@ -152,6 +195,39 @@
             "rewind"
         ],
         "colour": "#cd7f32"
+    },
+    {
+        "name": "Bright Pack",
+        "levels": [
+            "ivashka",
+            "zo",
+            "balls_15",
+            "sunfall",
+            "the_end"
+        ],
+        "colour": "#c0c0c0"
+    },
+      {
+        "name": "Red Pack",
+        "levels": [
+            "blood_sacrifice",
+            "sin",
+            "the_scarlet_sun",
+            "deaths_grasp",
+            "brimstone"
+        ],
+        "colour": "#ff0000"
+    },
+    {
+        "name": "Blue Pack",
+        "levels": [
+            "breaker",
+            "frozen_peak",
+            "ice_core",
+            "lightopolis",
+            "left_behind",
+        ],
+        "colour": "#0072fa"
     },
     {
         "name": "Black and White Pack",
