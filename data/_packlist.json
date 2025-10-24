@@ -42,6 +42,15 @@
         "colour": "#000000"
     },
     {
+        "name": "Eye Strain Pack",
+        "levels": [
+            "demon_swinging",
+            "x_force",
+            "x_club",
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "KeiAs Pack",
         "levels": [
             "demon_swinging",
@@ -51,22 +60,111 @@
         "colour": "#ffd700"
     },
     {
+        "name": "LOUD PACK",
+        "levels": [
+            "uffas",
+            "rip_it",
+            "good_karma",
+            "dry_bones",
+            "balls_15",
+            "eyestrike",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "quiet pack 2",
+        "levels": [
+            "ivashka",
+            "poison",
+            "lochness",
+            "harubi",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Tronzeki Pack",
+        "levels": [
+            "poison",
+            "chaoz_airflow_2",
+            "breaker",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "XXL Pack",
+        "levels": [
+            "rainbow_force_z",
+            "techno_punk",
+            "enuresis",
+            "biru",
+            "scarlet_field",
+            "apotheose_finale",
+            "autumn_travel",
+            "melodic_travel",
+        ],
+        "colour": "#ffd700"
+    }
+    {
         "name": "Old Pack",
         "levels": [
             "x_force",
             "x_club",
-            "dark_matte",
+            "dark_matter",
             "simg_factorial_8"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Number Name Pack",
+        "levels": [
+            "chaoz_airflow_2",
+            "simg_factorial_8",
+            "boss_3_electro",
+            "balls_15",
+            "rainbow_dust_v2"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "quiet pack 1",
+        "levels": [
+            "simulation swarm",
+            "high_noon",
+            "escuro",
+            "acrylic_canals"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Subwoofer Pack",
+        "levels": [
+            "enuresis",
+            "judgement",
+            "true_calamity",
         ],
         "colour": "#c0c0c0"
     },
     {
         "name": "'1.9 Pack'",
         "levels": [
-            "artillery",
-            "total_oblivion",
-            "sharp"
+            "lochness",
+            "redlight_blacklight",
+            "rewind"
         ],
         "colour": "#cd7f32"
     },
+    {
+        "name": "Black and White Pack",
+        "levels": [
+            "megalovania_gdjose",
+            "simulation_swarm",
+            "burnt_toast_ii",
+            "beyond",
+            "escuro",
+            "dry_bones",
+            "blackout",
+            "ride"
+        ],
+        "colour": "linear-gradient(45deg, rgba(0,0,0,1) 33%, rgba(212,208,208,1) 66%, rgba(255,255,255,1) 100%)"
+    }
 ]
