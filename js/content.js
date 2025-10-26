@@ -1,4 +1,3 @@
-import { fetchPacks, fetchPackLevels } from "../content.js";
 import { round, score } from './score.js';
 
 /**
@@ -9,8 +8,10 @@ const dir = '/data';
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
     const packResult = await fetch(`${dir}/_packlist.json`);
+    const nameMap = await fetchNameMap();
     try {
         const list = await listResult.json();
+        const packsList = await packResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
                 const levelResult = await fetch(`${dir}/${path}.json`);
@@ -21,14 +22,16 @@ export async function fetchList() {
                     level.creators = level.creators.map((creator) => nameMap[creator] || creator);
                     let packs = packsList.filter((x) =>
                         x.levels.includes(path)
+                    );
                     return [
                         {
                             ...level,
                             packs,
                             path,
-                            records: level.records.sort(
-                                (a, b) => b.percent - a.percent,
-                            ),
+                            records: level.records.map((record) => {
+                                record.user = nameMap[record.user] || record.user;
+                                return record;
+                            }),
                         },
                         null,
                     ];
@@ -45,10 +48,26 @@ export async function fetchList() {
 }
 
 export async function fetchEditors() {
+    const nameMap = await fetchNameMap();
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
-        const editors = await editorsResults.json();
+        const editors = (await editorsResults.json()).map((editor) => {
+            return {
+                ...editor,
+                name: nameMap[editor.name] || editor.name,
+            }   
+        });
         return editors;
+    } catch {
+        return null;
+    }
+}
+
+export async function fetchNameMap() {
+    try {
+        const nameMapResults = await fetch(`${dir}/_name_map.json`);
+        const nameMap = await nameMapResults.json();
+        return nameMap;
     } catch {
         return null;
     }
@@ -86,7 +105,7 @@ export async function fetchLeaderboard() {
         // Records
         level.records.forEach((record) => {
             const user = Object.keys(scoreMap).find(
-                (u) => u.toLowerCase() === record.user.toLowerCase(),
+                (u) => u === record.user,
             ) || record.user;
             scoreMap[user] ??= {
                 verified: [],
@@ -101,6 +120,7 @@ export async function fetchLeaderboard() {
                     level: level.name,
                     score: score(rank + 1, 100, level.percentToQualify),
                     link: record.link,
+                    path: level.path,
                 });
                 return;
             }
@@ -111,6 +131,7 @@ export async function fetchLeaderboard() {
                 percent: record.percent,
                 score: score(rank + 1, record.percent, level.percentToQualify),
                 link: record.link,
+                path: level.path,
             });
         });
     });
@@ -125,10 +146,11 @@ export async function fetchLeaderboard() {
         }
         
     }
-    
+
     // Wrap in extra Object containing the user and total score
-    const res = Object.entries(scoreMap).map(([user, scores]) => {
+    let res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
+
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
@@ -140,9 +162,32 @@ export async function fetchLeaderboard() {
         };
     });
 
-    // Sort by total score
-    return [res.sort((a, b) => b.total - a.total), errs];
+	// Sort by total score
+	res.sort((a, b) => b.total - a.total);
+
+    // Add rank to each user
+    res = res.map((entry, index) => ({
+        position: index + 1,
+        ...entry
+    }));
+
+    
+    // Map user to their name
+    const nameMap = await fetchNameMap();
+    res = res.map((entry) => {
+        let user = entry.user;
+        let name = nameMap[user] || user;
+        
+        return {
+            ...entry,
+            user: name
+        };
+    });
+
+    return [res, errs];
+    
 }
+
 export async function fetchPacks() {
     try {
         const packResult = await fetch(`${dir}/_packlist.json`);
