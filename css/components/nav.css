@@ -1,9 +1,11 @@
-.nav {
+:root {
     --color-background: white;
     --color-on-background: black;
-    --color-primary: #000000;
+    --color-primary: #0066ff;
     --color-on-primary: white;
+}
 
+.nav {
     display: flex;
     column-gap: 2rem;
 }
@@ -57,7 +59,6 @@
 .nav .nav__actions .nav__cta:hover:not(:active) {
     transform: translateY(-2px);
 }
-
 /* Shitty */
 
 .shity .nav .nav__tab.router-link-active {
