@@ -39,7 +39,6 @@
 .page-list .list .level button:hover {
     background-color: var(--color-background-hover);
     color: var(--color-on-background-hover);
-    cursor: pointer;
 }
 .page-list .list .level.active button {
     background-color: var(--color-primary);
@@ -72,6 +71,16 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+.page-list .level-container .level .packs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+}
+.page-list .level-container .level .packs .tag {
+    display: flex;
+    flex-shrink: 0;
+    background-size: 100% 100% !important;
 }
 .page-list .level-container .level .records {
     table-layout: fixed;
@@ -126,6 +135,14 @@
 }
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
+}
+.tag p {
+    font-family: "Lexend Deca", sans-serif;
+    display:block;
+    border-radius: 14px;
+    padding: 7px;
+    mix-blend-mode: difference;
+    color: rgb(128, 128, 128);
 }
 
 /* Shitty */
