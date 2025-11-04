@@ -1,0 +1,48 @@
+{
+    "id": 13699836,
+    "name": "Acousticophobia",
+    "author": "TheRealSquizz",
+    "creators": [],
+    "verifier": "TheRealSquizz",
+    "verification": "https://youtu.be/7EjOqhhrkZ4",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Darkyn5",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
