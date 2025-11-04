@@ -1,0 +1,48 @@
+{
+    "id": 215832,
+    "name": "Dawn of Darkness",
+    "author": "Midnight2",
+    "creators": [],
+    "verifier": "Midnight2",
+    "verification": "https://youtu.be/zPwiGxqK8KM",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
