@@ -20,7 +20,7 @@
             "percent": 100,
             "hz": 360
         },
-{
+        {
             "user": "M1Sushi",
             "link": "",
             "percent": 100,
@@ -97,9 +97,16 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
+
 
 
 
