@@ -73,6 +73,12 @@
             "link": "https://www.youtube.com/watch?v=-Wu8Sci9Ikw",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
