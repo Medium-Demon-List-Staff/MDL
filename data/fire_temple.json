@@ -8,6 +8,11 @@
     "showcase": "",
     "percentToQualify": 100,
     "records": [
-      
+        {
+            "user": "tomm",
+            "link": "https://www.youtube.com/watch?v=LqSrtYkoPB0",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
