@@ -1,0 +1,60 @@
+{
+    "id": 45626348,
+    "name": "Party Ride",
+    "author": "Zajicek",
+    "creators": ["Tribar, Zajicek, DjDvd17, GMD Vort3X, IlICrafIlI"],
+    "verifier": "",
+    "verification": "https://youtu.be/y5qAIUmzrUM",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "[FAIRY] angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
