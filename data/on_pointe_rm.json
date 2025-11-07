@@ -228,6 +228,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Sophie",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }        
     ]
 }
