@@ -181,6 +181,12 @@
             "link": "",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "TryOtherPies",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
