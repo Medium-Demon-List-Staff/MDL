@@ -156,10 +156,17 @@
             "user": "Beetron",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 360
+        },
+        {
+            "user": "Excryst",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
+
 
 
 
