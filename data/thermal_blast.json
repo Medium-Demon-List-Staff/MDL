@@ -115,6 +115,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Mesha256",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
