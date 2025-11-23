@@ -175,9 +175,16 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Excryst",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
+
 
 
 
