@@ -145,6 +145,12 @@
             "link": "https://youtu.be/kLBDS-mYjas",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "DJ",
+            "link": "https://www.youtube.com/watch?v=xqNYAN2TwRI",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
