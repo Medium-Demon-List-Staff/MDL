@@ -103,6 +103,12 @@
             "link": "",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "aerialshard",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
