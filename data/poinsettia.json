@@ -1,0 +1,24 @@
+{
+    "id": 127395809,
+    "name": "Poinsettia",
+    "author": "BloomOcean",
+    "creators": ["WayAway04, ExIIImE, vust, Cinemat, saures, Lipz, Harent, Koshkaht, Galliard, BlockBoss, Chrapiva, rebu"],
+    "verifier": "Nikver",
+    "verification": "https://www.youtube.com/watch?v=-GWT8MBlfXU",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
