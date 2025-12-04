@@ -85,6 +85,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Beetron",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
