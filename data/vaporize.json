@@ -289,6 +289,24 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Sfericzox",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 120
         }
     ]
 }
