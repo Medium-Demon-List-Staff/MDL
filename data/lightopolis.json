@@ -109,6 +109,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "shiver",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
