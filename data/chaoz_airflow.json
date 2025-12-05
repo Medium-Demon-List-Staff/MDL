@@ -1,0 +1,60 @@
+{
+    "id": 8693225,
+    "name": "Chaoz Airflow (NiceNike)",
+    "author": "NiceNike",
+    "creators": [],
+    "verifier": "NiceNike",
+    "verification": "https://youtu.be/e0y-tXG-GwU?si=k0SMX0iUnEt2SMuk",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "AgentDarius",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "DaShahzad",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Kuba",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "SmileBullet",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Beetron",
+            "link": "",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Chahnkeh",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
