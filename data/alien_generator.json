@@ -1,0 +1,48 @@
+{
+    "id": 90728742,
+    "name": "Alien Generator",
+    "author": "8bitfudge",
+    "creators": ["8bitfudge, elininja, mugna, carnitine"],
+    "verifier": "8bitfudge",
+    "verification": "https://youtu.be/D08yS2Nqfy0",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "RoboBear04",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
