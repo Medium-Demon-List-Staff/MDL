@@ -84,7 +84,13 @@
             "user": "JoacoPe",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
+        },
+        {
+            "user": "Mylou",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
