@@ -289,9 +289,16 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "AgentDarius",
+            "link": "",
+            "percent": 100,
+            "hz": 120
         }
     ]
 }
+
 
 
 
