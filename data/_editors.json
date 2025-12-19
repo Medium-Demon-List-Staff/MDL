@@ -11,28 +11,18 @@
     },
     {
         "role": "admin",
-        "name": "FBITB",
-        "link": "https://youtube.com/@fbitb-gd?si=pEwtmFpaT1PMNBoD"
+        "name": "tomm",
+        "link": "https://www.youtube.com/channel/UCObExuzSHQ7Y6PK78fpos_Q"
     },
     {
-        "role": "helper",
-        "name": "Kuba",
-        "link": "https://www.youtube.com/channel/UCfv_RvdOwqMaDateGYK__0g"
+        "role": "admin",
+        "name": "AceK58",
+        "link": "https://www.youtube.com/channel/UCIG2MhEhOT0BfzTLl3HOp8Q"
     },
     {
         "role": "helper",
         "name": "Angeb",
         "link": "https://youtube.com/@angeb2756?si=xOaSRdf_USjrdbKj"
-    },
-    {
-        "role": "helper",
-        "name": "tomm",
-        "link": "https://www.youtube.com/channel/UCObExuzSHQ7Y6PK78fpos_Q"
-    },
-    {
-        "role": "helper",
-        "name": "AceK58",
-        "link": "https://www.youtube.com/channel/UCIG2MhEhOT0BfzTLl3HOp8Q"
     },
     {
         "role": "helper",
@@ -43,5 +33,30 @@
         "role": "helper",
         "name": "Bobbyp02",
         "link": "https://www.youtube.com/channel/UCvGwcjgCB0vuSR3Fy03eNIw"
+    },
+    {
+        "role": "helper",
+        "name": "LifelessComputer",
+        "link": "https://www.youtube.com/@lifeless7434/featured"
+    },
+    {
+        "role": "helper",
+        "name": "Dwibble",
+        "link": "https://www.youtube.com/@GDDwibble/featured"
+    },
+    {
+        "role": "helper",
+        "name": "CoriDawg_PlaysYT",
+        "link": "https://www.youtube.com/@CoriOshawott/featured"
+    },
+    {
+        "role": "helper",
+        "name": "Identity",
+        "link": "https://www.youtube.com/@Identity_GD"
+    },
+    {
+        "role": "helper",
+        "name": "Scy",
+        "link": "https://www.youtube.com/@scy7172/featured"
     }
 ]
