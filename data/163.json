@@ -96,13 +96,19 @@
             "user": "dragnalus",
             "link": "https://youtu.be/lj8IIyPh_Ys?si=17tTOJtquP0Eljii",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "xJay0117",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
+        },
+        {
+            "user": "VDusty12",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
