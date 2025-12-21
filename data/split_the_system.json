@@ -163,6 +163,12 @@
             "link": "",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "RoboBear04",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
