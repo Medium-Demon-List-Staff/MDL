@@ -73,6 +73,12 @@
             "link": "",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
