@@ -12,19 +12,19 @@
             "user": "DIUS3D",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "lightning",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "DenyZr",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "lv3plane",
@@ -42,25 +42,25 @@
             "user": "Kuba",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "deadbush",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Leckylecks",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Fawxu",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Redcat",
@@ -72,103 +72,109 @@
             "user": "kubalolxd7",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "DerModster",
             "link": "https://youtu.be/Xj8Q0z4vuVU?si=qGWJiCSgvGQGLe9D&t=2345",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "JoacoPe",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "yoshi",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Joaquin",
             "link": "",
             "percent": 100,
-            "hz": 360    
+            "hz": 240    
         },
         {
             "user": "jon",
             "link": "https://www.youtube.com/watch?v=kNcY5SY4Jgs",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "RelieV",
             "link": "",
             "percent": 100,
-            "hz": 360    
+            "hz": 240    
         },
         {
             "user": "Chonkey",
             "link": "",
             "percent": 100,
-            "hz": 360  
+            "hz": 240  
         },
         {
             "user": "J O H N N Y",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "ButterFish",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Sheepyboy",
             "link": "https://youtu.be/txnAmL7cygE",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "LifelessComputer",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Yoloplex",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Identity",
             "link": "https://youtu.be/uE7_PktYPX0",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "milo",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Syne",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "ZircleZ",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
+        },
+        {
+            "user": "Bottomless",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
