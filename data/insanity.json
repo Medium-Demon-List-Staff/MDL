@@ -12,7 +12,7 @@
             "user": "Aquatic51",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "Chonkey",
@@ -42,7 +42,7 @@
             "user": "TheoSi",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "Beeshie",
@@ -54,7 +54,7 @@
             "user": "POKEMON GD",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "tomm",
@@ -156,10 +156,16 @@
             "user": "dragnalus",
             "link": "https://youtu.be/vOfgAe8dXKE?si=AxMsGGOhHVTzGYss",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "BlissBeedium",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "CroKrox",
             "link": "",
             "percent": 100,
             "hz": 240
