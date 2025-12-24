@@ -12,19 +12,19 @@
             "user": "DIUS3D",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "DenyZr",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "lightning",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "lv3plane",
@@ -36,25 +36,25 @@
             "user": "Kuba",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Leckylecks",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "xJay0117",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "TheYeGuy",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Redcat",
@@ -66,13 +66,13 @@
             "user": "DerModster",
             "link": "https://youtu.be/Xj8Q0z4vuVU?si=XrTHXrJ7IAvF2eQq&t=4371",
             "percent": 100,
-            "hz": 360    
+            "hz": 240    
         },
         {
             "user": "deadbush",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "RelieV",
@@ -84,31 +84,31 @@
             "user": "JoacoPe",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Joaquin",
             "link": "",
             "percent": 100,
-            "hz": 360    
+            "hz": 240    
         },
         {
             "user": "MatejTheMaze",
             "link": "",
             "percent": 100,
-            "hz": 360    
+            "hz": 240    
         },
         {
             "user": "yoshi",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Chonkey",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "FBITB",
@@ -120,67 +120,73 @@
             "user": "kubalolxd7",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "rohanis0000",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "ButterFish",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Fawxu",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "LifelessComputer",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Sheepyboy",
             "link": "https://youtu.be/s6xKwHtlRfI",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Amthekill",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Yoloplex",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Aquatic51",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Identity",
             "link": "https://youtu.be/-FJ5NGaRjpg?si=KETiMB5RBkSjGdcC",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Syne",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
+        },
+        {
+            "user": "DavidTheMaze",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
