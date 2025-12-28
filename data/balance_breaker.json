@@ -1,0 +1,54 @@
+{
+    "id": 64983517,
+    "name": "Balance breaker",
+    "author": "FrenchManZary",
+    "creators": ["FrenchManZary, AraxGames, Hir0Shi, Lightstyles, Tesla, LaserSword33, GDestrys"],
+    "verifier": "Doli",
+    "verification": "https://youtu.be/XOIFwjRzUV8",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "POKEMON GD",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
