@@ -1,0 +1,54 @@
+{
+    "id": 106562277,
+    "name": "Les Lueurs",
+    "author": "DOMIANGELI",
+    "creators": ["DOMIANGELI, X1RON"],
+    "verifier": "Zipi",
+    "verification": "https://youtu.be/SR_V5Jhl-ec",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "[FAIRY] angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "POKEMON GD",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
