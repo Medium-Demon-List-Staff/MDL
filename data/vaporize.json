@@ -355,6 +355,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "katzen",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
