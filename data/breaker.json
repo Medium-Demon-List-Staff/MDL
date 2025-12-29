@@ -235,6 +235,12 @@
             "link": "",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "super",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
