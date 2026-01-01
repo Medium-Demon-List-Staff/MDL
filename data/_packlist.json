@@ -46,7 +46,7 @@
         "levels": [
             "demon_swinging",
             "x_force",
-            "x_club",
+            "x_club"
         ],
         "colour": "#ffd700"
     },
@@ -55,7 +55,7 @@
         "levels": [
             "demon_swinging",
             "x_force",
-            "x_club",
+            "x_club"
         ],
         "colour": "#ffd700"
     },
@@ -68,7 +68,7 @@
             "light",
             "dry_bones",
             "balls_15",
-            "eyestrike",
+            "eyestrike"
         ],
         "colour": "#ffd700"
     },
@@ -79,7 +79,7 @@
             "vaporize",
             "gerbil",
             "dry_bones",
-            "trident",
+            "trident"
         ],
         "colour": "#ffd700"
     },
@@ -89,7 +89,7 @@
             "ivashka",
             "poison",
             "lochness",
-            "harubi",
+            "harubi"
         ],
         "colour": "#ffd700"
     },
@@ -98,7 +98,7 @@
         "levels": [
             "poison",
             "chaoz_airflow_2",
-            "breaker",
+            "breaker"
         ],
         "colour": "#ffd700"
     },
@@ -112,7 +112,7 @@
             "scarlet_field",
             "apotheose_finale",
             "autumn_travel",
-            "melodic_travel",
+            "melodic_travel"
         ],
         "colour": "#ffd700"
     },
@@ -183,7 +183,7 @@
         "levels": [
             "enuresis",
             "judgement",
-            "true_calamity",
+            "true_calamity"
         ],
         "colour": "#c0c0c0"
     },
@@ -225,7 +225,7 @@
             "frozen_peak",
             "ice_core",
             "lightopolis",
-            "left_behind",
+            "left_behind"
         ],
         "colour": "#0072fa"
     },
