@@ -40,6 +40,7 @@ export default {
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
+                    
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
@@ -122,7 +123,7 @@ export default {
         selected: 0,
         errors: [],
         roleIconMap,
-        store
+        store,
     }),
     computed: {
         level() {
@@ -156,7 +157,7 @@ export default {
                     .filter(([_, err]) => err)
                     .map(([_, err]) => {
                         return `Failed to load level. (${err}.json)`;
-                    })
+                    }),
             );
             if (!this.editors) {
                 this.errors.push("Failed to load list editors.");
