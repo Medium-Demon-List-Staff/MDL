@@ -1,4 +1,4 @@
-content.js
+
 import { round, score } from './score.js';
 
 /**
