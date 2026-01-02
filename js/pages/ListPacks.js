@@ -106,12 +106,12 @@ export default {
                                 v-if="record.mobile"
                                 :src="'/assets/phone-landscape' + (store && store.dark ? '-dark' : '') + '.svg'"
                                 alt="Mobile"
-                                />
+                            />
                             </td>
                             <td class="hz"><p>{{ record.hz }}Hz</p></td>
                         </tr>
                         </table>
-                </div>
+            </div>
 
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
@@ -167,7 +167,7 @@ export default {
 
     this.selectedPackLevels = levels;
   } catch (e) {
-    this.errors.push(`Packs page crashed: ${(e && e.message) ? e.message : e}`);
+    this.errors.push('Packs page crashed: ${(e && e.message) ? e.message : e}');
     console.error(e);
   } finally {
     this.loading = false;
