@@ -8,7 +8,7 @@ const dir = '/data';
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
     const packResult = await fetch(`${dir}/_packlist.json`);
-        const nameMap = await fetchNameMap();
+    const nameMap = await fetchNameMap();
     try {
         const list = await listResult.json();
         const packsList = await packResult.json();
@@ -52,7 +52,7 @@ export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
         const editors = (await editorsResults.json()).map((editor) => {
-        return {
+            return {
                 ...editor,
                 name: nameMap[editor.name] || editor.name,
             }   
@@ -150,6 +150,7 @@ export async function fetchLeaderboard() {
     // Wrap in extra Object containing the user and total score
     let res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
+
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
@@ -161,77 +162,77 @@ export async function fetchLeaderboard() {
         };
     });
 
-    // Sort by total score
-    res.sort((a, b) => b.total - a.total);
+	// Sort by total score
+	res.sort((a, b) => b.total - a.total);
+
+    // Add rank to each user
+    res = res.map((entry, index) => ({
+        position: index + 1,
+        ...entry
+    }));
+
     
-        // Add rank to each user
-        res = res.map((entry, index) => ({
-            position: index + 1,
-            ...entry
-        }));
-    
+    // Map user to their name
+    const nameMap = await fetchNameMap();
+    res = res.map((entry) => {
+        let user = entry.user;
+        let name = nameMap[user] || user;
         
-        // Map user to their name
-        const nameMap = await fetchNameMap();
-        res = res.map((entry) => {
-            let user = entry.user;
-            let name = nameMap[user] || user;
-            
-            return {
-                ...entry,
-                user: name
-            };
-        });
+        return {
+            ...entry,
+            user: name
+        };
+    });
+
+    return [res, errs];
     
-        return [res, errs];
-        
-    }
-    
-    export async function fetchPacks() {
-        try {
-            const packResult = await fetch(`${dir}/_packlist.json`);
-            const packsList = await packResult.json();
-            return packsList;
-        } catch {
-            return null;
-        }
-    }
-    
-    export async function fetchPackLevels(packname) {
+}
+
+export async function fetchPacks() {
+    try {
         const packResult = await fetch(`${dir}/_packlist.json`);
         const packsList = await packResult.json();
-        const selectedPack = await packsList.find((pack) => pack.name == packname);
-        const nameMap = await fetchNameMap();
-        try {
-            return await Promise.all(
-                selectedPack.levels.map(async (path, rank) => {
-                    const levelResult = await fetch(`${dir}/${path}.json`);
-                    try {
-                        const level = await levelResult.json();
-                        level.verifier = nameMap[level.verifier] || level.verifier;
-                        level.author = nameMap[level.author] || level.author;
-                        level.creators = level.creators.map((creator) => nameMap[creator] || creator);
-    
-    
-                        return [
-                            {
-                                level,
-                                path,
-                                records: level.records.map((record) => {
-                                    record.user = nameMap[record.user] || record.user;
-                                    return record;
-                                }),
-                            },
-                            null,
-                        ];
-                    } catch {
-                        console.error(`Failed to load level #${rank + 1} ${path}.`);
-                        return [null, path];
-                    }
-                })
-            );
-        } catch (e) {
-            console.error(`Failed to load packs.`, e);
-            return null;
-        }
+        return packsList;
+    } catch {
+        return null;
+    }
+}
+
+export async function fetchPackLevels(packname) {
+    const packResult = await fetch(`${dir}/_packlist.json`);
+    const packsList = await packResult.json();
+    const selectedPack = await packsList.find((pack) => pack.name == packname);
+    const nameMap = await fetchNameMap();
+    try {
+        return await Promise.all(
+            selectedPack.levels.map(async (path, rank) => {
+                const levelResult = await fetch(`${dir}/${path}.json`);
+                try {
+                    const level = await levelResult.json();
+                    level.verifier = nameMap[level.verifier] || level.verifier;
+                    level.author = nameMap[level.author] || level.author;
+                    level.creators = level.creators.map((creator) => nameMap[creator] || creator);
+
+
+                    return [
+                        {
+                            level,
+                            path,
+                            records: level.records.map((record) => {
+                                record.user = nameMap[record.user] || record.user;
+                                return record;
+                            }),
+                        },
+                        null,
+                    ];
+                } catch {
+                    console.error(`Failed to load level #${rank + 1} ${path}.`);
+                    return [null, path];
+                }
+            })
+        );
+    } catch (e) {
+        console.error(`Failed to load packs.`, e);
+        return null;
+    }
 }
