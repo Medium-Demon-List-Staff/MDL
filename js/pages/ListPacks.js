@@ -145,7 +145,7 @@ export default {
         // Hide loading spinner
     }
     methods: {
-        switchLevels(i) 
+        async switchLevels(i) 
             this.loadingPack = true;
 
             this.selected = i;
@@ -155,9 +155,8 @@ export default {
             );
 
             this.loadingPack = false;
-        }
+        },
         score,
         embed,
         getFontColour
-    
-
+}
