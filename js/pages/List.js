@@ -40,6 +40,11 @@ export default {
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
+                    <div class="packs" v-if="level.packs.length > 0">
+                        <div v-for="pack in level.packs" class="tag" :style="{background:pack.colour}">
+                            <p>{{pack.name}}</p>
+                        </div>
+                    </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
