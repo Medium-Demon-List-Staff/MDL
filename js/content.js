@@ -103,6 +103,7 @@ export async function fetchLeaderboard() {
             progressed.push({
                 rank: rank + 1,
                 level: level.name,
+                levelPath: level.path,
                 percent: record.percent,
                 score: score(rank + 1, record.percent, level.percentToQualify),
                 link: record.link,
@@ -164,15 +165,6 @@ if (packs) {
 
 // Sort by total score
 return [res.sort((a, b) => b.total - a.total), errs];
-}
-
-export async function fetchPacks() {
-    try {
-        const res = await fetch(`${dir}/_packlist.json`);
-        return await res.json();
-    } catch {
-        return null;
-    }
 }
 
 export async function fetchPacks() {
