@@ -43,7 +43,7 @@ export default {
                 </div>
                 <div class="player-container surface">
                     <div class="player">
-                        <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                        <h1 v-if="entry">#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
 
                 <!-- PACKS -->
@@ -114,13 +114,19 @@ export default {
         },
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard(
-        );
-        this.leaderboard = leaderboard;
-        this.err = err;
-        // Hide loading spinner
+    const result = await fetchLeaderboard();
+
+    if (!result) {
+        this.err = ["Failed to load leaderboard"];
         this.loading = false;
-    },
+        return;
+    }
+
+    const [leaderboard, err] = result;
+    this.leaderboard = leaderboard;
+    this.err = err;
+    this.loading = false;
+},
     methods: {
         localize,
         getFontColour,

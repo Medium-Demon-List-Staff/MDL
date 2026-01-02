@@ -144,3 +144,17 @@ res.forEach(player => {
 // Sort by total score
 return [res.sort((a, b) => b.total - a.total), errs];
 }
+
+export async function fetchPacks() {
+    try {
+        const res = await fetch(`${dir}/_packlist.json`);
+        return await res.json();
+    } catch {
+        return null;
+    }
+}
+
+export async function fetchPackLevels(packName) {
+    const res = await fetch(`/data/packs/${packName}.json`);
+    return await res.json();
+}
