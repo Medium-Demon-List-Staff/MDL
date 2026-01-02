@@ -115,6 +115,7 @@ const res = Object.entries(scoreMap).map(([user, scores]) => {
     return {
         user,
         total: round(total),
+        packs: [],
         ...scores,
     };
 });
