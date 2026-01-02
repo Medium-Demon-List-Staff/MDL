@@ -36,3 +36,17 @@ export function shuffle(array) {
 
     return array;
 }
+
+// js/util.js
+export function getFontColour(bgColor) {
+    // Simple contrast check (black/white text)
+    if (!bgColor) return '#000';
+    // Remove # if present
+    const hex = bgColor.replace('#', '');
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    // Perceived brightness formula
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness > 128 ? '#000' : '#fff';
+}
