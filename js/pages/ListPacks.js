@@ -112,39 +112,21 @@ export default {
         },
     },
     async mounted() {
-    this.packs = await fetchPacks();
+        this.packs = await fetchPacks();
 
-    if (!this.packs || this.packs.length === 0) {
-        this.errors.push("No packs could be loaded.");
+        if (!this.packs || this.packs.length === 0) {
+            this.errors.push("No packs could be loaded.");
+            this.loading = false;
+            return;
+        }
+
+        this.selectedPackLevels = await fetchPackLevels(
+            this.packs[this.selected].name
+        );
+
         this.loading = false;
-        return;
-    }
-
-    this.selectedPackLevels = await fetchPackLevels(
-        this.packs[this.selected].name
-    );
-
-    this.loading = false;
-},
-
-        // Error handling todo: make error handling
-        // if (!this.packs) {
-        //     this.errors = [
-        //         "Failed to load list. Retry in a few minutes or notify list staff.",
-        //     ];
-        // } else {
-        //     this.errors.push(
-        //         ...this.packs
-        //             .filter(([_, err]) => err)
-        //             .map(([_, err]) => {
-        //                 return `Failed to load level. (${err}.json)`;
-        //             })
-        //     );
-        // }
-
-        // Hide loading spinner
     },
-    
+
     methods: {
         async switchLevels(i) {
             this.loadingPack = true;
@@ -161,3 +143,4 @@ export default {
         embed,
         getFontColour
     }
+};
