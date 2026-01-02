@@ -172,3 +172,11 @@
     background-color: #5d5d5d;
     padding: 7px;
 }
+
+.packs-nav > div {
+  gap: 0;            /* ensure no gap */
+}
+
+.packs-nav button {
+  margin: 0;         /* ensure no margins */
+}

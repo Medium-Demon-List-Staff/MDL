@@ -34,7 +34,7 @@ export default {
             No packs available.
         </div>
             <div class="packs-nav" style="grid-column:1 / -1;">
-                <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                <div>
                     <button
                         @click="switchLevels(i)"
                         v-for="(pack, i) in packs"
