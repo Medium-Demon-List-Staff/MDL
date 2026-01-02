@@ -1,14 +1,14 @@
 .packs-nav {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
     z-index: 5;
-    position: sticky;      /* key: stick like HDL */
-    top: 0;                /* sticks to top of the page area */
+    position: relative; /* no sticky */
     background-color: var(--color-background-hover);
     height: 50px;
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-
-    grid-column: 1 / -1;   /* span all columns */
 }
 
 .packs-nav button {
@@ -50,33 +50,45 @@
 .pack-list {
     display: grid;
     grid-template-columns: 320px 1fr 360px;
-    gap: 16px;
+    grid-template-rows: 50px 1fr;   /* row 1 = tab bar, row 2 = content */
+    gap: 0;                         /* HDL has tight separators */
+    align-items: stretch;
 
-    /* fixes the big white area */
-    min-height: calc(100vh - 60px); /* adjust if your top nav height differs */
+    /* Make the page behave like a full viewport section */
+    height: calc(100vh - 60px);     /* 60px ≈ your purple nav height; adjust if needed */
     background: var(--color-background);
-    align-content: start;
+    overflow: hidden;               /* prevents the big page scroll/white area */
 }
 
 /* Place the three main sections into columns */
 .pack-list .list-container {
     grid-column: 1;
     grid-row: 2;
+    overflow-y: auto;
+    padding: 1rem;
+    border-right: 4px solid rgba(255,255,255,0.08); /* subtle divider like HDL */
 }
+
 .pack-list .level-container {
     grid-column: 2;
     grid-row: 2;
+    overflow-y: auto;
+    padding: 2rem;
+    border-right: 4px solid rgba(255,255,255,0.08);
 }
+
 .pack-list .meta-container {
     grid-column: 3;
     grid-row: 2;
+    overflow-y: auto;
+    padding: 2rem;
 }
 
 .pack-list .list-container,
 .pack-list .level-container,
 .pack-list .meta-container {
     margin-top: 0;
-    padding-block: 2rem;
+    padding-block: 0;
 }
 .pack-list .list-container {
     padding-inline: 1rem;
@@ -211,14 +223,5 @@
     padding: 7px;
 }
 
-.packs-nav > div {
-    height: 100%;
-    display: flex;
-    gap: 0;
-}
-.packs-nav button {
-    margin: 0;
-    border-radius: 0;
-}
 .packs-nav button:first-child { border-top-left-radius: 0.75em; }
 .packs-nav button:last-child { border-top-right-radius: 0.75em; }
