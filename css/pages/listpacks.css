@@ -1,9 +1,8 @@
-/* ===== Packs tab strip (match HDL exactly) ===== */
+/* ===== Packs tab strip (in-grid, HDL look) ===== */
 .packs-nav {
     z-index: 10;
-    position: absolute;
-    top: 60px; /* height of main nav */
-    left: 0;
+    grid-column: 1 / -1;
+    grid-row: 1;
 
     background-color: var(--color-background-hover);
     height: 50px;
@@ -11,8 +10,6 @@
 
     overflow-x: auto;
     overflow-y: hidden;
-
-    grid-column: 1 / -1;
 }
 
 .packs-nav > div {
@@ -33,8 +30,7 @@
     flex-shrink: 0;
     height: 100%;
     background-size: 100% 100% !important;
-
-    margin: 0;         /* touching */
+    margin: 0; /* touching */
 }
 
 .packs-nav button p {
@@ -43,32 +39,14 @@
     margin: 0;
 }
 
-/* Optional: only round the strip ends (comment out if you want HDL exact per-tab rounding) */
-/*
-.packs-nav button:first-child { border-top-left-radius: 0.75em; }
-.packs-nav button:last-child  { border-top-right-radius: 0.75em; }
-*/
-
-
-/* ===== 3-column page layout (below tabs) ===== */
-/* Key ideas:
-   - pack-list is a grid with a fixed height so columns can scroll
-   - columns need min-height: 0 so overflow-y works in grid
-*/
+/* ===== 3-column layout with tabs as row 1 ===== */
 .pack-list {
     display: grid;
     grid-template-columns: 380px minmax(0, 1fr) 380px;
-    grid-template-rows: auto 1fr;
-
-    height: calc(100vh - 60px); /* height under top nav */
+    grid-template-rows: 50px 1fr; /* tabs row + content row */
+    height: calc(100vh - 60px);   /* keep if your main nav is ~60px tall */
     background: var(--color-background);
-}
-
-/* Push content below the absolute 50px tab bar */
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
-    margin-top: 50px; /* same as .packs-nav height */
+    min-height: 0;
 }
 
 /* Place the 3 main sections */
@@ -77,22 +55,22 @@
     grid-row: 2;
     overflow-y: auto;
     padding-inline: 1rem;
-    min-height: 0; /* IMPORTANT */
+    min-height: 0;
 }
 
 .pack-list .level-container {
     grid-column: 2;
     grid-row: 2;
     overflow-y: auto;
-    min-height: 0; /* IMPORTANT */
+    min-height: 0;
 }
 
 .pack-list .meta-container {
     grid-column: 3;
     grid-row: 2;
-    overflow-y: hidden;
+    overflow-y: auto;   /* change to hidden if you truly never want scroll */
     padding-right: 2rem;
-    min-height: 0; /* IMPORTANT */
+    min-height: 0;
 }
 
 /* If you hate the “empty scrollbar” on the right column, use this instead: */
