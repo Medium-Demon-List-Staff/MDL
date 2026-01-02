@@ -55,7 +55,7 @@
     align-items: stretch;
 
     /* Make the page behave like a full viewport section */
-    height: calc(100vh - 60px);     /* 60px ≈ your purple nav height; adjust if needed */
+    height: calc(100vh - 64px);     /* 60px ≈ your purple nav height; adjust if needed */
     background: var(--color-background);
     overflow: hidden;               /* prevents the big page scroll/white area */
 }
