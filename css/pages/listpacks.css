@@ -39,40 +39,6 @@
     margin: 0;
 }
 
-/* ===== 3-column layout with tabs as row 1 ===== */
-.pack-list {
-    display: grid;
-    grid-template-columns: 380px minmax(0, 1fr) 380px;
-    grid-template-rows: 50px 1fr; /* tabs row + content row */
-    height: calc(100vh - 60px);   /* keep if your main nav is ~60px tall */
-    background: var(--color-background);
-    min-height: 0;
-}
-
-/* Place the 3 main sections */
-.pack-list .list-container {
-    grid-column: 1;
-    grid-row: 2;
-    overflow-y: auto;
-    padding-inline: 1rem;
-    min-height: 0;
-}
-
-.pack-list .level-container {
-    grid-column: 2;
-    grid-row: 2;
-    overflow-y: auto;
-    min-height: 0;
-}
-
-.pack-list .meta-container {
-    grid-column: 3;
-    grid-row: 2;
-    overflow-y: auto;   /* change to hidden if you truly never want scroll */
-    padding-right: 2rem;
-    min-height: 0;
-}
-
 /* If you hate the “empty scrollbar” on the right column, use this instead: */
 /* .pack-list .meta-container { overflow-y: hidden; } */
 
@@ -207,5 +173,75 @@
     background-color: #5d5d5d;
     padding: 7px;
 }
+
+/* ===== FORCE layout (debug override) ===== */
+.pack-list {
+  display: grid !important;
+  grid-template-columns: 460px minmax(0, 1fr) 460px !important; /* wider side columns */
+  grid-template-rows: 50px 1fr !important;
+
+  height: calc(100vh - 60px) !important; /* adjust 60px if your top nav differs */
+  min-height: 0 !important;
+
+  overflow: hidden !important; /* important so the columns scroll, not the page */
+  background: var(--color-background) !important;
+}
+
+/* Tabs row */
+.packs-nav {
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+}
+
+/* Columns must be allowed to shrink in grid or scroll breaks */
+.pack-list .list-container,
+.pack-list .level-container,
+.pack-list .meta-container {
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+/* Put them in the content row */
+.pack-list .list-container { grid-column: 1 !important; grid-row: 2 !important; }
+.pack-list .level-container { grid-column: 2 !important; grid-row: 2 !important; }
+.pack-list .meta-container  { grid-column: 3 !important; grid-row: 2 !important; }
+
+/* If you want NO scrollbar on the right column: */
+.pack-list .meta-container { overflow-y: hidden !important; }
+
+/* ===== FORCE layout (debug override) ===== */
+.pack-list {
+  display: grid !important;
+  grid-template-columns: 460px minmax(0, 1fr) 460px !important; /* wider side columns */
+  grid-template-rows: 50px 1fr !important;
+
+  height: calc(100vh - 60px) !important; /* adjust 60px if your top nav differs */
+  min-height: 0 !important;
+
+  overflow: hidden !important; /* important so the columns scroll, not the page */
+  background: var(--color-background) !important;
+}
+
+/* Tabs row */
+.packs-nav {
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+}
+
+/* Columns must be allowed to shrink in grid or scroll breaks */
+.pack-list .list-container,
+.pack-list .level-container,
+.pack-list .meta-container {
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+/* Put them in the content row */
+.pack-list .list-container { grid-column: 1 !important; grid-row: 2 !important; }
+.pack-list .level-container { grid-column: 2 !important; grid-row: 2 !important; }
+.pack-list .meta-container  { grid-column: 3 !important; grid-row: 2 !important; }
+
+/* If you want NO scrollbar on the right column: */
+.pack-list .meta-container { overflow-y: hidden !important; }
 
 .packs-nav { outline: 6px solid hotpink !important; }
