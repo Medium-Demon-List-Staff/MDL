@@ -123,23 +123,21 @@ const res = Object.entries(scoreMap).map(([user, scores]) => {
 /* ================= PACK COMPLETION ================= */
 
 res.forEach(player => {
-    const completedLevels = player.completed.map(l => l.level);
+    const completed = player.completed.map(l => l.level);
 
-    const packMap = {};
-
-    completedLevels.forEach(levelName => {
-        list.forEach(([lvl]) => {
-            if (!lvl || lvl.name !== levelName) return;
-
-            lvl.packs?.forEach(pack => {
-                packMap[pack.name] ??= { ...pack, count: 0 };
-                packMap[pack.name].count++;
-            });
-        });
-    });
-
-    player.packs = Object.values(packMap).filter(p => p.count >= 3);
+    player.packs = list
+        .flatMap(([lvl]) => lvl?.packs || [])
+        .filter((pack, i, arr) =>
+            completed.filter(name =>
+                list.some(([l]) =>
+                    l?.name === name &&
+                    l.packs?.some(p => p.name === pack.name)
+                )
+            ).length >= 3 &&
+            arr.findIndex(p => p.name === pack.name) === i
+        );
 });
+
 
 /* =================================================== */
 
