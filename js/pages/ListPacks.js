@@ -15,7 +15,13 @@ export default {
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="pack-list">
+        <main v-else class="pack-list" style="
+            display:grid;
+            grid-template-columns: 320px 1fr 360px;
+            grid-template-rows: auto 1fr;
+            gap: 16px;
+            align-items:start;
+        ">
             <div style="padding:12px; margin:12px; border:1px solid #999;">
                 Packs page loaded. loading={{ loading }}, packs={{ packs.length }}, levels={{ selectedPackLevels.length }}, errors={{ errors.length }}
             </div>
@@ -27,7 +33,7 @@ export default {
         <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px;">
             No packs available.
         </div>
-            <div class="packs-nav">
+            <div class="packs-nav" style="grid-column:1 / -1;">
                 <div style="display:flex; flex-wrap:wrap; gap:10px;">
                     <button
                         @click="switchLevels(i)"
@@ -46,7 +52,7 @@ export default {
                     </button>
                 </div>
             </div>
-            <div class="list-container">
+            <div class="list-container" style="grid-column:1; grid-row:2;">
                 <table class="list" v-if="selectedPackLevels && selectedPackLevels.length">
                     <tr v-for="(level, i) in selectedPackLevels">
                         <td class="rank">
@@ -62,7 +68,7 @@ export default {
                     </tr>
                 </table>
             </div>
-            <div class="level-container">
+            <div class="level-container" style="grid-column:2; grid-row:2;">
                 <div
                     class="level"
                     v-if="selectedPackLevels
@@ -141,7 +147,7 @@ export default {
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
                 </div>
                 </div>
-            <div class="meta-container">
+            <div class="meta-container" style="grid-column:3; grid-row:2;">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
