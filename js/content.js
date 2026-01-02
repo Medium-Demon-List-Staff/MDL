@@ -184,15 +184,12 @@ export async function fetchPackLevels(packName) {
         const pack = packs.find(p => p.name === packName);
         if (!pack) return null;
 
-        // Fetch each level JSON listed in pack.levels
         return await Promise.all(
             pack.levels.map(async (path, idx) => {
                 try {
                     const levelRes = await fetch(`${dir}/${path}.json`);
                     const level = await levelRes.json();
 
-                    // Match the shape your ListPacks template expects:
-                    // selectedPackLevels[i][0].level.<field>
                     return [{
                         level: {
                             ...level,
