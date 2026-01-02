@@ -192,41 +192,9 @@
   grid-column: 1 / -1 !important;
   grid-row: 1 !important;
 }
-
-/* Columns must be allowed to shrink in grid or scroll breaks */
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
-  min-height: 0 !important;
-  overflow-y: auto !important;
-}
-
-/* Put them in the content row */
-.pack-list .list-container { grid-column: 1 !important; grid-row: 2 !important; }
-.pack-list .level-container { grid-column: 2 !important; grid-row: 2 !important; }
-.pack-list .meta-container  { grid-column: 3 !important; grid-row: 2 !important; }
-
-/* If you want NO scrollbar on the right column: */
-.pack-list .meta-container { overflow-y: hidden !important; }
-
-/* ===== FORCE layout (debug override) ===== */
-.pack-list {
-  display: grid !important;
-  grid-template-columns: 460px minmax(0, 1fr) 460px !important; /* wider side columns */
-  grid-template-rows: 50px 1fr !important;
-
-  height: calc(100vh - 60px) !important; /* adjust 60px if your top nav differs */
-  min-height: 0 !important;
-
-  overflow: hidden !important; /* important so the columns scroll, not the page */
-  background: var(--color-background) !important;
-}
-
-/* Tabs row */
-.packs-nav {
-  grid-column: 1 / -1 !important;
-  grid-row: 1 !important;
-}
+.packs-nav button { margin: 0 !important; }
+.packs-nav button p { margin: 0 !important; }
+.packs-nav > div { gap: 0 !important; }
 
 /* Columns must be allowed to shrink in grid or scroll breaks */
 .pack-list .list-container,
