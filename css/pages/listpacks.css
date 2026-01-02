@@ -1,20 +1,17 @@
 .packs-nav {
     z-index: 1;
-    position: absolute;
+    position: relative; /* was absolute */
     background-color: var(--color-background-hover);
     height: 50px;
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
+    grid-column: 1 / -1; /* span all columns when grid is enabled */
 }
 
 .packs-nav button {
-    border-top-right-radius: 0.75em;
-    border-top-left-radius: 0.75em;
     border: none;
-    padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 10px 25px;
     text-align: start;
     word-break: normal;
     overflow-wrap: anywhere;
@@ -22,11 +19,24 @@
     flex-shrink: 0;
     height: 100%;
     background-size: 100% 100% !important;
+
+    /* Touching tabs */
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Round only the ends of the tab strip */
+.packs-nav button:first-child {
+    border-top-left-radius: 0.75em;
+}
+.packs-nav button:last-child {
+    border-top-right-radius: 0.75em;
 }
 
 .packs-nav button p {
-    mix-blend-mode: difference;
-    color: rgb(128, 128, 128);
+    mix-blend-mode: normal;
+    color: #111;
+    margin: 0;
 }
 
 .packs-nav > div {
@@ -34,10 +44,32 @@
     display: flex;
 }
 
+/* 3-column layout like HDL */
+.pack-list {
+    display: grid;
+    grid-template-columns: 320px 1fr 360px;
+    grid-template-rows: 50px 1fr;
+    align-items: start;
+}
+
+/* Place the three main sections into columns */
+.pack-list .list-container {
+    grid-column: 1;
+    grid-row: 2;
+}
+.pack-list .level-container {
+    grid-column: 2;
+    grid-row: 2;
+}
+.pack-list .meta-container {
+    grid-column: 3;
+    grid-row: 2;
+}
+
 .pack-list .list-container,
 .pack-list .level-container,
 .pack-list .meta-container {
-    margin-top: 50px;
+    margin-top: 0;
     padding-block: 2rem;
 }
 .pack-list .list-container {
