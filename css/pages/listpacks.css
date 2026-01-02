@@ -1,15 +1,18 @@
 /* ===== Packs tab strip (match HDL exactly) ===== */
 .packs-nav {
-    z-index: 5;
+    z-index: 10;
     position: absolute;
-    top: 0;
+    top: 60px; /* height of main nav */
     left: 0;
 
     background-color: var(--color-background-hover);
     height: 50px;
+    width: 100%;
+
     overflow-x: auto;
     overflow-y: hidden;
-    width: 100%;
+
+    grid-column: 1 / -1;
 }
 
 .packs-nav > div {
@@ -32,7 +35,6 @@
     background-size: 100% 100% !important;
 
     margin: 0;         /* touching */
-    border-radius: 0;  /* override any global button rounding */
 }
 
 .packs-nav button p {
@@ -62,25 +64,35 @@
     background: var(--color-background);
 }
 
+/* Push content below the absolute 50px tab bar */
+.pack-list .list-container,
+.pack-list .level-container,
+.pack-list .meta-container {
+    margin-top: 50px; /* same as .packs-nav height */
+}
+
 /* Place the 3 main sections */
 .pack-list .list-container {
     grid-column: 1;
     grid-row: 2;
     overflow-y: auto;
     padding-inline: 1rem;
+    min-height: 0; /* IMPORTANT */
 }
 
 .pack-list .level-container {
     grid-column: 2;
     grid-row: 2;
     overflow-y: auto;
+    min-height: 0; /* IMPORTANT */
 }
 
 .pack-list .meta-container {
     grid-column: 3;
     grid-row: 2;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-right: 2rem;
+    min-height: 0; /* IMPORTANT */
 }
 
 /* If you hate the “empty scrollbar” on the right column, use this instead: */
