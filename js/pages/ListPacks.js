@@ -16,6 +16,13 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="pack-list">
+        <div v-if="errors.length" class="surface" style="padding:12px; margin:12px;">
+            <p class="error" v-for="e in errors">{{ e }}</p>
+        </div>
+
+        <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px;">
+            No packs available.
+        </div>
             <div class="packs-nav">
                 <div style="display:flex; flex-wrap:wrap; gap:10px;">
                     <button @click="switchLevels(i)" v-for="(pack, i) in packs" :style="{background: pack.colour}" class="type-label-lg">
@@ -40,7 +47,11 @@ export default {
                 </table>
             </div>
             <div class="level-container">
-                <div class="level" v-if="selectedPackLevels[selectedLevel] && selectedPackLevels[selectedLevel][0]">
+                div class="level"
+                    v-if="selectedPackLevels
+                            && selectedPackLevels[selectedLevel]
+                            && selectedPackLevels[selectedLevel][0]
+                            && selectedPackLevels[selectedLevel][0].level">
                     <h1>{{ selectedPackLevels[selectedLevel][0].level.name }}</h1>
                     <LevelAuthors :author="selectedPackLevels[selectedLevel][0].level.author" :creators="selectedPackLevels[selectedLevel][0].level.creators" :verifier="selectedPackLevels[selectedLevel][0].level.verifier"></LevelAuthors>
                     <div style="display:flex">
@@ -58,7 +69,6 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 150"><strong>{{ selectedPackLevels[selectedLevel][0].level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else>100% or better to qualify</p>
                     <table class="records">
                         <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
@@ -114,20 +124,29 @@ export default {
         },
     },
     async mounted() {
-        this.packs = await fetchPacks();
+  try {
+    this.packs = await fetchPacks();
 
-        if (!this.packs || this.packs.length === 0) {
-            this.errors.push("No packs could be loaded.");
-            this.loading = false;
-            return;
-        }
+    if (!this.packs || this.packs.length === 0) {
+      this.errors.push("No packs could be loaded (fetchPacks returned empty).");
+      return;
+    }
 
-        this.selectedPackLevels = await fetchPackLevels(
-            this.packs[this.selected].name
-        );
+    const levels = await fetchPackLevels(this.packs[this.selected].name);
 
-        this.loading = false;
-    },
+    if (!levels) {
+      this.errors.push("Pack levels could not be loaded (fetchPackLevels returned null).");
+      return;
+    }
+
+    this.selectedPackLevels = levels;
+  } catch (e) {
+    this.errors.push(`Packs page crashed: ${e?.message || e}`);
+    console.error(e);
+  } finally {
+    this.loading = false;
+  }
+},
 
     methods: {
         async switchLevels(i) {
