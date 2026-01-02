@@ -96,21 +96,21 @@ export default {
                     </p>
 
                     <table class="records">
-                    <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
-                        <td class="percent"><p>{{ record.percent }}%</p></td>
-                        <td class="user">
-                        <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
-                        </td>
-                        <td class="mobile">
-                        <img
-                            v-if="record.mobile"
-                            :src="`/assets/phone-landscape${store && store.dark ? '-dark' : ''}.svg`"
-                            alt="Mobile"
-                        >
-                        </td>
-                        <td class="hz"><p>{{ record.hz }}Hz</p></td>
-                    </tr>
-                    </table>
+                        <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
+                            <td class="percent"><p>{{ record.percent }}%</p></td>
+                            <td class="user">
+                            <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                            </td>
+                            <td class="mobile">
+                            <img
+                                v-if="record.mobile"
+                                :src="'/assets/phone-landscape' + (store && store.dark ? '-dark' : '') + '.svg'"
+                                alt="Mobile"
+                                />
+                            </td>
+                            <td class="hz"><p>{{ record.hz }}Hz</p></td>
+                        </tr>
+                        </table>
                 </div>
 
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
@@ -167,7 +167,7 @@ export default {
 
     this.selectedPackLevels = levels;
   } catch (e) {
-    this.errors.push(`Packs page crashed: ${e?.message || e}`);
+    this.errors.push(`Packs page crashed: ${(e && e.message) ? e.message : e}`);
     console.error(e);
   } finally {
     this.loading = false;
