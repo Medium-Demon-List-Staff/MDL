@@ -2,11 +2,11 @@
     {
         "name": "Top 5 Pack",
         "levels": [
+            "vaporize",
+            "rainbow_force_z",
             "chaoz_overdrive",
             "happy_days",
-            "vaporize",
-            "ivashka",
-            "rainbow_force_z"
+            "ivashka"
         ],
         "colour": "#000000"
     },
@@ -27,7 +27,6 @@
             "lochness",
             "megalovania_gdjose",  
             "nautilus",
-            "on_pointe_rm",
             "poison",
             "que",
             "rainbow_force_z",
@@ -35,7 +34,6 @@
             "techno_punk",
             "uffas",
             "vaporize",
-            "weirdmaggedon",
             "x_force",
             "zo"
         ],
