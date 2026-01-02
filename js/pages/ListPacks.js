@@ -125,7 +125,7 @@ export default {
     );
 
     this.loading = false;
-}
+},
 
         // Error handling todo: make error handling
         // if (!this.packs) {
@@ -143,7 +143,8 @@ export default {
         // }
 
         // Hide loading spinner
-    }
+    },
+    
     methods: {
         async switchLevels(i) {
             this.loadingPack = true;
@@ -159,4 +160,4 @@ export default {
         score,
         embed,
         getFontColour
-}
+    }
