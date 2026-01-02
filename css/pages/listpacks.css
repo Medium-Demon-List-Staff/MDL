@@ -1,9 +1,10 @@
+/* ===== Packs tab strip (match HDL exactly) ===== */
 .packs-nav {
-    grid-column: 1 / -1;
-    grid-row: 1;
-
     z-index: 5;
-    position: relative; /* no sticky */
+    position: absolute;
+    top: 0;
+    left: 0;
+
     background-color: var(--color-background-hover);
     height: 50px;
     overflow-x: auto;
@@ -11,7 +12,15 @@
     width: 100%;
 }
 
+.packs-nav > div {
+    height: 100%;
+    display: flex;
+    gap: 0; /* touching */
+}
+
 .packs-nav button {
+    border-top-right-radius: 0.75em;
+    border-top-left-radius: 0.75em;
     border: none;
     padding: 10px 25px;
     text-align: start;
@@ -22,80 +31,71 @@
     height: 100%;
     background-size: 100% 100% !important;
 
-    /* Touching tabs */
-    margin: 0;
-    border-radius: 0;
-}
-
-/* Round only the ends of the tab strip */
-.packs-nav button:first-child {
-    border-top-left-radius: 0.75em;
-}
-.packs-nav button:last-child {
-    border-top-right-radius: 0.75em;
+    margin: 0;         /* touching */
+    border-radius: 0;  /* override any global button rounding */
 }
 
 .packs-nav button p {
-    mix-blend-mode: normal;
-    color: #111;
+    mix-blend-mode: difference;
+    color: rgb(128, 128, 128);
     margin: 0;
 }
 
-.packs-nav > div {
-    height: 100%;
-    display: flex;
-}
+/* Optional: only round the strip ends (comment out if you want HDL exact per-tab rounding) */
+/*
+.packs-nav button:first-child { border-top-left-radius: 0.75em; }
+.packs-nav button:last-child  { border-top-right-radius: 0.75em; }
+*/
 
-/* 3-column layout like HDL */
+
+/* ===== 3-column page layout (below tabs) ===== */
+/* Key ideas:
+   - pack-list is a grid with a fixed height so columns can scroll
+   - columns need min-height: 0 so overflow-y works in grid
+*/
 .pack-list {
+    position: relative; /* anchor the absolute .packs-nav */
     display: grid;
-    grid-template-columns: 320px 1fr 360px;
-    grid-template-rows: 50px 1fr;   /* row 1 = tab bar, row 2 = content */
-    gap: 0;                         /* HDL has tight separators */
-    align-items: stretch;
 
-    /* Make the page behave like a full viewport section */
-    height: calc(100vh - 64px);     /* 60px ≈ your purple nav height; adjust if needed */
+    /* Wider side columns like HDL */
+    grid-template-columns: 380px 1fr 420px;
+
+    /* Push content below the absolute tabs */
+    padding-top: 50px;
+
+    /* Constrain height so internal scrolling works */
+    height: calc(100vh - 60px); /* adjust 60px to your top navbar height */
     background: var(--color-background);
-    overflow: hidden;               /* prevents the big page scroll/white area */
+    overflow: hidden;
 }
 
-/* Place the three main sections into columns */
+/* Place the 3 main sections */
 .pack-list .list-container {
-    grid-column: 1;
-    grid-row: 2;
+    padding-inline: 1rem;
+    padding-block: 2rem;
     overflow-y: auto;
-    padding: 1rem;
-    border-right: 4px solid rgba(255,255,255,0.08); /* subtle divider like HDL */
+    min-height: 0;     /* IMPORTANT: allows scrolling */
 }
 
 .pack-list .level-container {
-    grid-column: 2;
-    grid-row: 2;
-    overflow-y: auto;
-    padding: 2rem;
-    border-right: 4px solid rgba(255,255,255,0.08);
-}
-
-.pack-list .meta-container {
-    grid-column: 3;
-    grid-row: 2;
-    overflow-y: auto;
-    padding: 2rem;
-}
-
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
-    margin-top: 0;
-    padding-block: 0;
-}
-.pack-list .list-container {
-    padding-inline: 1rem;
-}
-.pack-list .meta-container {
+    padding-block: 2rem;
     padding-right: 2rem;
+    overflow-y: auto;
+    min-height: 0;     /* IMPORTANT */
 }
+
+.pack-list .meta-container {
+    padding-block: 2rem;
+    padding-right: 2rem;
+    overflow-y: auto;  /* if you truly never want scroll here, set to hidden */
+    min-height: 0;     /* IMPORTANT */
+}
+
+/* If you hate the “empty scrollbar” on the right column, use this instead: */
+/* .pack-list .meta-container { overflow-y: hidden; } */
+
+
+/* ===== Existing HDL styles you already had (kept) ===== */
 
 .pack-list .list {
     table-layout: auto;
@@ -132,11 +132,11 @@
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }
+
 .pack-list .level-container .level {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-right: 2rem;
     max-width: 48rem;
 }
 .pack-list .level-container .level .level-authors {
@@ -178,10 +178,12 @@
 .pack-list .level-container .level .records .hz {
     text-align: end;
 }
+
 .pack-list .meta-container .og a:hover,
 .pack-list .level-container .level .records a:hover {
     text-decoration: underline;
 }
+
 .pack-list .meta {
     display: flex;
     flex-direction: column;
@@ -214,6 +216,7 @@
 .pack-list .meta .editors li a:hover {
     text-decoration: underline;
 }
+
 .tag {
     font-family: "Lexend Deca", sans-serif;
     display: block;
@@ -222,6 +225,3 @@
     background-color: #5d5d5d;
     padding: 7px;
 }
-
-.packs-nav button:first-child { border-top-left-radius: 0.75em; }
-.packs-nav button:last-child { border-top-right-radius: 0.75em; }
