@@ -212,9 +212,13 @@
 }
 
 .packs-nav > div {
-  gap: 0;            /* ensure no gap */
+    height: 100%;
+    display: flex;
+    gap: 0;
 }
-
 .packs-nav button {
-  margin: 0;         /* ensure no margins */
+    margin: 0;
+    border-radius: 0;
 }
+.packs-nav button:first-child { border-top-left-radius: 0.75em; }
+.packs-nav button:last-child { border-top-right-radius: 0.75em; }
