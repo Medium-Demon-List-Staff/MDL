@@ -54,41 +54,33 @@
    - columns need min-height: 0 so overflow-y works in grid
 */
 .pack-list {
-    position: relative; /* anchor the absolute .packs-nav */
     display: grid;
+    grid-template-columns: 380px minmax(0, 1fr) 380px;
+    grid-template-rows: auto 1fr;
 
-    /* Wider side columns like HDL */
-    grid-template-columns: 380px 1fr 420px;
-
-    /* Push content below the absolute tabs */
-    padding-top: 50px;
-
-    /* Constrain height so internal scrolling works */
-    height: calc(100vh - 60px); /* adjust 60px to your top navbar height */
+    height: calc(100vh - 60px); /* height under top nav */
     background: var(--color-background);
-    overflow: hidden;
 }
 
 /* Place the 3 main sections */
 .pack-list .list-container {
-    padding-inline: 1rem;
-    padding-block: 2rem;
+    grid-column: 1;
+    grid-row: 2;
     overflow-y: auto;
-    min-height: 0;     /* IMPORTANT: allows scrolling */
+    padding-inline: 1rem;
 }
 
 .pack-list .level-container {
-    padding-block: 2rem;
-    padding-right: 2rem;
+    grid-column: 2;
+    grid-row: 2;
     overflow-y: auto;
-    min-height: 0;     /* IMPORTANT */
 }
 
 .pack-list .meta-container {
-    padding-block: 2rem;
+    grid-column: 3;
+    grid-row: 2;
+    overflow-y: auto;
     padding-right: 2rem;
-    overflow-y: auto;  /* if you truly never want scroll here, set to hidden */
-    min-height: 0;     /* IMPORTANT */
 }
 
 /* If you hate the “empty scrollbar” on the right column, use this instead: */
