@@ -169,7 +169,7 @@
     {
         "name": "quiet pack 1",
         "levels": [
-            "simulation swarm",
+            "simulation_swarm",
             "high_noon",
             "escuro",
             "acrylic_canals"

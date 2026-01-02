@@ -93,6 +93,7 @@ export async function fetchLeaderboard() {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
+                    levelPath: level.path,  // (file id)
                     score: score(rank + 1, 100, level.percentToQualify),
                     link: record.link,
                 });
@@ -126,21 +127,37 @@ const res = Object.entries(scoreMap).map(([user, scores]) => {
 
 /* ================= PACK COMPLETION ================= */
 
-res.forEach(player => {
-    const completed = player.completed.map(l => l.level);
+const packs = await fetchPacks(); // uses _packlist.json
 
-    player.packs = (list ?? [])
-        .flatMap(([lvl]) => lvl?.packs || [])
-        .filter((pack, i, arr) =>
-            completed.filter(name =>
-                list.some(([l]) =>
-                    l?.name === name &&
-                    l.packs?.some(p => p.name === pack.name)
-                )
-            ).length >= 3 &&
-            arr.findIndex(p => p.name === pack.name) === i
+if (packs) {
+    // Build map: levelId -> [packObjects...]
+    const levelToPacks = {};
+    packs.forEach(pack => {
+        (pack.levels ?? []).forEach(levelId => {
+            (levelToPacks[levelId] ??= []).push(pack);
+        });
+    });
+
+    res.forEach(player => {
+        // Use file IDs only (matches _packlist.json)
+        const completedIds = new Set(
+            player.completed.map(l => l.levelPath).filter(Boolean)
         );
-});
+
+        // Count how many completed levels per pack
+        const counts = new Map();
+        completedIds.forEach(levelId => {
+            (levelToPacks[levelId] ?? []).forEach(pack => {
+                counts.set(pack.name, (counts.get(pack.name) ?? 0) + 1);
+            });
+        });
+
+        // Keep your ">= 3" rule
+        player.packs = packs.filter(pack => (counts.get(pack.name) ?? 0) >= 3);
+    });
+} else {
+    res.forEach(player => (player.packs = []));
+}
 
 
 /* =================================================== */
@@ -158,7 +175,46 @@ export async function fetchPacks() {
     }
 }
 
+export async function fetchPacks() {
+    try {
+        const res = await fetch(`${dir}/_packlist.json`);
+        return await res.json(); // array of {name, levels, colour}
+    } catch {
+        return null;
+    }
+}
+
 export async function fetchPackLevels(packName) {
-    const res = await fetch(`/data/packs/${packName}.json`);
-    return await res.json();
+    try {
+        const packs = await fetchPacks();
+        if (!packs) return null;
+
+        const pack = packs.find(p => p.name === packName);
+        if (!pack) return null;
+
+        // Fetch each level JSON listed in pack.levels
+        return await Promise.all(
+            pack.levels.map(async (path, idx) => {
+                try {
+                    const levelRes = await fetch(`${dir}/${path}.json`);
+                    const level = await levelRes.json();
+
+                    // Match the shape your ListPacks template expects:
+                    // selectedPackLevels[i][0].level.<field>
+                    return [{
+                        level: {
+                            ...level,
+                            path,
+                            records: (level.records ?? []).sort((a, b) => b.percent - a.percent),
+                        }
+                    }, null];
+                } catch {
+                    console.error(`Failed to load pack level #${idx + 1}: ${path}.json`);
+                    return [null, path];
+                }
+            })
+        );
+    } catch {
+        return null;
+    }
 }
