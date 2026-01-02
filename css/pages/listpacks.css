@@ -1,12 +1,14 @@
 .packs-nav {
-    z-index: 1;
-    position: relative; /* was absolute */
+    z-index: 5;
+    position: sticky;      /* key: stick like HDL */
+    top: 0;                /* sticks to top of the page area */
     background-color: var(--color-background-hover);
     height: 50px;
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-    grid-column: 1 / -1; /* span all columns when grid is enabled */
+
+    grid-column: 1 / -1;   /* span all columns */
 }
 
 .packs-nav button {
@@ -48,8 +50,12 @@
 .pack-list {
     display: grid;
     grid-template-columns: 320px 1fr 360px;
-    grid-template-rows: 50px 1fr;
-    align-items: start;
+    gap: 16px;
+
+    /* fixes the big white area */
+    min-height: calc(100vh - 60px); /* adjust if your top nav height differs */
+    background: var(--color-background);
+    align-content: start;
 }
 
 /* Place the three main sections into columns */

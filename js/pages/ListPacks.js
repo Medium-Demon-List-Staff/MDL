@@ -22,9 +22,6 @@ export default {
             gap: 16px;
             align-items:start;
         ">
-            <div style="padding:12px; margin:12px; border:1px solid #999;">
-                Packs page loaded. loading={{ loading }}, packs={{ packs.length }}, levels={{ selectedPackLevels.length }}, errors={{ errors.length }}
-            </div>
 
         <div v-if="errors.length" class="surface" style="padding:12px; margin:12px;">
             <p class="error" v-for="e in errors">{{ e }}</p>
