@@ -29,7 +29,19 @@ export default {
         </div>
             <div class="packs-nav">
                 <div style="display:flex; flex-wrap:wrap; gap:10px;">
-                    <button @click="switchLevels(i)" v-for="(pack, i) in packs" :style="{background: pack.colour}" class="type-label-lg">
+                    <button
+                        @click="switchLevels(i)"
+                        v-for="(pack, i) in packs"
+                        :style="{
+                            background: pack.colour,
+                            color: getFontColour(pack.colour),
+                            borderRadius: '0',
+                            margin: '0',
+                            flex: '0 0 auto',
+                            padding: '10px 16px'
+                        }"
+                        class="type-label-lg"
+                    >
                         <p>{{pack.name}}</p>
                     </button>
                 </div>
@@ -66,7 +78,15 @@ export default {
                     :verifier="selectedPackLevels[selectedLevel][0].level.verifier"
                     ></LevelAuthors>
 
-                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <div style="
+                        display:flex;
+                        flex-wrap:nowrap;
+                        overflow-x:auto;
+                        overflow-y:hidden;
+                        white-space:nowrap;
+                        gap:0;
+                        width:100%;
+                    ">
                     <div
                         v-for="pack in selectedPackLevels[selectedLevel][0].level.packs"
                         class="tag"
