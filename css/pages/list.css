@@ -73,6 +73,16 @@
     align-items: center;
     gap: 1rem;
 }
+.page-list .level-container .level .packs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+}
+.page-list .level-container .level .packs .tag {
+    display: flex;
+    flex-shrink: 0;
+    background-size: 100% 100% !important;
+}
 .page-list .level-container .level .records {
     table-layout: fixed;
 }
@@ -127,21 +137,11 @@
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
 }
-
-/* Shitty */
-
-.shitty .page-list .list .level button {
-    background-color: transparent;
-    padding: 1rem 0;
-}
-
-
-.shitty .page-list .list .level button:hover {
-    background-color: #eee;
-    color: black !important;
-}
-
-.shitty .page-list .list .level.active button {
-    background-color: transparent;
-    color: orange;
+.tag p {
+    font-family: "Lexend Deca", sans-serif;
+    display:block;
+    border-radius: 14px;
+    padding: 7px;
+    mix-blend-mode: difference;
+    color: rgb(128, 128, 128);
 }
