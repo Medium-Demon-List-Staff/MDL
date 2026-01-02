@@ -17,7 +17,7 @@ export default {
         </main>
         <main v-else class="pack-list">
             <div class="packs-nav">
-                <div>
+                <div style="display:flex; flex-wrap:wrap; gap:10px;">
                     <button @click="switchLevels(i)" v-for="(pack, i) in packs" :style="{background: pack.colour}" class="type-label-lg">
                         <p>{{pack.name}}</p>
                     </button>
@@ -29,16 +29,18 @@ export default {
                         <td class="rank">
                             <p class="type-label-lg">#{{ i + 1 }}</p>
                         </td>
-                        <td class="level" :class="{ 'active': selectedLevel == i, 'error': !level }">
+                        <td class="level" :class="{ 'active': selectedLevel == i, 'error': !level || !level[0] }">
                             <button :style="selectedLevel === i && pack ? { background: pack.colour } : {}" @click="selectedLevel = i">
-                                <span class="type-label-lg">{{ level[0].level.name || \`Error (\.json)\` }}</span>
+                                <span class="type-label-lg">
+                                    {{ (level && level[0] && level[0].level && level[0].level.name) ? level[0].level.name : ('Error (' + (level && level[1] ? level[1] : '?') + '.json)') }}
+                                </span>
                             </button>
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="level-container">
-                <div class="level" v-if="selectedPackLevels[selectedLevel]">
+                <div class="level" v-if="selectedPackLevels[selectedLevel] && selectedPackLevels[selectedLevel][0]">
                     <h1>{{ selectedPackLevels[selectedLevel][0].level.name }}</h1>
                     <LevelAuthors :author="selectedPackLevels[selectedLevel][0].level.author" :creators="selectedPackLevels[selectedLevel][0].level.creators" :verifier="selectedPackLevels[selectedLevel][0].level.verifier"></LevelAuthors>
                     <div style="display:flex">
