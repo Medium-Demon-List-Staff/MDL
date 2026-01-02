@@ -1,8 +1,8 @@
-import { fetchList } from '../content.js';
-import { getThumbnailFromId, getYoutubeIdFromUrl, shuffle } from '../util.js';
+import { fetchList } from "../content.js";
+import { getThumbnailFromId, getYoutubeIdFromUrl, shuffle } from "../util.js";
 
-import Spinner from '../components/Spinner.js';
-import Btn from '../components/Btn.js';
+import Spinner from "../components/Spinner.js";
+import Btn from "../components/Btn.js";
 
 export default {
     components: { Spinner, Btn },
@@ -11,7 +11,7 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-roulette">
-            <div class="sidebar">
+            <div class="sidebar surface">
                 <p class="type-label-md" style="color: #aaa">
                     Shameless copy of the Extreme Demon Roulette by <a href="https://matcool.github.io/extreme-demon-roulette/" target="_blank">matcool</a>.
                 </p>
@@ -37,7 +37,7 @@ export default {
                     </div>
                 </form>
             </div>
-            <section class="levels-container">
+            <section class="levels-container surface">
                 <div class="levels">
                     <template v-if="levels.length > 0">
                         <!-- Completed Levels -->
@@ -113,14 +113,14 @@ export default {
     }),
     mounted() {
         // Create File Input
-        this.fileInput = document.createElement('input');
-        this.fileInput.type = 'file';
+        this.fileInput = document.createElement("input");
+        this.fileInput.type = "file";
         this.fileInput.multiple = false;
-        this.fileInput.accept = '.json';
-        this.fileInput.addEventListener('change', this.onImportUpload);
+        this.fileInput.accept = ".json";
+        this.fileInput.addEventListener("change", this.onImportUpload);
 
         // Load progress from local storage
-        const roulette = JSON.parse(localStorage.getItem('roulette'));
+        const roulette = JSON.parse(localStorage.getItem("roulette"));
 
         if (!roulette) {
             return;
@@ -159,7 +159,7 @@ export default {
         getYoutubeIdFromUrl,
         async onStart() {
             if (this.isActive) {
-                this.showToast('Give up before starting a new roulette.');
+                this.showToast("Give up before starting a new roulette.");
                 return;
             }
 
@@ -174,7 +174,7 @@ export default {
             if (fullList.filter(([_, err]) => err).length > 0) {
                 this.loading = false;
                 this.showToast(
-                    'List is currently broken. Wait until it\'s fixed to start a roulette.',
+                    "List is currently broken. Wait until it's fixed to start a roulette."
                 );
                 return;
             }
@@ -202,11 +202,11 @@ export default {
         },
         save() {
             localStorage.setItem(
-                'roulette',
+                "roulette",
                 JSON.stringify({
                     levels: this.levels,
                     progression: this.progression,
-                }),
+                })
             );
         },
         onDone() {
@@ -218,7 +218,7 @@ export default {
                 this.percentage <= this.currentPercentage ||
                 this.percentage > 100
             ) {
-                this.showToast('Invalid percentage.');
+                this.showToast("Invalid percentage.");
                 return;
             }
 
@@ -231,12 +231,14 @@ export default {
             this.givenUp = true;
 
             // Save progress
-            localStorage.removeItem('roulette');
+            localStorage.removeItem("roulette");
         },
         onImport() {
             if (
                 this.isActive &&
-                !window.confirm('This will overwrite the currently running roulette. Continue?')
+                !window.confirm(
+                    "This will overwrite the currently running roulette. Continue?"
+                )
             ) {
                 return;
             }
@@ -248,8 +250,8 @@ export default {
 
             const file = this.fileInput.files[0];
 
-            if (file.type !== 'application/json') {
-                this.showToast('Invalid file.');
+            if (file.type !== "application/json") {
+                this.showToast("Invalid file.");
                 return;
             }
 
@@ -257,7 +259,7 @@ export default {
                 const roulette = JSON.parse(await file.text());
 
                 if (!roulette.levels || !roulette.progression) {
-                    this.showToast('Invalid file.');
+                    this.showToast("Invalid file.");
                     return;
                 }
 
@@ -268,21 +270,23 @@ export default {
                 this.showRemaining = false;
                 this.percentage = undefined;
             } catch {
-                this.showToast('Invalid file.');
+                this.showToast("Invalid file.");
                 return;
             }
         },
         onExport() {
             const file = new Blob(
-                [JSON.stringify({
-                    levels: this.levels,
-                    progression: this.progression,
-                })],
-                { type: 'application/json' },
+                [
+                    JSON.stringify({
+                        levels: this.levels,
+                        progression: this.progression,
+                    }),
+                ],
+                { type: "application/json" }
             );
-            const a = document.createElement('a');
+            const a = document.createElement("a");
             a.href = URL.createObjectURL(file);
-            a.download = 'tsl_roulette';
+            a.download = "tsl_roulette";
             a.click();
             URL.revokeObjectURL(a.href);
         },
