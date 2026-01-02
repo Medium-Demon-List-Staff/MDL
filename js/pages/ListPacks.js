@@ -145,7 +145,7 @@ export default {
         // Hide loading spinner
     }
     methods: {
-        async switchLevels(i) 
+        async switchLevels(i) {
             this.loadingPack = true;
 
             this.selected = i;
