@@ -47,50 +47,76 @@ export default {
                 </table>
             </div>
             <div class="level-container">
-                div class="level"
+                <div
+                    class="level"
                     v-if="selectedPackLevels
-                            && selectedPackLevels[selectedLevel]
-                            && selectedPackLevels[selectedLevel][0]
-                            && selectedPackLevels[selectedLevel][0].level">
+                        && selectedPackLevels[selectedLevel]
+                        && selectedPackLevels[selectedLevel][0]
+                        && selectedPackLevels[selectedLevel][0].level"
+                >
                     <h1>{{ selectedPackLevels[selectedLevel][0].level.name }}</h1>
-                    <LevelAuthors :author="selectedPackLevels[selectedLevel][0].level.author" :creators="selectedPackLevels[selectedLevel][0].level.creators" :verifier="selectedPackLevels[selectedLevel][0].level.verifier"></LevelAuthors>
-                    <div style="display:flex">
-                        <div v-for="pack in selectedPackLevels[selectedLevel][0].level.packs" class="tag" :style="{background:pack.colour, color:getFontColour(pack.colour)}">{{pack.name}}</div>
+
+                    <LevelAuthors
+                    :author="selectedPackLevels[selectedLevel][0].level.author"
+                    :creators="selectedPackLevels[selectedLevel][0].level.creators"
+                    :verifier="selectedPackLevels[selectedLevel][0].level.verifier"
+                    ></LevelAuthors>
+
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <div
+                        v-for="pack in selectedPackLevels[selectedLevel][0].level.packs"
+                        class="tag"
+                        :style="{ background: pack.colour, color: getFontColour(pack.colour) }"
+                    >
+                        {{ pack.name }}
                     </div>
-                    <iframe class="video" :src="embed(selectedPackLevels[selectedLevel][0].level.verification)" frameborder="0"></iframe>
+                    </div>
+
+                    <iframe
+                    class="video"
+                    :src="embed(selectedPackLevels[selectedLevel][0].level.verification)"
+                    frameborder="0"
+                    ></iframe>
+
                     <ul class="stats">
-                        <li>
-                            <div class="type-title-sm">ID</div>
-                            <p>{{ selectedPackLevels[selectedLevel][0].level.id }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">Password</div>
-                            <p>{{ selectedPackLevels[selectedLevel][0].level.password || 'Free to Copy' }}</p>
-                        </li>
+                    <li>
+                        <div class="type-title-sm">ID</div>
+                        <p>{{ selectedPackLevels[selectedLevel][0].level.id }}</p>
+                    </li>
+                    <li>
+                        <div class="type-title-sm">Password</div>
+                        <p>{{ selectedPackLevels[selectedLevel][0].level.password || 'Free to Copy' }}</p>
+                    </li>
                     </ul>
+
                     <h2>Records</h2>
-                    <p v-else>100% or better to qualify</p>
+                    <p>
+                    <strong>{{ selectedPackLevels[selectedLevel][0].level.percentToQualify }}%</strong>
+                    or better to qualify
+                    </p>
+
                     <table class="records">
-                        <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
-                            <td class="percent">
-                                <p>{{ record.percent }}%</p>
-                            </td>
-                            <td class="user">
-                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
-                            </td>
-                            <td class="mobile">
-                                <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store?.dark ? '-dark' : ''}.svg\`" alt="Mobile">
-                            </td>
-                            <td class="hz">
-                                <p>{{ record.hz }}Hz</p>
-                            </td>
-                        </tr>
+                    <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
+                        <td class="percent"><p>{{ record.percent }}%</p></td>
+                        <td class="user">
+                        <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                        </td>
+                        <td class="mobile">
+                        <img
+                            v-if="record.mobile"
+                            :src="`/assets/phone-landscape${store && store.dark ? '-dark' : ''}.svg`"
+                            alt="Mobile"
+                        >
+                        </td>
+                        <td class="hz"><p>{{ record.hz }}Hz</p></td>
+                    </tr>
                     </table>
                 </div>
+
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
                 </div>
-            </div>
+                </div>
             <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
