@@ -49,6 +49,10 @@ export async function fetchEditors() {
 export async function fetchLeaderboard() {
     const list = await fetchList();
 
+    if (!list) {
+        return null;
+    }
+
     const scoreMap = {};
     const errs = [];
     list.forEach(([level, err], rank) => {
@@ -125,7 +129,7 @@ const res = Object.entries(scoreMap).map(([user, scores]) => {
 res.forEach(player => {
     const completed = player.completed.map(l => l.level);
 
-    player.packs = list
+    player.packs = (list ?? [])
         .flatMap(([lvl]) => lvl?.packs || [])
         .filter((pack, i, arr) =>
             completed.filter(name =>
