@@ -106,19 +106,42 @@ export async function fetchLeaderboard() {
     });
 
     // Wrap in extra Object containing the user and total score
-    const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
-        const total = [verified, completed, progressed]
-            .flat()
-            .reduce((prev, cur) => prev + cur.score, 0);
+const res = Object.entries(scoreMap).map(([user, scores]) => {
+    const { verified, completed, progressed } = scores;
+    const total = [verified, completed, progressed]
+        .flat()
+        .reduce((prev, cur) => prev + cur.score, 0);
 
-        return {
-            user,
-            total: round(total),
-            ...scores,
-        };
+    return {
+        user,
+        total: round(total),
+        ...scores,
+    };
+});
+
+/* ================= PACK COMPLETION ================= */
+
+res.forEach(player => {
+    const completedLevels = player.completed.map(l => l.level);
+
+    const packMap = {};
+
+    completedLevels.forEach(levelName => {
+        list.forEach(([lvl]) => {
+            if (!lvl || lvl.name !== levelName) return;
+
+            lvl.packs?.forEach(pack => {
+                packMap[pack.name] ??= { ...pack, count: 0 };
+                packMap[pack.name].count++;
+            });
+        });
     });
 
-    // Sort by total score
-    return [res.sort((a, b) => b.total - a.total), errs];
+    player.packs = Object.values(packMap).filter(p => p.count >= 3);
+});
+
+/* =================================================== */
+
+// Sort by total score
+return [res.sort((a, b) => b.total - a.total), errs];
 }

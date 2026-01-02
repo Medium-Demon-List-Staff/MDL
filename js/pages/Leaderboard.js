@@ -1,5 +1,6 @@
 import { fetchLeaderboard } from "../content.js";
-import { localize } from "../util.js";
+import { localize, getFontColour } from "../util.js";
+import { getFontColour } from "../util.js";
 
 import Spinner from "../components/Spinner.js";
 
@@ -45,6 +46,22 @@ export default {
                     <div class="player">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
+
+                <!-- PACKS -->
+                        <h2 v-if="entry.packs?.length">Packs</h2>
+                        <div v-if="entry.packs?.length" style="display:flex;gap:6px;">
+                    <div v-for="pack in entry.packs"
+            class="tag"
+            :style="{ background: pack.colour, color: getFontColour(pack.colour) }">
+            {{ pack.name }}
+        </div>
+    </div>
+
+    <h2 v-if="entry.verified.length > 0">
+        Verified ({{ entry.verified.length}})
+    </h2>
+    ...
+
                         <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
                         <table v-if="entry.verified.length > 0" class="table">
                             <tr v-for="score in entry.verified">
@@ -98,7 +115,8 @@ export default {
         },
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard();
+        const [leaderboard, err] = await fetchLeaderboard(
+        );
         this.leaderboard = leaderboard;
         this.err = err;
         // Hide loading spinner
@@ -106,5 +124,6 @@ export default {
     },
     methods: {
         localize,
+        getFontColour,
     },
 };

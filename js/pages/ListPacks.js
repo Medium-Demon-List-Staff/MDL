@@ -1,6 +1,7 @@
 import { fetchPacks, fetchPackLevels } from "../content.js";
 import { getFontColour, embed } from "../util.js";
 import { score } from "../score.js";
+import { store } from "../main.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
@@ -29,7 +30,7 @@ export default {
                             <p class="type-label-lg">#{{ i + 1 }}</p>
                         </td>
                         <td class="level" :class="{ 'active': selectedLevel == i, 'error': !level }">
-                            <button :style= "[selectedLevel == i ? {background: pack.colour} : {}]" @click="selectedLevel = i">
+                            <button :style="selectedLevel === i && pack ? { background: pack.colour } : {}" @click="selectedLevel = i">
                                 <span class="type-label-lg">{{ level[0].level.name || \`Error (\.json)\` }}</span>
                             </button>
                         </td>
@@ -103,6 +104,7 @@ export default {
         selectedPackLevels: [],
         loading: true,
         loadingPack: true,
+        store,
     }),
     computed: {
         pack() {
@@ -110,10 +112,20 @@ export default {
         },
     },
     async mounted() {
-        this.packs = await fetchPacks();
-        this.selectedPackLevels = await fetchPackLevels(
-            this.packs[this.selected].name
-        );
+    this.packs = await fetchPacks();
+
+    if (!this.packs || this.packs.length === 0) {
+        this.errors.push("No packs could be loaded.");
+        this.loading = false;
+        return;
+    }
+
+    this.selectedPackLevels = await fetchPackLevels(
+        this.packs[this.selected].name
+    );
+
+    this.loading = false;
+}
 
         // Error handling todo: make error handling
         // if (!this.packs) {
@@ -131,11 +143,9 @@ export default {
         // }
 
         // Hide loading spinner
-        this.loading = false;
-        this.loadingPack = false;
-    },
+    }
     methods: {
-        async switchLevels(i) {
+        switchLevels(i) 
             this.loadingPack = true;
 
             this.selected = i;
@@ -145,9 +155,9 @@ export default {
             );
 
             this.loadingPack = false;
-        },
+        }
         score,
         embed,
-        getFontColour,
-    },
-};
+        getFontColour
+    
+
