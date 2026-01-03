@@ -193,25 +193,22 @@
   grid-column: 1 / -1 !important;
   grid-row: 1 !important;
 
-  height: 50px !important;
+  height: 50px !important; /* bar == button height */
   background-color: var(--color-background-hover) !important;
 
   overflow-x: auto !important;
   overflow-y: hidden !important;
 
-  /* helps rounding show + makes it feel like HDL */
-  padding-top: 6px !important;
-  height: 56px !important; /* 50 + 6 padding */
+  padding: 0 !important;   /* no top gap */
 }
 
-/* the flex row of buttons */
 .packs-nav > div {
-  height: 50px !important;  /* match the button height */
+  height: 50px !important;
   display: flex !important;
-  gap: 0 !important;        /* touching */
+  gap: 0 !important;
+  align-items: stretch !important;
 }
 
-/* each tab */
 .packs-nav button {
   height: 50px !important;
   margin: 0 !important;
@@ -220,11 +217,8 @@
   border-top-left-radius: 0.75em !important;
   border-top-right-radius: 0.75em !important;
 
+  /* this is what makes them “HDL tabs” */
   padding: 10px 25px !important;
-  cursor: pointer !important;
-  flex-shrink: 0 !important;
-
-  background-size: 100% 100% !important;
 }
 
 .packs-nav button p {
