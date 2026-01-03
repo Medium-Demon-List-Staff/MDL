@@ -267,4 +267,58 @@
 /* If you want NO scrollbar on the right column: */
 .pack-list .meta-container { overflow-y: hidden !important; }
 
+/* Prevent the page itself from scrolling on the packs view */
+.pack-list {
+  overflow: hidden !important;   /* you already have this, keep it */
+}
+
+/* These MUST be scroll containers */
+.pack-list .list-container,
+.pack-list .level-container,
+.pack-list .meta-container {
+  overflow-y: auto !important;
+  min-height: 0 !important;      /* critical for grid children */
+}
+
+.pack-list .level-container {
+  min-width: 0 !important; /* prevents grid overflow issues */
+}
+.pack-list .level-container .level {
+  max-width: none !important; /* optional: lets it fill like HDL */
+}
+
+/* optional */
+.pack-list .meta-container { overflow-y: hidden !important; }
+
+/* Visible scrollbar styling (Chrome) */
+.pack-list .list-container::-webkit-scrollbar,
+.pack-list .level-container::-webkit-scrollbar,
+.pack-list .meta-container::-webkit-scrollbar,
+.packs-nav::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.pack-list .list-container::-webkit-scrollbar-track,
+.pack-list .level-container::-webkit-scrollbar-track,
+.pack-list .meta-container::-webkit-scrollbar-track,
+.packs-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pack-list .list-container::-webkit-scrollbar-thumb,
+.pack-list .level-container::-webkit-scrollbar-thumb,
+.pack-list .meta-container::-webkit-scrollbar-thumb,
+.packs-nav::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.5);
+  border-radius: 999px;
+}
+
+.pack-list .list-container::-webkit-scrollbar-thumb:hover,
+.pack-list .level-container::-webkit-scrollbar-thumb:hover,
+.pack-list .meta-container::-webkit-scrollbar-thumb:hover,
+.packs-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.75);
+}
+
 .packs-nav { outline: 6px solid hotpink !important; }
