@@ -24,7 +24,7 @@ export default {
         <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px;">
             No packs available.
         </div>
-            <div class="packs-nav" style="grid-column:1 / -1;">
+            <div class="packs-nav">
                 <div>
                     <button
                         @click="switchLevels(i)"
