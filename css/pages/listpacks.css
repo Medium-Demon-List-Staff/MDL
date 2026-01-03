@@ -39,6 +39,35 @@
     margin: 0;
 }
 
+/* ===== Packs page layout (clean, scrollable columns) ===== */
+.pack-list {
+  display: grid;
+  grid-template-columns: 460px minmax(0, 1fr) 460px;
+  grid-template-rows: 56px minmax(0, 1fr); /* tabs row + scroll row */
+  column-gap: 2rem;
+  min-height: 0;
+}
+
+/* put packs tabs in row 1 */
+.pack-list .packs-nav {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+/* scrollable columns in row 2 */
+.pack-list .list-container,
+.pack-list .level-container,
+.pack-list .meta-container {
+  grid-row: 2;
+  min-height: 0;     /* critical */
+  overflow-y: auto;  /* critical */
+  padding-block: 2rem;
+}
+
+.pack-list .list-container { grid-column: 1; padding-inline: 1rem; }
+.pack-list .level-container { grid-column: 2; min-width: 0; }
+.pack-list .meta-container { grid-column: 3; padding-right: 2rem; }
+
 /* If you hate the “empty scrollbar” on the right column, use this instead: */
 /* .pack-list .meta-container { overflow-y: hidden; } */
 
@@ -174,129 +203,21 @@
     padding: 7px;
 }
 
-/* ===== FORCE layout (debug override) ===== */
-.pack-list {
-  display: grid !important;
-  grid-template-columns: 460px minmax(0, 1fr) 460px !important; /* wider side columns */
-  grid-template-rows: 56px 1fr !important;
-
-  height: calc(100vh - 60px) !important; /* adjust 60px if your top nav differs */
-  min-height: 0 !important;
-
-  overflow: hidden !important; /* important so the columns scroll, not the page */
-  background: var(--color-background) !important;
-}
-
-/* Tabs row */
-/* Packs tab strip (HDL-like) */
-.packs-nav {
-  grid-column: 1 / -1 !important;
-  grid-row: 1 !important;
-
-  height: 50px !important; /* bar == button height */
-  background-color: var(--color-background-hover) !important;
-
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-
-  padding: 0 !important;   /* no top gap */
-}
-
-.packs-nav > div {
-  height: 50px !important;
-  display: flex !important;
-  gap: 0 !important;
-  align-items: stretch !important;
-}
-
-.packs-nav button {
-  height: 50px !important;
-  margin: 0 !important;
-
-  border: none !important;
-  border-top-left-radius: 0.75em !important;
-  border-top-right-radius: 0.75em !important;
-
-  /* this is what makes them “HDL tabs” */
-  padding: 10px 25px !important;
-}
-
-.packs-nav button p {
-  margin: 0 !important;
-  mix-blend-mode: difference !important;
-  color: rgb(128, 128, 128) !important;
-}
-
-/* scrollbar change */
-
-.packs-nav::-webkit-scrollbar {
-  height: 8px;
-}
-.packs-nav::-webkit-scrollbar-track {
-  background: transparent;
-}
-.packs-nav::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-}
-
-/* Columns must be allowed to shrink in grid or scroll breaks */
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
-  min-height: 0 !important;
-  overflow-y: auto !important;
-}
-
-/* Put them in the content row */
-.pack-list .list-container { grid-column: 1 !important; grid-row: 2 !important; }
-.pack-list .level-container { grid-column: 2 !important; grid-row: 2 !important; }
-.pack-list .meta-container  { grid-column: 3 !important; grid-row: 2 !important; }
-
-/* List container padding */
-
-.pack-list .list-container {
-  padding-left: 1.5rem !important;
-  padding-right: 1rem !important;
-}
-
-.pack-list .list .rank {
-  padding-left: 0.75rem !important;
-  padding-right: 1rem !important;
-}
-
-/* If you want NO scrollbar on the right column: */
-.pack-list .meta-container { overflow-y: hidden !important; }
-
-/* Prevent the page itself from scrolling on the packs view */
-.pack-list {
-  overflow: hidden !important;   /* you already have this, keep it */
-}
-
-/* These MUST be scroll containers */
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
-  overflow-y: auto !important;
-  min-height: 0 !important;      /* critical for grid children */
-}
-
-.pack-list .level-container {
-  min-width: 0 !important; /* prevents grid overflow issues */
-}
-.pack-list .level-container .level {
-  max-width: none !important; /* optional: lets it fill like HDL */
-}
-
-/* optional */
-.pack-list .meta-container { overflow-y: hidden !important; }
-
-/* Visible scrollbar styling (Chrome) */
+/* Thin grey scrollbar (Chrome) */
 .pack-list .list-container::-webkit-scrollbar,
 .pack-list .level-container::-webkit-scrollbar,
 .pack-list .meta-container::-webkit-scrollbar,
 .packs-nav::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+.pack-list .list-container::-webkit-scrollbar-thumb,
+.pack-list .level-container::-webkit-scrollbar-thumb,
+.pack-list .meta-container::-webkit-scrollbar-thumb,
+.packs-nav::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.6);
+  border-radius: 999px;
 }
 
 .pack-list .list-container::-webkit-scrollbar-track,
@@ -306,19 +227,8 @@
   background: transparent;
 }
 
-.pack-list .list-container::-webkit-scrollbar-thumb,
-.pack-list .level-container::-webkit-scrollbar-thumb,
-.pack-list .meta-container::-webkit-scrollbar-thumb,
-.packs-nav::-webkit-scrollbar-thumb {
-  background: rgba(160, 160, 160, 0.5);
-  border-radius: 999px;
+.packs-nav::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
-
-.pack-list .list-container::-webkit-scrollbar-thumb:hover,
-.pack-list .level-container::-webkit-scrollbar-thumb:hover,
-.pack-list .meta-container::-webkit-scrollbar-thumb:hover,
-.packs-nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(160, 160, 160, 0.75);
-}
-
-.packs-nav { outline: 6px solid hotpink !important; }
