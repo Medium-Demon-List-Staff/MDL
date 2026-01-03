@@ -50,24 +50,35 @@
    ========================= */
 
 /* Key: lock the packs layout to the viewport under the 4rem header */
+/* ===== Packs page layout (scrollable columns) ===== */
 .pack-list {
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
-  grid-template-rows: 56px minmax(0, 1fr);
-  column-gap: 2rem;
+  grid-template-rows: 56px minmax(0, 1fr); /* tabs row + scroll row */
+  gap: 16px;
+  align-items: start;
 
-  height: 100%;       /* ✅ key: fill main’s content area */
-  min-height: 0;      /* ✅ key: allow grid children to shrink */
-  overflow: hidden;   /* ✅ key: columns scroll, not the page */
-
-  background: var(--color-background);
+  /* CRITICAL: constrain the packs page so children can scroll */
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* Put the tab strip in row 1 (works whether packs-nav is inside pack-list or not) */
-.pack-list .packs-nav,
-.pack-list > .packs-nav {
+.pack-list .packs-nav {
   grid-column: 1 / -1;
   grid-row: 1;
+}
+
+/* horizontal pack tags row inside the level column */
+.pack-list .level-packs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 0.4em;
+  width: 100%;
 }
 
 /* Scrollable columns in row 2 */
@@ -75,27 +86,17 @@
 .pack-list .level-container,
 .pack-list .meta-container {
   grid-row: 2;
-  min-height: 0;      /* ✅ critical */
-  overflow-y: auto;   /* ✅ critical */
+  min-height: 0;     /* CRITICAL for grid children */
+  overflow-y: auto;  /* CRITICAL for vertical scroll */
   padding-block: 2rem;
 }
 
 /* Column placement + padding */
-.pack-list .list-container {
-  grid-column: 1;
-  padding-left: 1.5rem;  /* fixes # close to edge */
-  padding-right: 1rem;
-}
+.pack-list .list-container { grid-column: 1; padding-inline: 1rem; }
+.pack-list .level-container { grid-column: 2; min-width: 0; }
+.pack-list .meta-container { grid-column: 3; padding-right: 2rem; }
+.pack-list .meta-container { overflow-y: hidden; }
 
-.pack-list .level-container {
-  grid-column: 2;
-  min-width: 0;          /* prevents grid overflow issues */
-}
-
-.pack-list .meta-container {
-  grid-column: 3;
-  padding-right: 2rem;
-}
 
 /* =========================
    Existing pack styles (yours)

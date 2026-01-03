@@ -15,13 +15,7 @@ export default {
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="pack-list" style="
-            display:grid;
-            grid-template-columns: 320px 1fr 360px;
-            grid-template-rows: auto 1fr;
-            gap: 16px;
-            align-items:start;
-        ">
+        <main v-else class="pack-list">
 
         <div v-if="errors.length" class="surface" style="padding:12px; margin:12px;">
             <p class="error" v-for="e in errors">{{ e }}</p>
@@ -35,21 +29,17 @@ export default {
                     <button
                         @click="switchLevels(i)"
                         v-for="(pack, i) in packs"
+                        class="type-label-lg"
                         :style="{
                             background: pack.colour,
-                            color: getFontColour(pack.colour),
-                            borderRadius: '0',
-                            margin: '0',
-                            flex: '0 0 auto',
-                            padding: '10px 16px'
+                            color: getFontColour(pack.colour)
                         }"
-                        class="type-label-lg"
                     >
                         <p>{{pack.name}}</p>
                     </button>
                 </div>
             </div>
-            <div class="list-container" style="grid-column:1; grid-row:2;">
+            <div class="list-container">
                 <table class="list" v-if="selectedPackLevels && selectedPackLevels.length">
                     <tr v-for="(level, i) in selectedPackLevels">
                         <td class="rank">
@@ -65,7 +55,7 @@ export default {
                     </tr>
                 </table>
             </div>
-            <div class="level-container" style="grid-column:2; grid-row:2;">
+            <div class="level-container">
                 <div
                     class="level"
                     v-if="selectedPackLevels
@@ -81,23 +71,15 @@ export default {
                     :verifier="selectedPackLevels[selectedLevel][0].level.verifier"
                     ></LevelAuthors>
 
-                    <div style="
-                        display:flex;
-                        flex-wrap:nowrap;
-                        overflow-x:auto;
-                        overflow-y:hidden;
-                        white-space:nowrap;
-                        gap:0;
-                        width:100%;
-                    ">
-                    <div
-                        v-for="pack in selectedPackLevels[selectedLevel][0].level.packs"
-                        class="tag"
-                        :style="{ background: pack.colour, color: getFontColour(pack.colour) }"
-                    >
-                        {{ pack.name }}
-                    </div>
-                    </div>
+                    <div class="level-packs">
+                        <div
+                            v-for="pack in selectedPackLevels[selectedLevel][0].level.packs"
+                            class="tag"
+                            :style="{ background: pack.colour, color: getFontColour(pack.colour) }"
+                        >
+                            {{ pack.name }}
+                        </div>
+                        </div>
 
                     <iframe
                     class="video"
@@ -144,7 +126,7 @@ export default {
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
                 </div>
                 </div>
-            <div class="meta-container" style="grid-column:3; grid-row:2;">
+            <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
@@ -194,7 +176,7 @@ export default {
 
     this.selectedPackLevels = levels;
   } catch (e) {
-    this.errors.push('Packs page crashed: ${(e && e.message) ? e.message : e}');
+    this.errors.push(`Packs page crashed: ${(e && e.message) ? e.message : e}`);
     console.error(e);
   } finally {
     this.loading = false;
