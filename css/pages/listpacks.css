@@ -51,52 +51,47 @@
 
 /* Key: lock the packs layout to the viewport under the 4rem header */
 /* ===== Packs page layout (scrollable columns) ===== */
-.pack-list {
+/* IMPORTANT: main.css uses main { height:0; flex:1 }.
+   We mirror that here so the grid has a real height and columns can scroll. */
+main.pack-list {
+  flex: 1;
+  height: 0;        /* critical in a flex column layout */
+  min-height: 0;    /* critical for grid children scrolling */
+  overflow: hidden; /* stop page scroll; allow inner scroll */
+
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
-  grid-template-rows: 56px minmax(0, 1fr); /* tabs row + scroll row */
+  grid-template-rows: 56px minmax(0, 1fr);
   gap: 16px;
   align-items: start;
-
-  /* CRITICAL: constrain the packs page so children can scroll */
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
 }
 
-/* Put the tab strip in row 1 (works whether packs-nav is inside pack-list or not) */
-.pack-list .packs-nav {
+/* Tabs row */
+main.pack-list > .packs-nav {
   grid-column: 1 / -1;
   grid-row: 1;
-}
-
-/* horizontal pack tags row inside the level column */
-.pack-list .level-packs {
-  display: flex;
-  flex-wrap: nowrap;
+  height: 56px;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
-  gap: 0.4em;
-  width: 100%;
 }
 
-/* Scrollable columns in row 2 */
-.pack-list .list-container,
-.pack-list .level-container,
-.pack-list .meta-container {
+/* Columns are in row 2 and scroll vertically */
+main.pack-list > .list-container,
+main.pack-list > .level-container,
+main.pack-list > .meta-container {
   grid-row: 2;
-  min-height: 0;     /* CRITICAL for grid children */
-  overflow-y: auto;  /* CRITICAL for vertical scroll */
+  min-height: 0;      /* critical */
+  overflow-y: auto;   /* critical */
+  align-self: stretch; /* fill the row height */
   padding-block: 2rem;
 }
 
-/* Column placement + padding */
-.pack-list .list-container { grid-column: 1; padding-inline: 1rem; }
-.pack-list .level-container { grid-column: 2; min-width: 0; }
-.pack-list .meta-container { grid-column: 3; padding-right: 2rem; }
-.pack-list .meta-container { overflow-y: hidden; }
+main.pack-list > .list-container { grid-column: 1; padding-inline: 1rem; }
+main.pack-list > .level-container { grid-column: 2; min-width: 0; }
+main.pack-list > .meta-container  { grid-column: 3; padding-right: 2rem; }
 
+/* Optional: disable right column scroll if you want */
+ /* main.pack-list > .meta-container { overflow-y: hidden; } */
 
 /* =========================
    Existing pack styles (yours)
