@@ -58,7 +58,7 @@ main.pack-list {
   height: 0;        /* critical in a flex column layout */
   min-height: 0;    /* critical for grid children scrolling */
   overflow: hidden; /* stop page scroll; allow inner scroll */
-
+  background: var(--color-background);
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
   grid-template-rows: 56px minmax(0, 1fr);
@@ -290,4 +290,22 @@ main.pack-list > .meta-container  { grid-column: 3; padding-right: 2rem; }
   display: none;
   width: 0;
   height: 0;
+}
+
+/* Mobile: collapse 3 columns so the center isn't skinny and page can't swipe sideways */
+@media (max-width: 900px) {
+  main.pack-list {
+    grid-template-columns: 320px minmax(0, 1fr);
+    grid-template-rows: 56px minmax(0, 1fr);
+    gap: 12px;
+    overflow-x: hidden; /* kill horizontal swipe */
+  }
+
+  main.pack-list > .packs-nav {
+    grid-column: 1 / -1;
+  }
+
+  main.pack-list > .list-container { grid-column: 1; }
+  main.pack-list > .level-container { grid-column: 2; min-width: 0; }
+  main.pack-list > .meta-container { display: none; }
 }
