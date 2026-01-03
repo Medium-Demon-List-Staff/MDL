@@ -119,6 +119,24 @@ input[type="checkbox"] {
     margin: 0;
 }
 
+/* --- Force clickable cursor on interactive UI --- */
+button,
+a,
+[role="button"],
+.nav__tab,
+.packs-nav button,
+.pack-list .list .level button,
+.page-list .list .level button {
+  cursor: pointer;
+}
+
+/* Keep disabled / non-clickable states correct */
+button:disabled,
+.pack-list .list .level.error button,
+.page-list .list .level.error button {
+  cursor: not-allowed;
+}
+
 /* Shitty */
 
 .shitty .surface {

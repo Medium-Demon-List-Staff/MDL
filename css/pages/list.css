@@ -1,3 +1,20 @@
+/* --- Lock List page to viewport and keep scroll inside columns --- */
+main.page-list {
+  flex: 1;
+  height: 0;        /* critical: prevents body scroll in a flex column layout */
+  min-height: 0;    /* critical: allows children to become scroll containers */
+  overflow: hidden; /* stop page scroll; columns scroll instead */
+  background: var(--color-background);
+}
+
+/* Ensure the 3 columns can actually scroll */
+main.page-list > .list-container,
+main.page-list > .level-container,
+main.page-list > .meta-container {
+  min-height: 0;
+  overflow-y: auto;
+}
+
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
