@@ -53,13 +53,14 @@
 .pack-list {
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
-  grid-template-rows: 56px minmax(0, 1fr); /* tabs row + scroll row */
+  grid-template-rows: 56px minmax(0, 1fr);
   column-gap: 2rem;
 
-  /* Prevent the page from scrolling into white space */
-  height: calc(100vh - 4rem); /* header is 4rem in main.css */
-  min-height: 0;
-  overflow: hidden;           /* IMPORTANT: columns scroll, not the page */
+  height: 100%;       /* ✅ key: fill main’s content area */
+  min-height: 0;      /* ✅ key: allow grid children to shrink */
+  overflow: hidden;   /* ✅ key: columns scroll, not the page */
+
+  background: var(--color-background);
 }
 
 /* Put the tab strip in row 1 (works whether packs-nav is inside pack-list or not) */
@@ -74,8 +75,8 @@
 .pack-list .level-container,
 .pack-list .meta-container {
   grid-row: 2;
-  min-height: 0;     /* CRITICAL for grid scrolling */
-  overflow-y: auto;  /* CRITICAL */
+  min-height: 0;      /* ✅ critical */
+  overflow-y: auto;   /* ✅ critical */
   padding-block: 2rem;
 }
 
