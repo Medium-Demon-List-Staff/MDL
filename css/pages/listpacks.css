@@ -62,7 +62,7 @@ main.pack-list {
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
   grid-template-rows: 56px minmax(0, 1fr);
-  gap: 16px;
+  gap: 0;
   align-items: start;
 }
 
