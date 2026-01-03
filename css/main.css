@@ -101,8 +101,8 @@ main {
     grid-template-rows: minmax(0, 1fr);
     column-gap: 2rem;
 }
-main > div {
-    overflow-y: auto;
+main > div:has(.pack-list) {
+  overflow-y: hidden;
 }
 
 .spinner {
