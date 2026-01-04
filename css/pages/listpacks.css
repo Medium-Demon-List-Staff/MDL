@@ -328,4 +328,16 @@ main.pack-list > .meta-container {
   }
 
   .pack-list .level-container .level { max-width: none; }
+  
+  /* prevent “letter-by-letter” wrapping */
+  .pack-list .list .level button span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pack-list .list .rank p {
+    white-space: nowrap;
+  }
 }
