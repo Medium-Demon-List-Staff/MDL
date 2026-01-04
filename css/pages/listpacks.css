@@ -60,7 +60,7 @@ main.pack-list {
   overflow: hidden; /* page doesn't scroll, columns do */
 
   display: grid;
-  grid-template-columns: 460px minmax(0, 1fr) 460px;
+  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
   grid-template-rows: 56px minmax(0, 1fr);
 
   column-gap: 2rem; /* HDL spacing */
@@ -341,5 +341,32 @@ main.pack-list > .meta-container {
 
   .pack-list .list .rank p {
     white-space: nowrap;
+  }
+}
+
+/* Mobile: keep HDL proportions (1fr / 2fr / 1fr) but reduce minimums */
+@media (max-width: 900px) {
+  main.pack-list {
+    grid-template-columns: minmax(9rem, 1fr) minmax(0, 2fr) minmax(9rem, 1fr);
+
+    /* This is the big gotcha: 2rem gaps eat tons of space on phones.
+       HDL may reduce it via a media query even if the desktop rule is 2rem. */
+    column-gap: 1rem;
+  }
+
+  /* Keep side columns compact */
+  main.pack-list > .list-container { padding-inline: 0.5rem; }
+  main.pack-list > .meta-container { padding-right: 0.5rem; padding-left: 0.5rem; }
+
+  /* Let center breathe */
+  .pack-list .level-container .level { max-width: none; }
+
+  /* Prevent sideways page swipe */
+  main.pack-list,
+  main.pack-list > .list-container,
+  main.pack-list > .level-container,
+  main.pack-list > .meta-container {
+    min-width: 0;
+    overflow-x: hidden;
   }
 }
