@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--color-background);
+}
+
+/* Allow grid/flex children to shrink instead of forcing page overflow */
+main,
+.root,
+.page-list,
+.pack-list,
+.list-container,
+.level-container,
+.meta-container {
+  min-width: 0;
+}
+
 :root {
     --color-background: white;
     --color-on-background: black;
