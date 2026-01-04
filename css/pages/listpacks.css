@@ -14,10 +14,10 @@
 }
 
 .packs-nav > div {
-  height: 100%;
+  height: 56px;
   display: flex;
-  gap: 0;                 /* touching tabs */
   align-items: stretch;
+  gap: 0;
 }
 
 .packs-nav button {
@@ -55,15 +55,19 @@
    We mirror that here so the grid has a real height and columns can scroll. */
 main.pack-list {
   flex: 1;
-  height: 0;        /* critical in a flex column layout */
-  min-height: 0;    /* critical for grid children scrolling */
-  overflow: hidden; /* stop page scroll; allow inner scroll */
-  background: var(--color-background);
+  height: 0;        /* critical in your flex layout */
+  min-height: 0;    /* critical for scrolling children */
+  overflow: hidden; /* page doesn't scroll, columns do */
+
   display: grid;
   grid-template-columns: 460px minmax(0, 1fr) 460px;
   grid-template-rows: 56px minmax(0, 1fr);
-  gap: 0;
+
+  column-gap: 2rem; /* HDL spacing */
+  row-gap: 0;
   align-items: start;
+
+  background: var(--color-background);
 }
 
 /* Tabs row */
@@ -75,20 +79,40 @@ main.pack-list > .packs-nav {
   overflow-y: hidden;
 }
 
-/* Columns are in row 2 and scroll vertically */
+/* packs tabs occupy row 1 */
+main.pack-list > .packs-nav {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+/* ALL three columns occupy row 2 and scroll */
 main.pack-list > .list-container,
 main.pack-list > .level-container,
 main.pack-list > .meta-container {
   grid-row: 2;
-  min-height: 0;      /* critical */
-  overflow-y: auto;   /* critical */
-  align-self: stretch; /* fill the row height */
+  min-height: 0;    /* critical */
+  overflow-y: auto; /* critical */
   padding-block: 2rem;
+  align-self: stretch;
 }
 
-main.pack-list > .list-container { grid-column: 1; padding-inline: 1rem; }
-main.pack-list > .level-container { grid-column: 2; min-width: 0; }
-main.pack-list > .meta-container  { grid-column: 3; padding-right: 2rem; }
+main.pack-list > .list-container {
+  grid-column: 1;
+  grid-row: 2;
+  padding-inline: 1rem;
+}
+
+main.pack-list > .level-container {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+}
+
+main.pack-list > .meta-container {
+  grid-column: 3;
+  grid-row: 2;
+  padding-right: 2rem;
+}
 
 /* Optional: disable right column scroll if you want */
  /* main.pack-list > .meta-container { overflow-y: hidden; } */
