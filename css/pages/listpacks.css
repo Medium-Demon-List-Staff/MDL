@@ -307,20 +307,39 @@ main.pack-list > .meta-container {
   height: 0;
 }
 
-/* Mobile: collapse 3 columns so the center isn't skinny and page can't swipe sideways */
-@media (max-width: 900px) {
+/* Touch devices: make side columns thinner and give the center real space.
+   This does NOT affect desktop mouse devices. */
+@media (pointer: coarse) and (hover: none) {
+
+  /* keep 3 columns, but stop the 460/460 crushing */
   main.pack-list {
-    grid-template-columns: 320px minmax(0, 1fr);
-    grid-template-rows: 56px minmax(0, 1fr);
-    gap: 12px;
-    overflow-x: hidden; /* kill horizontal swipe */
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    column-gap: 12px;
   }
 
-  main.pack-list > .packs-nav {
-    grid-column: 1 / -1;
+  /* reduce wasted padding on small screens */
+  main.pack-list > .list-container { padding-inline: 0.5rem; }
+  main.pack-list > .meta-container { padding-right: 0.5rem; padding-left: 0.25rem; }
+
+  /* make sure columns can shrink instead of forcing overflow */
+  main.pack-list > .list-container,
+  main.pack-list > .level-container,
+  main.pack-list > .meta-container {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  /* prevent “letter-by-letter” wrapping in the list column */
+  .pack-list .list .level button span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  main.pack-list > .list-container { grid-column: 1; }
-  main.pack-list > .level-container { grid-column: 2; min-width: 0; }
-  main.pack-list > .meta-container { display: none; }
+  .pack-list .list .rank p {
+    white-space: nowrap;
+  }
 }
