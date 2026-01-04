@@ -17,28 +17,30 @@ export default {
         </main>
         <main v-else class="pack-list">
 
-        <div v-if="errors.length" class="surface" style="padding:12px; margin:12px;">
+        <div v-if="errors.length" class="surface" style="padding:12px; margin:12px; grid-column: 1 / -1;">
             <p class="error" v-for="e in errors">{{ e }}</p>
         </div>
 
-        <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px;">
+        <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px; grid-column: 1 / -1;">
             No packs available.
         </div>
-            <div class="packs-nav">
-                <div>
-                    <button
-                        @click="switchLevels(i)"
-                        v-for="(pack, i) in packs"
-                        class="type-label-lg"
-                        :style="{
-                            background: pack.colour,
-                            color: getFontColour(pack.colour)
-                        }"
-                    >
-                        <p>{{pack.name}}</p>
-                    </button>
-                </div>
+
+        <template v-else>
+        <div class="packs-nav">
+            <div>
+            <button
+                @click="switchLevels(i)"
+                v-for="(pack, i) in packs"
+                class="type-label-lg"
+                :style="{
+                background: pack.colour,
+                color: getFontColour(pack.colour)
+                }"
+            >
+                <p>{{pack.name}}</p>
+            </button>
             </div>
+        </div>
             <div class="list-container">
                 <table class="list" v-if="selectedPackLevels && selectedPackLevels.length">
                     <tr v-for="(level, i) in selectedPackLevels">
