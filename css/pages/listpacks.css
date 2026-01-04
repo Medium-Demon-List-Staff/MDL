@@ -70,15 +70,6 @@ main.pack-list {
   background: var(--color-background);
 }
 
-/* Tabs row */
-main.pack-list > .packs-nav {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  height: 56px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
 /* packs tabs occupy row 1 */
 main.pack-list > .packs-nav {
   grid-column: 1 / -1;
