@@ -307,20 +307,56 @@ main.pack-list > .meta-container {
   height: 0;
 }
 
-/* Mobile: collapse 3 columns so the center isn't skinny and page can't swipe sideways */
+/* Mobile: stack panels so nothing gets skinny */
 @media (max-width: 900px) {
   main.pack-list {
-    grid-template-columns: 320px minmax(0, 1fr);
-    grid-template-rows: 56px minmax(0, 1fr);
-    gap: 12px;
-    overflow-x: hidden; /* kill horizontal swipe */
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows:
+      56px                  /* tabs */
+      minmax(0, 38vh)       /* list */
+      minmax(0, 1fr)        /* level */
+      minmax(0, 28vh);      /* meta */
+    column-gap: 0;
+    row-gap: 12px;
+    overflow-x: hidden; /* kill sideways swipe */
   }
 
   main.pack-list > .packs-nav {
-    grid-column: 1 / -1;
+    grid-column: 1;
+    grid-row: 1;
   }
 
-  main.pack-list > .list-container { grid-column: 1; }
-  main.pack-list > .level-container { grid-column: 2; min-width: 0; }
-  main.pack-list > .meta-container { display: none; }
+  main.pack-list > .list-container {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  main.pack-list > .level-container {
+    grid-column: 1;
+    grid-row: 3;
+    min-width: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  main.pack-list > .meta-container {
+    display: block;      /* show it on mobile */
+    grid-column: 1;
+    grid-row: 4;
+    min-width: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 1rem; /* phones */
+    padding-left: 1rem;
+  }
+
+  /* optional: a little less padding on mobile */
+  main.pack-list > .list-container,
+  main.pack-list > .level-container,
+  main.pack-list > .meta-container {
+    padding-block: 1rem;
+  }
 }
