@@ -60,10 +60,7 @@ main.pack-list {
   overflow: hidden; /* page doesn't scroll, columns do */
 
   display: grid;
-  grid-template-columns:
-    minmax(9rem, 1fr)
-    minmax(0, 2fr)
-    minmax(9rem, 1fr);
+  grid-template-columns: 460px minmax(0, 1fr) 460px;
   grid-template-rows: 56px minmax(0, 1fr);
 
   column-gap: 2rem; /* HDL spacing */
@@ -310,7 +307,7 @@ main.pack-list > .meta-container {
 }
 
 /* Mobile: 3 columns, skinny sidebars, wide center */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   main.pack-list {
     /* skinny list + big center + skinny meta */
     grid-template-columns: 110px minmax(0, 1fr) 110px;
