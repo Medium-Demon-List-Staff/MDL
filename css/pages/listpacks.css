@@ -306,56 +306,49 @@ main.pack-list > .meta-container {
   height: 0;
 }
 
-/* Mobile: stack panels so nothing gets skinny */
+/* Mobile: 3 columns, skinny sidebars, wide center */
 @media (max-width: 900px) {
   main.pack-list {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows:
-      56px                  /* tabs */
-      minmax(0, 38vh)       /* list */
-      minmax(0, 1fr)        /* level */
-      minmax(0, 28vh);      /* meta */
-    column-gap: 0;
-    row-gap: 12px;
-    overflow-x: hidden; /* kill sideways swipe */
+    /* skinny list + big center + skinny meta */
+    grid-template-columns: 110px minmax(0, 1fr) 110px;
+    grid-template-rows: 56px minmax(0, 1fr);
+
+    column-gap: 12px;
+    row-gap: 0;
+
+    overflow-x: hidden; /* prevent sideways page swipe */
   }
 
-  main.pack-list > .packs-nav {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  main.pack-list > .list-container {
-    grid-column: 1;
-    grid-row: 2;
-    min-width: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  main.pack-list > .level-container {
-    grid-column: 1;
-    grid-row: 3;
-    min-width: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  main.pack-list > .meta-container {
-    display: block;      /* show it on mobile */
-    grid-column: 1;
-    grid-row: 4;
-    min-width: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-right: 1rem; /* phones */
-    padding-left: 1rem;
-  }
-
-  /* optional: a little less padding on mobile */
+  /* Make sure each column can shrink + scroll */
   main.pack-list > .list-container,
   main.pack-list > .level-container,
   main.pack-list > .meta-container {
-    padding-block: 1rem;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  /* Optional: reduce padding so sidebars don't waste space */
+  main.pack-list > .list-container {
+    padding-inline: 0.5rem;
+  }
+
+  main.pack-list > .meta-container {
+    padding-right: 0.5rem;
+    padding-left: 0.25rem;
+  }
+
+  /* Make the center feel “full width” */
+  main.pack-list > .level-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .pack-list .level-container .level {
+    max-width: none;   /* let it use the full center column */
+  }
+
+  /* (Optional) keep meta visible but compact */
+  main.pack-list > .meta-container .meta {
+    gap: 1rem;
   }
 }
