@@ -6,34 +6,49 @@ import { round, score } from './score.js';
 const dir = '/data';
 
 export async function fetchList() {
-    const listResult = await fetch(`${dir}/_list.json`);
-    try {
-        const list = await listResult.json();
-        return await Promise.all(
-            list.map(async (path, rank) => {
-                const levelResult = await fetch(`${dir}/${path}.json`);
-                try {
-                    const level = await levelResult.json();
-                    return [
-                        {
-                            ...level,
-                            path,
-                            records: level.records.sort(
-                                (a, b) => b.percent - a.percent,
-                            ),
-                        },
-                        null,
-                    ];
-                } catch {
-                    console.error(`Failed to load level #${rank + 1} ${path}.`);
-                    return [null, path];
-                }
-            }),
-        );
-    } catch {
-        console.error(`Failed to load list.`);
-        return null;
-    }
+  // Load pack definitions once
+  const packs = await fetchPacks(); // returns null or array
+  const levelToPacks = {};
+
+  if (packs) {
+    packs.forEach(pack => {
+      (pack.levels ?? []).forEach(levelId => {
+        (levelToPacks[levelId] ??= []).push({
+          name: pack.name,
+          colour: pack.colour,
+        });
+      });
+    });
+  }
+
+  const listResult = await fetch(`${dir}/_list.json`);
+  try {
+    const list = await listResult.json();
+    return await Promise.all(
+      list.map(async (path, rank) => {
+        const levelResult = await fetch(`${dir}/${path}.json`);
+        try {
+          const level = await levelResult.json();
+          return [
+            {
+              ...level,
+              path,
+              // Inject packs membership (empty array if none / packs failed)
+              packs: levelToPacks[path] ?? [],
+              records: (level.records ?? []).sort((a, b) => b.percent - a.percent),
+            },
+            null,
+          ];
+        } catch {
+          console.error(`Failed to load level #${rank + 1} ${path}.`);
+          return [null, path];
+        }
+      }),
+    );
+  } catch {
+    console.error(`Failed to load list.`);
+    return null;
+  }
 }
 
 export async function fetchEditors() {
