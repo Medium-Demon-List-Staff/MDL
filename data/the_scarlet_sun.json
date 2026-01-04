@@ -306,25 +306,31 @@
             "user": "TheoSi",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "ZircleZ",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "POKEMON GD",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "andrkd",
             "link": "https://www.youtube.com/watch?v=I5r42euWUyM",
             "percent": 100,
-            "hz": 60
+            "hz": 240
+        },
+        {
+            "user": "Armani",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
