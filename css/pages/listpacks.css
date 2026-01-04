@@ -313,8 +313,8 @@ main.pack-list > .meta-container {
 
   /* keep 3 columns, but stop the 460/460 crushing */
   main.pack-list {
-    grid-template-columns: 160px minmax(0, 1fr) 160px;
-    column-gap: 14px;
+    grid-template-columns: 90px minmax(0, 1fr) 90px;
+    column-gap: 11px;
   }
 
   /* reduce wasted padding on small screens */
