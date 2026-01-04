@@ -131,35 +131,22 @@ const res = Object.entries(scoreMap).map(([user, scores]) => {
 const packs = await fetchPacks(); // uses _packlist.json
 
 if (packs) {
-    // Build map: levelId -> [packObjects...]
-    const levelToPacks = {};
-    packs.forEach(pack => {
-        (pack.levels ?? []).forEach(levelId => {
-            (levelToPacks[levelId] ??= []).push(pack);
-        });
+  res.forEach(player => {
+    // completed level file-ids (paths) from _list.json
+    const completedIds = new Set(
+      player.completed.map(l => l.levelPath).filter(Boolean)
+    );
+
+    // Pack is "completed" only if EVERY levelId in that pack is completed
+    player.packs = packs.filter(pack => {
+      const levels = pack.levels ?? [];
+      if (levels.length === 0) return false; // ignore empty packs
+      return levels.every(levelId => completedIds.has(levelId));
     });
-
-    res.forEach(player => {
-        // Use file IDs only (matches _packlist.json)
-        const completedIds = new Set(
-            player.completed.map(l => l.levelPath).filter(Boolean)
-        );
-
-        // Count how many completed levels per pack
-        const counts = new Map();
-        completedIds.forEach(levelId => {
-            (levelToPacks[levelId] ?? []).forEach(pack => {
-                counts.set(pack.name, (counts.get(pack.name) ?? 0) + 1);
-            });
-        });
-
-        // Keep your ">= 3" rule
-        player.packs = packs.filter(pack => (counts.get(pack.name) ?? 0) >= 3);
-    });
+  });
 } else {
-    res.forEach(player => (player.packs = []));
+  res.forEach(player => (player.packs = []));
 }
-
 
 /* =================================================== */
 
