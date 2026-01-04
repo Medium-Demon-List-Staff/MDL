@@ -12,43 +12,43 @@
             "user": "AgentDarius",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "ZircleZ",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "DIUS3D",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "DaShahzad",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Kuba",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "SmileBullet",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Beetron",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "yoshi",
@@ -78,7 +78,7 @@
             "user": "Aquatic51",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "Chonkey",
@@ -100,6 +100,12 @@
         },
         {
             "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "GW HyperActive",
             "link": "",
             "percent": 100,
             "hz": 240

@@ -223,6 +223,12 @@
             "link": "https://www.youtube.com/watch?v=XBXShrGNjOI",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "GW HyperActive",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
