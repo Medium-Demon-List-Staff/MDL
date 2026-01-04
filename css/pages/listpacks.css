@@ -370,3 +370,8 @@ main.pack-list > .meta-container {
     overflow-x: hidden;
   }
 }
+
+main.pack-list {
+  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr) !important;
+  column-gap: 2rem !important;
+}
