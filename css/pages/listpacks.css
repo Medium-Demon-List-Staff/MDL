@@ -159,6 +159,7 @@ main.pack-list > .meta-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 48rem;
 }
 
 .pack-list .level-container .level .level-authors {
@@ -306,49 +307,20 @@ main.pack-list > .meta-container {
   height: 0;
 }
 
-/* Mobile: 3 columns, skinny sidebars, wide center */
+/* Mobile: collapse 3 columns so the center isn't skinny and page can't swipe sideways */
 @media (max-width: 900px) {
   main.pack-list {
-    /* skinny list + big center + skinny meta */
-    grid-template-columns: 110px minmax(0, 1fr) 110px;
+    grid-template-columns: 320px minmax(0, 1fr);
     grid-template-rows: 56px minmax(0, 1fr);
-
-    column-gap: 12px;
-    row-gap: 0;
-
-    overflow-x: hidden; /* prevent sideways page swipe */
+    gap: 12px;
+    overflow-x: hidden; /* kill horizontal swipe */
   }
 
-  /* Make sure each column can shrink + scroll */
-  main.pack-list > .list-container,
-  main.pack-list > .level-container,
-  main.pack-list > .meta-container {
-    min-width: 0;
-    overflow-x: hidden;
+  main.pack-list > .packs-nav {
+    grid-column: 1 / -1;
   }
 
-  /* Optional: reduce padding so sidebars don't waste space */
-  main.pack-list > .list-container {
-    padding-inline: 0.5rem;
-  }
-
-  main.pack-list > .meta-container {
-    padding-right: 0.5rem;
-    padding-left: 0.25rem;
-  }
-
-  /* Make the center feel “full width” */
-  main.pack-list > .level-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .pack-list .level-container .level {
-    max-width: none;   /* let it use the full center column */
-  }
-
-  /* (Optional) keep meta visible but compact */
-  main.pack-list > .meta-container .meta {
-    gap: 1rem;
-  }
+  main.pack-list > .list-container { grid-column: 1; }
+  main.pack-list > .level-container { grid-column: 2; min-width: 0; }
+  main.pack-list > .meta-container { display: none; }
 }
