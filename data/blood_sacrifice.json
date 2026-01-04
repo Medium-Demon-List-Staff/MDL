@@ -96,7 +96,7 @@
             "user": "TheoSi",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
             "user": "Music Addict",
@@ -107,6 +107,12 @@
         {
             "user": "Unstable",
             "link": "https://outplayed.tv/media/a4obQW",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "super",
+            "link": "",
             "percent": 100,
             "hz": 240
         }
