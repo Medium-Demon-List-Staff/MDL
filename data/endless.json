@@ -1,0 +1,48 @@
+{
+    "id": 36723231,
+    "name": "Endless",
+    "author": "luisilloRS",
+    "creators": ["luisilloRS, Vennom628"],
+    "verifier": "luisilloRS",
+    "verification": "https://youtu.be/j1DtXNo0VT4",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
