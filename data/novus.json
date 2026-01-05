@@ -1,0 +1,48 @@
+{
+    "id": 59338155,
+    "name": "Novus",
+    "author": "gdParallax",
+    "creators": [],
+    "verifier": "gdParallax",
+    "verification": "https://youtu.be/gf9JBabndJc",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "lightning",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
