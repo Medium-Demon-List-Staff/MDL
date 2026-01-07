@@ -40,15 +40,6 @@
         "colour": "#000000"
     },
     {
-        "name": "Eye Strain Pack",
-        "levels": [
-            "demon_swinging",
-            "x_force",
-            "x_club"
-        ],
-        "colour": "#ffd700"
-    },
-    {
         "name": "KeiAs Pack",
         "levels": [
             "demon_swinging",
