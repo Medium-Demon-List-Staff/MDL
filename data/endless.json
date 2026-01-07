@@ -1,6 +1,6 @@
 {
     "id": 36723231,
-    "name": "Endless",
+    "name": "Endless (luisilloRS)",
     "author": "luisilloRS",
     "creators": ["luisilloRS, Vennom628"],
     "verifier": "luisilloRS",
@@ -40,6 +40,12 @@
         },
         {
             "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "TheoSi",
             "link": "",
             "percent": 100,
             "hz": 240
