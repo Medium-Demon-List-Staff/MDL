@@ -108,10 +108,16 @@ main.page-list > .meta-container {
 }
 .page-list .level-container .level .records .percent,
 .page-list .level-container .level .records .user,
+.page-list .level-container .level .records .hz {
+    padding-block: 1rem;
+}
 .page-list .level-container .level .records .user {
     width: 100%;
 }
 .page-list .level-container .level .records .percent,
+.page-list .level-container .level .records .hz {
+    text-align: end;
+}
 .page-list .meta-container .og a:hover,
 .page-list .level-container .level .records a:hover {
     text-decoration: underline;
