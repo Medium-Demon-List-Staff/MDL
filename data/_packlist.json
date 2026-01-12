@@ -231,7 +231,6 @@
         ],
         "colour": "#c0c0c0"
     },
-
     {
         "name": "Memory Pack",
         "levels": [
@@ -349,7 +348,7 @@
         "levels": [
             "gerbil",
             "nautilus",
-            "pigstep",
+            "pigstep"
         ],
         "colour": "#cd7f32"
     },
@@ -409,7 +408,7 @@
         ],
         "colour": "#cd7f32"
     },
-      {
+    {
         "name": "Red Pack",
         "levels": [
             "rip_it",
