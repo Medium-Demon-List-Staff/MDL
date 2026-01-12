@@ -35,7 +35,9 @@ export async function fetchList() {
               path,
               // Inject packs membership (empty array if none / packs failed)
               packs: levelToPacks[path] ?? [],
-              records: (level.records ?? []).sort((a, b) => b.percent - a.percent),
+              records: (level.records ?? [])
+                .map(({ hz, ...rest }) => rest)
+                .sort((a, b) => b.percent - a.percent),
             },
             null,
           ];
@@ -196,7 +198,9 @@ export async function fetchPackLevels(packName) {
                         level: {
                             ...level,
                             path,
-                            records: (level.records ?? []).sort((a, b) => b.percent - a.percent),
+                            records: (level.records ?? [])
+                                .map(({ hz, ...rest }) => rest)
+                                .sort((a, b) => b.percent - a.percent),
                         }
                     }, null];
                 } catch {

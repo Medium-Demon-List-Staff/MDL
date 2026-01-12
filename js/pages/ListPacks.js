@@ -119,7 +119,6 @@ export default {
                                 alt="Mobile"
                             />
                             </td>
-                            <td class="hz"><p>{{ record.hz }}Hz</p></td>
                         </tr>
                         </table>
             </div>
