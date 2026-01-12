@@ -40,6 +40,20 @@
         "colour": "#000000"
     },
     {
+        "name": "Bossfight Pack",
+        "levels": [
+            "blood_sacrifice",
+            "breaker",
+            "true_calamity",
+            "banished",
+            "sparkle",
+            "boss_3_electro",
+            "evil_yeeter",
+            "lost_lazors"
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "Bright Pack 2",
         "levels": [
             "ivashka",
@@ -47,6 +61,42 @@
             "light",
             "escuro",
             "les_lueurs"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Carpel Tunnel Pack",
+        "levels": [
+            "fleeting_race",
+            "gerbil",
+            "petrified_factory",
+            "good_karma",
+            "zuron",
+            "balls_15"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Imposter Pack 2",
+        "levels": [
+            "megalovania_gdjose",
+            "elevation",
+            "screamroom_zober",
+            "bass_knight",
+            "beyond"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Insane Dual Pack",
+        "levels": [
+            "crisis_complex",
+            "techno_punk",
+            "sin",
+            "cosmic_jet",
+            "deaths_grasp",
+            "zuron",
+            "lightopolis"
         ],
         "colour": "#ffd700"
     },
@@ -82,6 +132,28 @@
         "colour": "#ffd700"
     },
     {
+        "name": "Onefin Song Pack",
+        "levels": [
+            "ivashka",
+            "biru",
+            "zo",
+            "clocktown",
+            "melodic_travel"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Party Pack",
+        "levels": [
+            "circus_maniacus",
+            "demon_swinging",
+            "techno_punk",
+            "dance_zone",
+            "party_ride"
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "quiet pack 2",
         "levels": [
             "ivashka",
@@ -103,6 +175,17 @@
         "colour": "#ffd700"
     },
     {
+        "name": "Xtrullor Song Pack",
+        "levels": [
+            "poison",
+            "rip_it",
+            "screamroom_zober",
+            "sheolz",
+            "thermal_blast"
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "XXL Pack 2",
         "levels": [
             "rainbow_force_z",
@@ -114,40 +197,41 @@
         "colour": "#ffd700"
     },
     {
-        "name": "Bright Pack 1",
+        "name": "Afterlife Pack",
         "levels": [
-            "zo",
-            "redlight_blacklight",
-            "eyestrike",
-            "balls15",
-            "sunfall",
-            "the_end"
+            "soul_searching",
+            "sheolz",
+            "dark_heaven",
+            "resurrection",
+            "death_theory",
+            "deaths_grasp"
         ],
         "colour": "#c0c0c0"
     },
     {
-        "name": "LOUD PACK 1",
+        "name": "Creo Song Pack 2",
         "levels": [
-            "dry_bones",
-            "eyestrike",
-            "balls15",
-            "toundra",
-            "grinda"
+            "enuresis",
+            "hydrangea",
+            "nautilus",
+            "the_scarlet_sun",
+            "trident"
         ],
         "colour": "#c0c0c0"
     },
     {
-        "name": "Megacollab Pack 1",
+        "name": "Hell Pack",
         "levels": [
-            "dry_bones",
-            "helix",
-            "didi",
-            "trident",
+            "blood_sacrifice",
+            "sin",
+            "judgement",
+            "deaths_grasp",
             "que",
-            "1k"
+            "anda_iblis"
         ],
         "colour": "#c0c0c0"
     },
+
     {
         "name": "Memory Pack",
         "levels": [
@@ -229,6 +313,17 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "The Pack",
+        "levels": [
+            "split_the_system",
+            "the_scarlet_sun",
+            "through_the_top",
+            "the_prophetius",
+            "the_end"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "XXL Pack 1",
         "levels": [
             "apotheose_finale",
@@ -249,6 +344,71 @@
         ],
         "colour": "#c0c0c0"
     },
+    {
+        "name": "Animal Pack",
+        "levels": [
+            "gerbil",
+            "nautilus",
+            "pigstep",
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "Bright Pack 1",
+        "levels": [
+            "zo",
+            "redlight_blacklight",
+            "eyestrike",
+            "balls15",
+            "sunfall",
+            "the_end"
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "Creo Song Pack 1",
+        "levels": [
+            "sunfall",
+            "floral_catastrophe",
+            "left_behind",
+            "the_end"
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "Imposter Pack 1",
+        "levels": [
+            "astronaut_13",
+            "endless",
+            "thermodynamix_castrix",
+            "key",
+            "the_end"
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "LOUD PACK 1",
+        "levels": [
+            "dry_bones",
+            "eyestrike",
+            "balls15",
+            "toundra",
+            "grinda"
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "Megacollab Pack 1",
+        "levels": [
+            "dry_bones",
+            "helix",
+            "didi",
+            "trident",
+            "que",
+            "1k"
+        ],
+        "colour": "#cd7f32"
+    },
       {
         "name": "Red Pack",
         "levels": [
@@ -261,6 +421,27 @@
         "colour": "#ff0000"
     },
     {
+        "name": "Orange Pack",
+        "levels": [
+            "high_noon",
+            "endless",
+            "sunfall",
+            "que"
+        ],
+        "colour": "#ffa500"
+    },
+    {
+        "name": "Green Pack",
+        "levels": [
+            "poison",
+            "astronaut_13",
+            "aetherite_twilight",
+            "boss_3_electro",
+            "h"
+        ],
+        "colour": "#0bb300"
+    },
+    {
         "name": "Blue Pack",
         "levels": [
             "breaker",
@@ -271,6 +452,19 @@
             "left_behind"
         ],
         "colour": "#0072fa"
+    },
+    {
+        "name": "Purple Pack",
+        "levels": [
+            "dark_heaven",
+            "true_calamity",
+            "thermal_blast",
+            "sparkle",
+            "astrum",
+            "thermodynamix_castrix",
+            "crunchy_town"
+        ],
+        "colour": "#a200ff"
     },
     {
         "name": "Black and White Pack",
