@@ -1,0 +1,42 @@
+{
+    "id": 50504506,
+    "name": "Backwash III",
+    "author": "PeloSlim RMD",
+    "creators": [],
+    "verifier": "PeloSlim RMD",
+    "verification": "https://www.youtube.com/watch?v=OCeRr7RtEx0",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
