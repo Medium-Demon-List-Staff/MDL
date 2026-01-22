@@ -247,6 +247,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Molten",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "RoboBear04",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
