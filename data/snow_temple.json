@@ -367,6 +367,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "synthwave",
+            "link": "https://www.youtube.com/watch?v=4kzllogabSo",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
