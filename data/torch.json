@@ -55,6 +55,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Neptune",
+            "link": "https://youtu.be/AvOrsU6t2VI",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
