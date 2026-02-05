@@ -1,0 +1,60 @@
+{
+    "id": 109679428,
+    "name": "Artifical Powder",
+    "author": "DRisscuN8",
+    "creators": [""],
+    "verifier": "DRisscuN8",
+    "verification": "https://youtu.be/tZ8QJcU2tjw?si=rAFUZ-_cc57uEffc",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "TheoSi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Beeshie",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
