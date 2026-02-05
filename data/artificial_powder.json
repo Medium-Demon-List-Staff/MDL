@@ -9,6 +9,12 @@
     "percentToQualify": 100,
     "records": [
         {
+            "user": "huggies",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "yoshi",
             "link": "",
             "percent": 100,
