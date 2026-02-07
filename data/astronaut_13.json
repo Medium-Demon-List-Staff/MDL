@@ -222,7 +222,13 @@
             "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
+        },
+        {
+            "user": "Pizzabote6h",
+            "link": "https://www.youtube.com/watch?v=mMqLuZmrbJE",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
