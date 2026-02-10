@@ -49,6 +49,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "[MOAT] Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "[MOAT] Identity",
+            "link": "https://www.youtube.com/watch?v=eELZfzZhyVs",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
