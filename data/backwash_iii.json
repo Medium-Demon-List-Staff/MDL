@@ -61,6 +61,18 @@
             "link": "https://www.youtube.com/watch?v=eELZfzZhyVs",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "CoriOshawott",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
