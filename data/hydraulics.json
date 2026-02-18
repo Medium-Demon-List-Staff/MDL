@@ -142,7 +142,13 @@
         },
         {
             "user": "TheoSi",
-            "link": "https://www.youtube.com/watch?v=xFUiP0xOgfE",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
             "percent": 100,
             "hz": 240
         }
