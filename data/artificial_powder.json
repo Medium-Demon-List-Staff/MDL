@@ -91,6 +91,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Omnix",
+            "link": "https://www.youtube.com/watch?v=uhjXCHu7S-M",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "THNDR",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
