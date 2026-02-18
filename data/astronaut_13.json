@@ -229,6 +229,12 @@
             "link": "https://www.youtube.com/watch?v=mMqLuZmrbJE",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "MatejTheMaze",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
