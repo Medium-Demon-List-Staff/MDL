@@ -1,0 +1,60 @@
+{
+    "id": 15126930,
+    "name": "Twister",
+    "author": "willy5000",
+    "creators": [],
+    "verifier": "willy5000",
+    "verification": "https://youtu.be/2BoTzqO11oA?si=xgDfIp6wwqPx3YXU",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Sir_Manface",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "POKEMON GD",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Sheepyboy",
+            "link": "https://youtu.be/r2Iu0VFcEfo?si=i7UVbWTZZ6mMhxzJ",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
