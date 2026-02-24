@@ -331,6 +331,12 @@
             "link": "https://www.youtube.com/watch?v=FoFRrzd7-C8",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "goofy goober",
+            "link": "https://www.youtube.com/watch?v=thKYlYruoLY",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
