@@ -61,11 +61,6 @@ export default {
                         {{ pack.name }}
                     </div>
     </div>
-
-    <h2 v-if="entry.verified.length > 0">
-        Verified ({{ entry.verified.length}})
-    </h2>
-
                         <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
                         <table v-if="entry.verified.length > 0" class="table">
                             <tr v-for="score in entry.verified">
