@@ -1,0 +1,42 @@
+{
+    "id": 45650578,
+    "name": "Killgore",
+    "author": "RealZober",
+    "creators": "",
+    "verifier": "RealZober",
+    "verification": "https://youtu.be/vm3fQk4FcyY?si=Kaio_UyWJNOMns85",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Breaker",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aph",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        }
+    ]
+}
