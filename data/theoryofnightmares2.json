@@ -1,0 +1,42 @@
+{
+    "id": 127950287,
+    "name": "TheoryOfNightmares2",
+    "author": "DreamZoneGD",
+    "creators": [],
+    "verifier": "DreamZoneGD",
+    "verification": "https://youtu.be/-3l5oXNYB6Q?si=r6mBCttIY_uxw-QP",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "Frogs65",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        }
+    ]
+}
