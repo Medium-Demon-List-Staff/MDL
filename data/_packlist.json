@@ -40,6 +40,32 @@
         "colour": "#000000"
     },
     {
+        "name": "MDL Favorites Pack",
+        "levels": [
+            "crisis_complex",
+            "harubi",
+            "simulation_swarm",
+            "dry_bones",
+            "eyestrike",
+            "lightopolis",
+            "floral_catastrophe"
+        ],
+        "colour": "#afe6ed"
+    },
+    {
+        "name": "Awful Pack",
+        "levels": [
+            "chaoz_overdrive",
+            "screamroom_realzober",
+            "escuro",
+            "dark_matter",
+            "spaced_out",
+            "dawn_of_darkness",
+            "ice_core",
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "Bossfight Pack",
         "levels": [
             "blood_sacrifice",
@@ -73,6 +99,53 @@
             "good_karma",
             "zuron",
             "balls15"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Default Song Pack 2",
+        "levels": [
+            "laststep",
+            "x_force",
+            "x_club",
+            "death_theory",
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Early 2.0 Pack",
+        "levels": [
+            "split_the_system",
+            "screamroom_realzober",
+            "sheolz",
+            "chaoz_airflow_2",
+            "galaxy_way",
+            "acousticophobia"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Early 2.1 Pack",
+        "levels": [
+            "vaporize",
+            "megalovania_gdjose",
+            "elevation",
+            "ad_honorem",
+            "banished",
+            "zuron"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Impossible Ending Pack",
+        "levels": [
+            "biru",
+            "artificial_powder",
+            "backwash_iii",
+            "novus",
+            "simplicity",
+            "dream",
+            "the_end"
         ],
         "colour": "#ffd700"
     },
@@ -154,6 +227,17 @@
         "colour": "#ffd700"
     },
     {
+        "name": "Popular Pack 2",
+        "levels": [
+            "crisis_complex",
+            "ad_honorem",
+            "resurrection",
+            "judgement",
+            "biru"
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "quiet pack 2",
         "levels": [
             "ivashka",
@@ -161,6 +245,20 @@
             "lochness",
             "harubi",
             "simulation_swarm"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Raw Pack",
+        "levels": [
+            "sin",
+            "fleeting_race",
+            "enuresis",
+            "sheolz",
+            "high_noon",
+            "banished",
+            "galaxy_way",
+            "acousticophobia"
         ],
         "colour": "#ffd700"
     },
@@ -220,6 +318,36 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Dark Pack",
+        "levels": [
+            "escuro",
+            "dark_matter",
+            "blackout",
+            "dawn_of_darkness"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Default Song Pack 1",
+        "levels": [
+            "dark_matter",
+            "simg_factorial_8",
+            "dawn_of_darkness",
+            "clubstep_ex",
+            "electric_landscape"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Joshteautwins Pack",
+        "levels": [
+            "elevation",
+            "eff",
+            "ride"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Hell Pack",
         "levels": [
             "blood_sacrifice",
@@ -270,26 +398,14 @@
         "colour": "#c0c0c0"
     },
     {
-        "name": "Old Pack",
+        "name": "Popular Pack 2",
         "levels": [
-            "x_club",
-            "dark_matter",
-            "simg_factorial_8",
-            "dawn_of_darkness",
-            "clubstep_ex"
-        ],
-        "colour": "#c0c0c0"
-    },
-    {
-        "name": "Popular Pack",
-        "levels": [
-            "crisis_complex",
-            "ad_honorem",
-            "resurrection",
-            "biru",
+            "artificial_powder",
+            "astronaut_13",
+            "torch",
             "dry_bones",
-            "ride",
-            "lava_temple"
+            "boss_3_electro",
+            "ride"
         ],
         "colour": "#c0c0c0"
     },
@@ -300,6 +416,18 @@
             "high_noon",
             "escuro",
             "acrylic_canals"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Rukkus Song Pack",
+        "levels": [
+            "fleeting_race",
+            "astronaut_13",
+            "redlight_blacklight",
+            "blackout",
+            "rewind",
+            "skullbreaker"
         ],
         "colour": "#c0c0c0"
     },
@@ -320,6 +448,26 @@
             "through_the_top",
             "the_prophetius",
             "the_end"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Underwater Pack",
+        "levels": [
+            "lochness",
+            "buoy_base",
+            "nautilus",
+            "trident"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Videogame Pack",
+        "levels": [
+            "buoy_base",
+            "scarlet_field",
+            "good_karma",
+            "true_calamity"
         ],
         "colour": "#c0c0c0"
     },
@@ -406,6 +554,16 @@
             "trident",
             "que",
             "1k"
+        ],
+        "colour": "#cd7f32"
+    },
+    {
+        "name": "Season Pack",
+        "levels": [
+            "floral_catastrophe",
+            "sunfall",
+            "autumn_travel",
+            "frozen_peak"
         ],
         "colour": "#cd7f32"
     },
