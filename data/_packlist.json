@@ -339,15 +339,6 @@
         "colour": "#c0c0c0"
     },
     {
-        "name": "Joshteautwins Pack",
-        "levels": [
-            "elevation",
-            "eff",
-            "ride"
-        ],
-        "colour": "#c0c0c0"
-    },
-    {
         "name": "Hell Pack",
         "levels": [
             "blood_sacrifice",
@@ -356,6 +347,15 @@
             "deaths_grasp",
             "que",
             "anda_iblis"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Joshteautwins Pack",
+        "levels": [
+            "elevation",
+            "eff",
+            "ride"
         ],
         "colour": "#c0c0c0"
     },
