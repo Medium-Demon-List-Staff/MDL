@@ -97,6 +97,7 @@
             "gerbil",
             "petrified_factory",
             "good_karma",
+            "but_heres_the_kicker",
             "zuron",
             "balls15"
         ],
@@ -249,16 +250,12 @@
         "colour": "#ffd700"
     },
     {
-        "name": "Raw Pack",
+        "name": "Raw Pack 2",
         "levels": [
             "sin",
             "fleeting_race",
             "enuresis",
-            "sheolz",
-            "high_noon",
-            "banished",
-            "galaxy_way",
-            "acousticophobia"
+            "sheolz"
         ],
         "colour": "#ffd700"
     },
@@ -290,7 +287,7 @@
             "techno_punk",
             "enuresis",
             "biru",
-            "scarlet_field"
+            "scarlet_field",
         ],
         "colour": "#ffd700"
     },
@@ -385,7 +382,7 @@
         "colour": "#c0c0c0"
     },
     {
-        "name": "Number Name Pack",
+        "name": "Number Name Pack 1",
         "levels": [
             "chaoz_airflow_2",
             "astronaut_13",
@@ -393,7 +390,9 @@
             "boss_3_electro",
             "balls15",
             "rainbow_dust_v2",
-            "163"
+            "theoryofnightmares2",
+            "163",
+            "1k"
         ],
         "colour": "#c0c0c0"
     },
@@ -413,9 +412,20 @@
         "name": "quiet pack 1",
         "levels": [
             "scarlet_field",
+            "but_heres_the_kicker",
             "high_noon",
             "escuro",
             "acrylic_canals"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Raw Pack 2",
+        "levels": [
+            "high_noon",
+            "banished",
+            "galaxy_way",
+            "acousticophobia"
         ],
         "colour": "#c0c0c0"
     },
@@ -432,11 +442,31 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Russia Pack",
+        "levels": [
+            "stormfront",
+            "solevoy",
+            "backwash_iii",
+            "sparkle"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Subwoofer Pack",
         "levels": [
             "enuresis",
             "judgement",
             "true_calamity"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Space Pack",
+        "levels": [
+            "cosmic_jet",
+            "dark_matter",
+            "alien_generator",
+            "spaced_out"
         ],
         "colour": "#c0c0c0"
     },
@@ -474,10 +504,21 @@
     {
         "name": "XXL Pack 1",
         "levels": [
+            "solevoy",
+            "backwash_iii",
             "apotheose_finale",
             "clocktown",
             "autumn_travel",
             "melodic_travel"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Zober Pack",
+        "levels": [
+            "screamroom_realzober",
+            "need_you",
+            "killgore"
         ],
         "colour": "#c0c0c0"
     },
@@ -488,6 +529,7 @@
             "redlight_blacklight",
             "rewind",
             "blackout",
+            "theoryofnightmares2",
             "key"
         ],
         "colour": "#c0c0c0"
@@ -583,6 +625,7 @@
         "name": "Orange Pack",
         "levels": [
             "high_noon",
+            "torch",
             "endless",
             "sunfall",
             "que"
@@ -615,13 +658,14 @@
     {
         "name": "Purple Pack",
         "levels": [
+            "but_heres_the_kicker",
             "dark_heaven",
             "true_calamity",
             "thermal_blast",
             "sparkle",
+            "digtal_action",
             "astrum",
             "thermodynamix_castrix",
-            "crunchy_town"
         ],
         "colour": "#a200ff"
     },
