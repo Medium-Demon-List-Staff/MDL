@@ -1,0 +1,54 @@
+{
+    "id": 127252162,
+    "name": "Fury of Bombcraft",
+    "author": "BombCraft2010",
+    "creators": [],
+    "verifier": "BombCraft2010",
+    "verification": "https://youtu.be/m8nvlIgm98A?si=A0kJpBU56aJ2v-V-",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "Frogs65",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "Aph",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        }
+    ]
+}
