@@ -325,6 +325,18 @@
             "link": "https://www.youtube.com/watch?v=zBN0_Dq6YCc",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Diegarrix",
+            "link": "https://www.youtube.com/watch?v=x4XKCDwlSJI",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Sir_Manface",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
