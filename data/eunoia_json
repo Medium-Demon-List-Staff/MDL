@@ -1,0 +1,42 @@
+{
+    "id": 78304351,
+    "name": "Eunoia",
+    "author": "GoldenEra",
+    "creators": [],
+    "verifier": "GoldenEra",
+    "verification": "https://youtu.be/BDHu8KbUTkU?si=iRfnzOHA_rUzxyQK",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "TheoSi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "StellarGradient",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
