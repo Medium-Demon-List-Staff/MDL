@@ -1,9 +1,9 @@
 {
     "id": 42315135,
     "name": "The Scarlet Sun",
-    "author": "loltad",
+    "author": "Loltad",
     "creators": [],
-    "verifier": "loltad",
+    "verifier": "Loltad",
     "verification": "https://youtu.be/_gyqJf9elRg",
     "showcase": "",
     "percentToQualify": 100,
@@ -352,6 +352,12 @@
         },
         {
             "user": "Frogs65",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "CoriOshawott",
             "link": "",
             "percent": 100,
             "hz": 240    
