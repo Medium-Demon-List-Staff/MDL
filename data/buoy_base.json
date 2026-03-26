@@ -253,6 +253,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Cokmocc",
+            "link": "https://www.youtube.com/watch?v=5XyWGk5HTy4",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
