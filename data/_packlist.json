@@ -370,6 +370,16 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Minecraft Pack",
+        "levels": [
+            "torch",
+            "nautilus",
+            "dream",
+            "pigstep"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "NONG Pack",
         "levels": [
             "lochness",
