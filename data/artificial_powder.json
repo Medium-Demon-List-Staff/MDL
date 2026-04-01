@@ -151,6 +151,12 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "Braiinfog",
+            "link": "https://www.youtube.com/watch?v=2HnoH0aXA1M",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
