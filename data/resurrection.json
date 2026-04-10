@@ -661,6 +661,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "50Steaks",
+            "link": "https://www.youtube.com/watch?v=tdxjVe8cba4",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
