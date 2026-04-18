@@ -1,0 +1,43 @@
+{
+    "id": 77723735,
+    "name": "163",
+    "author": "Diffuse",
+    "creators": [],
+    "verifier": "Diffuse",
+    "verification": "https://youtu.be/9MXFxPg6GVg",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "CoriOshawott",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aph",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        }
+    ]
+}
