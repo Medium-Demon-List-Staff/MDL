@@ -139,6 +139,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": ".bbly",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "kilodiv",
+            "link": "https://www.youtube.com/watch?v=ySDR5sDIqVo",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
