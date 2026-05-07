@@ -189,8 +189,14 @@
             "hz": 240    
         },
         {
-            "user": "Burbon",
-            "link": "Joylanturn",
+            "user": "Joylanturn",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "FONDuS",
+            "link": "https://www.youtube.com/watch?v=GuGaS6Gph0Q",
             "percent": 100,
             "hz": 240    
         }
