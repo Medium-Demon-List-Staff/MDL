@@ -1,0 +1,54 @@
+{
+    "id": 15854378,
+    "name": "Grindery",
+    "author": "LinkTheGamer",
+    "creators": [],
+    "verifier": "LinkTheGamer",
+    "verification": "https://youtu.be/pf1na82B2fQ",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Aph",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Aquatic51",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Sheepyboy",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
