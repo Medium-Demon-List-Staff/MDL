@@ -127,6 +127,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "WKGames",
+            "link": "https://www.youtube.com/watch?v=QcSMgepSPTc",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
