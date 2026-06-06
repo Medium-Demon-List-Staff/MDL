@@ -157,6 +157,18 @@
             "link": "",
             "percent": 100,
             "hz": 240    
+        },
+        {
+            "user": "lostdiamond7",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240    
         }
     ]
 }

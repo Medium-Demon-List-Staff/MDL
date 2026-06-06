@@ -67,6 +67,18 @@
             "link": "https://www.youtube.com/watch?v=1p8rG1G8AN0",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "DavidTheMaze",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
