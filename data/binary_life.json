@@ -1,0 +1,54 @@
+{
+    "id": 90348209,
+    "name": "Binary Life",
+    "author": "cherryteam",
+    "creators": ["KseNon, Hir0shi, SmitN, Nidroo, ivyteal, Vadi, gdsauzzeth, Cuaer7, Xatz, ArtaxFerSarh, Amadei, curxe"],
+    "verifier": "ViPriN",
+    "verification": "https://youtu.be/fv7eAMZIVic",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "wassas",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Excryst",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Beulraeki",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "DIUS3D",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
