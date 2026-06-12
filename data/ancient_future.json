@@ -1,0 +1,48 @@
+{
+    "id": 62418569,
+    "name": "Ancient Future",
+    "author": "Df0rDie",
+    "creators": [],
+    "verifier": "Df0rDie",
+    "verification": "https://youtu.be/UohUBBzm-CU?si=jxDfX0zQQCYRfCUE",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
