@@ -1,0 +1,54 @@
+{
+    "id": 51119584,
+    "name": "Lineated Pearlescent",
+    "author": "TeamNoX",
+    "creators": ["BlUhOl, Snarkz, SirZaiss, Alfian10, EnZore, R4nger, Fairfax, Kurokawa, Lipz, MrClyde"],
+    "verifier": "TeamNoX",
+    "verification": "https://youtu.be/d0SoAsSNyVY?si=JNEIHO06PWelTXGv",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Excryst",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
