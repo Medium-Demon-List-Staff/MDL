@@ -43,7 +43,6 @@
         "name": "MDL Favorites Pack",
         "levels": [
             "crisis_complex",
-            "harubi",
             "simulation_swarm",
             "dry_bones",
             "eyestrike",
@@ -85,8 +84,7 @@
             "ivashka",
             "poison",
             "light",
-            "escuro",
-            "les_lueurs"
+            "escuro"
         ],
         "colour": "#ffd700"
     },
@@ -211,7 +209,6 @@
             "ivashka",
             "biru",
             "zo",
-            "clocktown",
             "melodic_travel"
         ],
         "colour": "#ffd700"
@@ -244,7 +241,6 @@
             "ivashka",
             "poison",
             "lochness",
-            "harubi",
             "simulation_swarm"
         ],
         "colour": "#ffd700"
@@ -517,7 +513,6 @@
             "solevoy",
             "backwash_iii",
             "apotheose_finale",
-            "clocktown",
             "autumn_travel",
             "melodic_travel"
         ],
