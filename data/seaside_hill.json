@@ -1,0 +1,48 @@
+{
+    "id": 79914375,
+    "name": "SEASIDE HILL",
+    "author": "Sillow",
+    "creators": [],
+    "verifier": "Sillow",
+    "verification": "https://www.youtube.com/watch?v=Ay5e5JbL0Mw",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "JoacoPe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "huggies",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
