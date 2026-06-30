@@ -43,10 +43,14 @@
         "name": "MDL Favorites Pack",
         "levels": [
             "crisis_complex",
+            "lochness",
             "simulation_swarm",
+            "judgement",
+            "torch",
             "dry_bones",
             "eyestrike",
             "lightopolis",
+            "sunfall",
             "floral_catastrophe"
         ],
         "colour": "#afe6ed"
@@ -55,7 +59,9 @@
         "name": "Awful Pack",
         "levels": [
             "chaoz_overdrive",
+            "hazard",
             "screamroom_realzober",
+            "bass_knight",
             "escuro",
             "dark_matter",
             "spaced_out",
