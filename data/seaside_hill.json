@@ -91,6 +91,12 @@
             "link": "",
             "percent": 100,
             "hz": 240    
+        },
+        {
+            "user": "SEASIDE HILL",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
