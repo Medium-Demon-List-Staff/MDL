@@ -97,6 +97,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "MidNight2",
+            "link": "",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
