@@ -169,6 +169,12 @@
             "link": "",
             "percent": 100,
             "hz": 240    
+        },
+        {
+            "user": "dragnalus",
+            "link": "https://www.youtube.com/watch?v=D6I4O35EF7g",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
