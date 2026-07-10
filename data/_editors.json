@@ -20,9 +20,14 @@
         "link": "https://www.youtube.com/channel/UCIG2MhEhOT0BfzTLl3HOp8Q"
     },
     {
-        "role": "helper",
+        "role": "admin",
         "name": "Identity",
         "link": "https://www.youtube.com/@Identity_GD"
+    },
+    {
+        "role": "admin",
+        "name": "LifelessComputer",
+        "link": "https://www.youtube.com/@lifeless7434/featured"
     },
     {
         "role": "helper",
@@ -38,11 +43,6 @@
         "role": "helper",
         "name": "Bobbyp02",
         "link": "https://www.youtube.com/channel/UCvGwcjgCB0vuSR3Fy03eNIw"
-    },
-    {
-        "role": "helper",
-        "name": "LifelessComputer",
-        "link": "https://www.youtube.com/@lifeless7434/featured"
     },
     {
         "role": "helper",
