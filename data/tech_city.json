@@ -127,6 +127,12 @@
             "link": "",
             "percent": 100,
             "hz": "- "
+        },
+        {
+            "user": "M1Sushi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
