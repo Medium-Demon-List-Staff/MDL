@@ -1,0 +1,48 @@
+{
+    "id": 16961247,
+    "name": "Galaxy Journey",
+    "author": "Lucoraf",
+    "creators": [],
+    "verifier": "Lucoraf",
+    "verification": "https://www.youtube.com/watch?v=qbNc6cESGoE",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "AceK58",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
