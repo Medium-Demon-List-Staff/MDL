@@ -379,6 +379,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Noxair",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "hanzel_HA",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
