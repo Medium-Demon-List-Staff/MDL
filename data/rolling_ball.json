@@ -19,6 +19,48 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "[FAIRY] Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "sheeb",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "GeoLunatic",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }

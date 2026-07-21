@@ -15,7 +15,25 @@
             "hz": 120
         },
         {
-            "user": "",
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ItsmeWinzz",
             "link": "",
             "percent": 100,
             "hz": 240
