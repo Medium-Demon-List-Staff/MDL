@@ -1,8 +1,8 @@
 {
     "id": 15815353,
     "name": "Happy Days",
-    "author": "Overzero",
-    "creators": ["Overzero, ReMuN"],
+    "author": "OverZero",
+    "creators": ["OverZero, ReMuN"],
     "verifier": "Allan",
     "verification": "https://www.youtube.com/watch?v=kwPu3qoHhio",
     "showcase": "",
@@ -520,6 +520,12 @@
         },
         {
             "user": "Greeny",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Beulraeki",
             "link": "",
             "percent": 100,
             "hz": 240
