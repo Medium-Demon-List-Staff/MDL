@@ -1,9 +1,9 @@
 {
     "id": 32802982,
     "name": "Vaporize (Hard Demon)",
-    "author": "Enlex",
-    "creators": ["Enlex, Lemons, Nico99, ChaSe, Skitten, Myst, Schady, Andrez, Borto, AyDiePay, EnZore, BananaMuffin"],
-    "verifier": "Enlex",
+    "author": "enlex",
+    "creators": ["enlex, Lemons, Nico99, ChaSe, Skitten, Myst, schady, AndreZ, Borto, AyDiePay, EnZore, BananaMuffin"],
+    "verifier": "enlex",
     "verification": "https://www.youtube.com/watch?v=B2oZVo0rbZM",
     "showcase": "",
     "percentToQualify": 100,
@@ -502,6 +502,12 @@
         },
         {
             "user": "Noxair",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
             "link": "",
             "percent": 100,
             "hz": 240
