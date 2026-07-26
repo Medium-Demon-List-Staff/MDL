@@ -1,0 +1,24 @@
+{
+    "id": 61722550,
+    "name": "Elevator",
+    "author": "Failure444",
+    "creators": ["Failure444", "genericqueso0"],
+    "verifier": "",
+    "verification": "https://www.youtube.com/watch?v=BpxYHF6OAkI",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
