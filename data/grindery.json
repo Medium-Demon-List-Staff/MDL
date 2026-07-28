@@ -97,6 +97,18 @@
             "link": "",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "WKGames",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "AndreLac",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
