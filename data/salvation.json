@@ -9,13 +9,25 @@
     "percentToQualify": 100,
     "records": [
         {
-            "user": "",
+            "user": "ZircleZ",
             "link": "",
             "percent": 100,
             "hz": 240
         },
         {
-            "user": "",
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
             "link": "",
             "percent": 100,
             "hz": 240
