@@ -1,0 +1,24 @@
+{
+    "id": 67479864,
+    "name": "BABYLON",
+    "author": "Splash",
+    "creators": ["Splash", "Zoroa","BelonziK"],
+    "verifier": "Splash",
+    "verification": "https://www.youtube.com/watch?v=W59EjQqqWjI",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
