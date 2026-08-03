@@ -2,11 +2,11 @@
     {
         "name": "Top 5 Pack",
         "levels": [
-            "vaporize",
-            "rainbow_force_z",
             "chaoz_overdrive",
             "happy_days",
-            "ivashka"
+            "ivashka",
+            "poison",
+            "megalovania_gdjose"
         ],
         "colour": "#000000"
     },
@@ -18,22 +18,23 @@
             "chaoz_overdrive",
             "demon_swinging",
             "elevation",
-            "fleeting_race",
+            "fury_of_bombcraft",
             "gerbil",
             "happy_days",
             "ivashka",
             "judgement",
-            "key",
+            "killgore",
             "lochness",
             "megalovania_gdjose",  
             "nautilus",
+            "on_my_own",
             "poison",
             "que",
-            "rainbow_force_z",
-            "split_the_system",
+            "rip_it",
+            "sin",
             "techno_punk",
             "uffas",
-            "vaporize",
+            "vortex_ii",
             "x_force",
             "zo"
         ],
@@ -50,7 +51,6 @@
             "dry_bones",
             "eyestrike",
             "lightopolis",
-            "sunfall",
             "floral_catastrophe"
         ],
         "colour": "#afe6ed"
@@ -78,9 +78,9 @@
             "true_calamity",
             "banished",
             "sparkle",
+            "spaced_out",
             "boss_3_electro",
-            "evil_yeeter",
-            "lost_lazors"
+            "evil_yeeter"
         ],
         "colour": "#ffd700"
     },
@@ -120,7 +120,7 @@
     {
         "name": "Early 2.0 Pack",
         "levels": [
-            "split_the_system",
+            "happy_days",
             "screamroom_realzober",
             "sheolz",
             "chaoz_airflow_2",
@@ -132,8 +132,8 @@
     {
         "name": "Early 2.1 Pack",
         "levels": [
-            "vaporize",
             "megalovania_gdjose",
+            "tech_city",
             "elevation",
             "ad_honorem",
             "banished",
@@ -148,9 +148,9 @@
             "artificial_powder",
             "backwash_iii",
             "novus",
+            "purple_splash",
             "simplicity",
-            "dream",
-            "the_end"
+            "stomp_the_ground"
         ],
         "colour": "#ffd700"
     },
@@ -158,10 +158,10 @@
         "name": "Imposter Pack 2",
         "levels": [
             "megalovania_gdjose",
+            "hazard",
             "elevation",
             "screamroom_realzober",
             "bass_knight",
-            "beyond"
         ],
         "colour": "#ffd700"
     },
@@ -170,11 +170,13 @@
         "levels": [
             "crisis_complex",
             "techno_punk",
+            "circus_maniacus",
             "sin",
             "cosmic_jet",
             "deaths_grasp",
             "zuron",
-            "lightopolis"
+            "lightopolis",
+            "amen"
         ],
         "colour": "#ffd700"
     },
@@ -199,13 +201,15 @@
         "colour": "url('data:image/jpeg;base64,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')"
     },
     {
-        "name": "Megacollab Pack 2",
+        "name": "Megacollab Pack 3",
         "levels": [
             "chaoz_overdrive",
-            "vaporize",
             "gerbil",
-            "magic_mushroom",
-            "balance_breaker"
+            "enuresis",
+            "balance_breaker",
+            "party_ride",
+            "magic_mushroom"
+            
         ],
         "colour": "#ffd700"
     },
@@ -254,9 +258,11 @@
     {
         "name": "Raw Pack 2",
         "levels": [
+            "hazard",
             "sin",
             "fleeting_race",
             "enuresis",
+            "banished",
             "sheolz"
         ],
         "colour": "#ffd700"
@@ -285,8 +291,8 @@
     {
         "name": "XXL Pack 2",
         "levels": [
-            "rainbow_force_z",
             "techno_punk",
+            "fury_of_bombcraft",
             "enuresis",
             "biru",
             "scarlet_field"
@@ -301,18 +307,21 @@
             "dark_heaven",
             "resurrection",
             "death_theory",
-            "deaths_grasp"
+            "deaths_grasp",
+            "salvation"
         ],
         "colour": "#c0c0c0"
     },
     {
-        "name": "Creo Song Pack 2",
+        "name": "Creo Song Pack",
         "levels": [
             "enuresis",
             "hydrangea",
             "nautilus",
             "the_scarlet_sun",
-            "trident"
+            "left_behind",
+            "trident",
+            "floral_catastrophe"
         ],
         "colour": "#c0c0c0"
     },
@@ -350,11 +359,13 @@
         "colour": "#c0c0c0"
     },
     {
-        "name": "Joshteautwins Pack",
+        "name": "Megacollab Pack 2",
         "levels": [
-            "elevation",
-            "eff",
-            "ride"
+            "dry_bones",
+            "rolling_ball",
+            "didi",
+            "purple_splash",
+            "need_you"
         ],
         "colour": "#c0c0c0"
     },
@@ -364,10 +375,10 @@
             "x_force",
             "x_club",
             "sheolz",
-            "nautilus",
             "frame_of_mind",
             "simg_factorial_8",
-            "the_prophetius"
+            "reactive",
+            "ancient_future"
         ],
         "colour": "#c0c0c0"
     },
@@ -389,7 +400,6 @@
             "simulation_swarm",
             "apotheose_finale",
             "eff",
-            "ride",
             "rolling_ball"
         ],
         "colour": "#c0c0c0"
@@ -416,8 +426,7 @@
             "astronaut_13",
             "torch",
             "dry_bones",
-            "boss_3_electro",
-            "ride"
+            "boss_3_electro"
         ],
         "colour": "#c0c0c0"
     },
@@ -435,9 +444,11 @@
     {
         "name": "Raw Pack 1",
         "levels": [
-            "high_noon",
-            "banished",
+            "laststep",
             "galaxy_way",
+            "didi",
+            "breaking_in",
+            "high_noon",
             "acousticophobia"
         ],
         "colour": "#c0c0c0"
@@ -449,6 +460,7 @@
             "astronaut_13",
             "redlight_blacklight",
             "blackout",
+            "rolling_ball",
             "rewind",
             "skullbreaker"
         ],
@@ -476,10 +488,12 @@
     {
         "name": "Space Pack",
         "levels": [
+            "galaxy_journey",
             "cosmic_jet",
             "dark_matter",
             "alien_generator",
-            "spaced_out"
+            "spaced_out",
+            "galaxy_way"
         ],
         "colour": "#c0c0c0"
     },
@@ -489,8 +503,7 @@
             "split_the_system",
             "the_scarlet_sun",
             "through_the_top",
-            "the_prophetius",
-            "the_end"
+            "the_prophetius"
         ],
         "colour": "#c0c0c0"
     },
@@ -510,7 +523,8 @@
             "buoy_base",
             "scarlet_field",
             "good_karma",
-            "true_calamity"
+            "true_calamity",
+            "seaside_hill"
         ],
         "colour": "#c0c0c0"
     },
@@ -541,8 +555,8 @@
             "redlight_blacklight",
             "rewind",
             "blackout",
-            "theoryofnightmares2",
-            "key"
+            "salvation",
+            "theoryofnightmares2"
         ],
         "colour": "#c0c0c0"
     },
@@ -561,31 +575,17 @@
             "zo",
             "redlight_blacklight",
             "eyestrike",
-            "balls15",
-            "sunfall",
-            "the_end"
-        ],
-        "colour": "#cd7f32"
-    },
-    {
-        "name": "Creo Song Pack 1",
-        "levels": [
-            "sunfall",
-            "floral_catastrophe",
-            "left_behind",
-            "the_end"
+            "balls15"
         ],
         "colour": "#cd7f32"
     },
     {
         "name": "Imposter Pack 1",
         "levels": [
+            "beyond",
             "astronaut_13",
             "novus",
-            "endless",
-            "thermodynamix_castrix",
-            "key",
-            "the_end"
+            "endless"
         ],
         "colour": "#cd7f32"
     },
@@ -603,12 +603,11 @@
     {
         "name": "Megacollab Pack 1",
         "levels": [
-            "dry_bones",
-            "helix",
-            "didi",
-            "trident",
+            "on_my_own",
+            "lineated_pearlescent",
             "que",
-            "1k"
+            "binary_life",
+            "trident"
         ],
         "colour": "#cd7f32"
     },
@@ -616,7 +615,6 @@
         "name": "Season Pack",
         "levels": [
             "floral_catastrophe",
-            "sunfall",
             "autumn_travel",
             "frozen_peak"
         ],
@@ -639,7 +637,6 @@
             "high_noon",
             "torch",
             "endless",
-            "sunfall",
             "que"
         ],
         "colour": "#ffa500"
@@ -651,13 +648,14 @@
             "astronaut_13",
             "aetherite_twilight",
             "boss_3_electro",
-            "h"
+            "binary_life"
         ],
         "colour": "#0bb300"
     },
     {
         "name": "Blue Pack",
         "levels": [
+            "tech_city",
             "breaker",
             "biru",
             "frozen_peak",
@@ -675,9 +673,8 @@
             "true_calamity",
             "thermal_blast",
             "sparkle",
-            "digital_action",
-            "astrum",
-            "thermodynamix_castrix"
+            "purple_splash",
+            "digital_action"
         ],
         "colour": "#a200ff"
     },
@@ -690,8 +687,7 @@
             "beyond",
             "escuro",
             "dry_bones",
-            "blackout",
-            "ride"
+            "blackout"
         ],
         "colour": "linear-gradient(45deg, rgba(0,0,0,1) 33%, rgba(212,208,208,1) 66%, rgba(255,255,255,1) 100%)"
     }
