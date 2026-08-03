@@ -1,9 +1,9 @@
 {
     "id": 75673707,
     "name": "Sin",
-    "author": "xdGamers2856",
+    "author": "XDGamers2856",
     "creators": [],
-    "verifier": "xdGamers2856",
+    "verifier": "XDGamers2856",
     "verification": "https://youtu.be/xcec_L4bY_o",
     "showcase": "",
     "percentToQualify": 100,
@@ -208,6 +208,12 @@
         },
         {
             "user": "RoboBear04",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "wassas1",
             "link": "",
             "percent": 100,
             "hz": 240
