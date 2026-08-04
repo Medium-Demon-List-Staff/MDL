@@ -118,6 +118,19 @@
         "colour": "#ffd700"
     },
     {
+        "name": "Difficulty Spike Pack",
+        "levels": [
+            "techno_punk",
+            "rip_it",
+            "ad_honorem",
+            "dark_heaven",
+            "impact",
+            "sadness",
+            "clubstep_ex"
+        ],
+        "colour": "#ffd700"
+    },
+    {
         "name": "Early 2.0 Pack",
         "levels": [
             "happy_days",
@@ -138,6 +151,27 @@
             "ad_honorem",
             "banished",
             "zuron"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "France Pack",
+        "levels": [
+            "balance_breaker",
+            "badlands",
+            "magic_mushroom"
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Impossible Beginning Pack",
+        "levels": [
+            "demon_swinging",
+            "breaker",
+            "zo",
+            "alien_generator",
+            "sparkle",
+            "dawn_of_darkness"
         ],
         "colour": "#ffd700"
     },
@@ -210,6 +244,19 @@
             "party_ride",
             "magic_mushroom"
             
+        ],
+        "colour": "#ffd700"
+    },
+    {
+        "name": "Modern Pack 2",
+        "levels": [
+            "ivashka",
+            "polygonal_array",
+            "gerbil",
+            "soul_searching",
+            "beyond",
+            "zo",
+            "aspect"
         ],
         "colour": "#ffd700"
     },
@@ -313,6 +360,25 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "City Pack",
+        "levels": [
+            "tech_city",
+            "battletown",
+            "lightopolis",
+            "tokyo_takedown"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Core Pack",
+        "levels": [
+            "torch",
+            "aetherite_twilight",
+            "blackout"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Creo Song Pack",
         "levels": [
             "enuresis",
@@ -347,6 +413,29 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Future Pack",
+        "levels": [
+            "tech_city",
+            "alien_generator",
+            "zuron",
+            "cybernetic_umbilicus",
+            "digital_action",
+            "ancient_future",
+            "binary_life"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Gun Pack",
+        "levels": [
+            "banished",
+            "magic_mushroom",
+            "frametrapped",
+            "high_noon"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Hell Pack",
         "levels": [
             "blood_sacrifice",
@@ -354,6 +443,15 @@
             "judgement",
             "deaths_grasp",
             "que",
+            "anda_iblis"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Indonesia Pack",
+        "levels": [
+            "biru",
+            "lineated_pearlescent",
             "anda_iblis"
         ],
         "colour": "#c0c0c0"
@@ -393,6 +491,30 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Modern Pack 1",
+        "levels": [
+            "dry_bones",
+            "sparkle",
+            "helix",
+            "balls15",
+            "purple_splash",
+            "boss_3_electro",
+            "163"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Name Pack",
+        "levels": [
+            "ivashka",
+            "fury_of_bombcraft",
+            "sparkle",
+            "didi",
+            "zeum_never_pass"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "NONG Pack",
         "levels": [
             "lochness",
@@ -416,6 +538,28 @@
             "theoryofnightmares2",
             "163",
             "1k"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Physics Pack",
+        "levels": [
+            "thermal_blast",
+            "impact",
+            "gravitation_surge",
+            "rolling_ball",
+            "reactive",
+            "twister",
+            "hydaulics"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Poland Pack",
+        "levels": [
+            "astronaut_13",
+            "nautilus",
+            "impact"
         ],
         "colour": "#c0c0c0"
     },
@@ -477,6 +621,35 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Short N' Sweet Pack",
+        "levels": [
+            "fleeting_race",
+            "aspect",
+            "reactive",
+            "hydaulics"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "SirHadoken Pack",
+        "levels": [
+            "enuresis",
+            "banished",
+            "amen"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Sleep Pack",
+        "levels": [
+            "enuresis",
+            "dream",
+            "dawn_of_darkness",
+            "theoryofnightmares2"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Subwoofer Pack",
         "levels": [
             "enuresis",
@@ -500,8 +673,9 @@
     {
         "name": "The Pack",
         "levels": [
-            "split_the_system",
+            "but_heres_the_kicker",
             "the_scarlet_sun",
+            "stomp_the_ground",
             "through_the_top",
             "the_prophetius"
         ],
@@ -525,6 +699,20 @@
             "good_karma",
             "true_calamity",
             "seaside_hill"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
+        "name": "Violence Pack",
+        "levels": [
+            "poison",
+            "rip_it",
+            "blood_sacrifice",
+            "battletown",
+            "skullbreaker",
+            "breaking_in",
+            "killgore",
+            "trident"
         ],
         "colour": "#c0c0c0"
     },
@@ -627,7 +815,8 @@
             "blood_sacrifice",
             "sin",
             "the_scarlet_sun",
-            "deaths_grasp"
+            "deaths_grasp",
+            "rolling_ball"
         ],
         "colour": "#ff0000"
     },
