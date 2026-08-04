@@ -550,7 +550,7 @@
             "rolling_ball",
             "reactive",
             "twister",
-            "hydaulics"
+            "hydraulics"
         ],
         "colour": "#c0c0c0"
     },
@@ -626,7 +626,7 @@
             "fleeting_race",
             "aspect",
             "reactive",
-            "hydaulics"
+            "hydraulics"
         ],
         "colour": "#c0c0c0"
     },
