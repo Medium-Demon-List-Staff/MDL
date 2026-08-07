@@ -9,13 +9,43 @@
     "percentToQualify": 100,
     "records": [
         {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
             "user": "tomm",
             "link": "",
             "percent": 100,
             "hz": 120
         },
         {
-            "user": "",
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "wassas1",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
             "link": "",
             "percent": 100,
             "hz": 240
