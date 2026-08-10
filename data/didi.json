@@ -2,7 +2,7 @@
     "id": 78721973,
     "name": "Didi",
     "author": "Ivanpercie",
-    "creators": ["Joojmiguel, ParallaxGMD, Epxa, ReiGalinha, StarlinkGD, Ivanpercie, Vit12, Hugola"],
+    "creators": ["Joojmiguel, gdParallax, Epxa, ReiGalinha, StarlinkGD, Ivanpercie, Vit12, Hugola"],
     "verifier": "Ivanpercie",
     "verification": "https://youtu.be/6j9JZzcGngM",
     "showcase": "",
@@ -160,6 +160,12 @@
         },
         {
             "user": "DeDe",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "WKGames",
             "link": "",
             "percent": 100,
             "hz": 240
