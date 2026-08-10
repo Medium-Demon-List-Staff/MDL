@@ -1,9 +1,9 @@
 {
     "id": 90728742,
     "name": "Alien Generator",
-    "author": "8bitfudge",
-    "creators": ["8bitfudge, elininja, mugna, carnitine"],
-    "verifier": "8bitfudge",
+    "author": "8BitFudge",
+    "creators": ["8BitFudge, elininja, mugna, carnitine"],
+    "verifier": "8BitFudge",
     "verification": "https://youtu.be/D08yS2Nqfy0",
     "showcase": "",
     "percentToQualify": 100,
@@ -100,6 +100,12 @@
         },
         {
             "user": "sheeb",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "WKGames",
             "link": "",
             "percent": 100,
             "hz": 240
