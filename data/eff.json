@@ -105,7 +105,7 @@
             "hz": 240
         },
         {
-            "user": "[MOAT] Bobbyp02",
+            "user": "[HUMR] Bobbyp02",
             "link": "",
             "percent": 100,
             "hz": 240
@@ -340,6 +340,12 @@
         },
         {
             "user": "WKGames",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "andrewww",
             "link": "",
             "percent": 100,
             "hz": 240
