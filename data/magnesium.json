@@ -1,0 +1,84 @@
+{
+    "id": 77260916,
+    "name": "Magnesium",
+    "author": "Starter",
+    "creators": [],
+    "verifier": "Starter",
+    "verification": "https://youtu.be/OHxyyu9M6mY?si=EErea_NrAggYK4Pg",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "WKGames",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "shiver",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "Identity",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ItsmeWinzz",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
