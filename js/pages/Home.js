@@ -24,7 +24,7 @@ export default {
                     <h1 v-html="welcomeText"></h1>
                     <hr class="divider">
                     <p>
-                    This list keeps track of the hardest 2-player levels in Geometry Dash that have been done&nbsp;<strong>solo</strong>. Levels must have enough of its length&nbsp;<i>or</i> difficulty come from its 2P sections to place on the list. Keep in mind the list is an approximation based on players' opinions and is <strong>not objective</strong>.
+                    The Official Demonlist that has the hardest 150 medium demons ranked based on difficulty &nbsp;<strong>solo</strong>! Keep in mind the list is an approximation based on players' opinions and is <strong>not objective</strong>.
                     </p>
                 </div>
                 <div class="changelog-container">
@@ -143,7 +143,7 @@ export default {
             const randomNumber = Math.floor(Math.random() * 200) + 1;
             return randomNumber === 1
                 ? 'Welcome to <span class="gradient-text">your mind</span>...'
-                : 'Welcome to the <span class="gradient-text">2P List</span>!';
+                : 'Welcome to the <span class="gradient-text">Medium Demon List</span>!';
         },
         nextPage() {
             if (this.currentPage < this.totalPages) this.currentPage++;
