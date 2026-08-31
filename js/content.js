@@ -5,6 +5,15 @@ import { round, score } from './score.js';
  */
 const dir = '/data';
 
+export async function fetchChangelog() {
+    try {
+        const res = await fetch(`${dir}/_changelog.json`);
+        return await res.json(); // array of { id, date, text }
+    } catch {
+        return null;
+    }
+}
+
 export async function fetchList() {
   // Load pack definitions once
   const packs = await fetchPacks(); // returns null or array
