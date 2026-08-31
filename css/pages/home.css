@@ -177,6 +177,9 @@ input::-webkit-inner-spin-button {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem 1rem;
         padding: 0;
+        background: var(--color-section-background, var(--color-background-hover));
+        border: 1px solid var(--color-primary);
+        border-radius: 20px;
     }
     .page-home .meta .editors li img {
         height: 1.5rem;

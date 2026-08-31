@@ -26,6 +26,9 @@
 .page-leaderboard .player-container {
     grid-row: 2;
     padding-block: 2rem;
+    background: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
 }
 .page-leaderboard .board-container {
     padding-inline: 1rem;

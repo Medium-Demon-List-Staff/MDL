@@ -4,6 +4,9 @@
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
+    background: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
 }
 .page-roulette .sidebar a {
     text-decoration: underline;
@@ -35,6 +38,9 @@
     grid-column: 2 / span 2;
     overflow-y: auto;
     padding-right: 2rem;
+    background: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
 }
 
 .page-roulette .levels {
@@ -101,6 +107,9 @@
     align-self: start;
     margin-block: 2rem;
     margin-right: 2rem;
+    background: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
 }
 .page-roulette .toasts {
     display: flex;
