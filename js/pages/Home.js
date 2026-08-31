@@ -24,7 +24,7 @@ export default {
                     <h1 v-html="welcomeText"></h1>
                     <hr class="divider">
                     <p>
-                    The Official Demonlist that has the hardest 150 medium demons ranked based on difficulty &nbsp;<strong>solo</strong>! Keep in mind the list is an approximation based on players' opinions and is <strong>not objective</strong>.
+                    The Official Demonlist that has the hardest 150 medium demons ranked based on difficulty! Keep in mind the list is an approximation based on players' opinions and is <strong>not objective</strong>.
                     </p>
                 </div>
                 <div class="changelog-container">
