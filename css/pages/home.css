@@ -63,7 +63,8 @@ main.page-home {
 
 .text-container,
 .changelog-container {
-    background: var(--color-section-background);
+    background: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 20px;
@@ -178,6 +179,6 @@ input::-webkit-inner-spin-button {
         padding: 0;
     }
     .page-home .meta .editors li img {
-        height: 1rem;
+        height: 1.5rem;
     }
 }
