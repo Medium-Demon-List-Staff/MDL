@@ -1,7 +1,3 @@
-.page-home {
-    align-items: start;
-}
-
 .page-home .home-container {
     grid-column: 2;
     display: flex;
