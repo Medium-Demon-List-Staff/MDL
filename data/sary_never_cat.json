@@ -1,27 +1,33 @@
 {
-    "id": 77260916,
-    "name": "Magnesium",
-    "author": "Starter",
+    "id": 116397340,
+    "name": "SARY NEVER CAT",
+    "author": "Camilleden",
     "creators": [],
-    "verifier": "Starter",
-    "verification": "https://youtu.be/OHxyyu9M6mY?si=EErea_NrAggYK4Pg",
+    "verifier": "Camilleden",
+    "verification": "https://youtu.be/vsfMWIo0_BE?si=5FUjUWoYNFA9r8Kr",
     "showcase": "",
     "percentToQualify": 100,
     "records": [
         {
-            "user": "deadbush",
+            "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
             "hz": 120
         },
         {
-            "user": "WKGames",
+            "user": "tomm",
             "link": "",
             "percent": 100,
             "hz": 120
         },
         {
-            "user": "shiver",
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "IlGiammo",
             "link": "",
             "percent": 100,
             "hz": 120
@@ -30,46 +36,16 @@
             "user": "yoshi",
             "link": "",
             "percent": 100,
-            "hz": 120
+            "hz": 240
         },
         {
-            "user": "Identity",
+            "user": "sheeb",
             "link": "",
             "percent": 100,
             "hz": 240
         },
         {
-            "user": "ZircleZ",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "[HUMR] Bobbyp02",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "harryxu2802",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "tomm",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "ItsmeWinzz",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "Chonkey",
+            "user": "deadbush",
             "link": "",
             "percent": 100,
             "hz": 240
@@ -81,19 +57,31 @@
             "hz": 240
         },
         {
-            "user": "JoacoWoop",
+            "user": "WKGames",
             "link": "",
             "percent": 100,
             "hz": 240
         },
         {
-            "user": "Excryst",
+            "user": "harryxu2802",
             "link": "",
             "percent": 100,
             "hz": 240
         },
         {
-            "user": "Lukas",
+            "user": "Sir_Manface",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Arcadie",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
             "link": "",
             "percent": 100,
             "hz": 240

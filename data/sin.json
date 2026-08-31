@@ -223,6 +223,18 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "WKGames",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "IlGiammo",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
