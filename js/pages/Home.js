@@ -29,31 +29,19 @@ export default {
                 </div>
                 <div class="changelog-container">
                     <template v-if="changelog && changelog.length">
-                        <h3>Changelog <hr class="divider"></h3>
+                        <h2>Changelog <hr class="divider"></h2>
                         <ol class="changelog">
                             <li v-for="entry in paginatedChangelog" :key="entry.id">
                                 <p class="type-label-md" v-html="formatEntryText(entry.date, entry.text)"></p>
                             </li>
                         </ol>
-                        <div class="pagination">
-                            <div class="wrapper">
-                                <button class="btn" @click="firstPage" :disabled="currentPage === 1"><span class="type-label-lg"><<</span></button>
-                            </div>
-                            <div class="wrapper">
-                                <button class="btn" @click="prevPage" :disabled="currentPage === 1"><span class="type-label-lg">Previous</span></button>
-                            </div>
-                            <div v-for="page in pageNumbers" :key="page" class="wrapper">
-                                <button class="btn" @click="goToPage(page)" :class="{ active: currentPage === page }"><span class="type-label-lg">{{ page }}</span></button>
-                            </div>
-                            <div class="wrapper" v-if="totalPages > 5">
-                                <input class="btn" type="number" v-model.number="inputPage" @keyup.enter="goToInputPage" min="1" :max="totalPages" placeholder="..." />
-                            </div>
-                            <div class="wrapper">
-                                <button class="btn" @click="nextPage" :disabled="currentPage === totalPages"><span class="type-label-lg">Next</span></button>
-                            </div>
-                            <div class="wrapper">
-                                <button class="btn" @click="lastPage" :disabled="currentPage === totalPages"><span class="type-label-lg">>></span></button>
-                            </div>
+                       <div class="pagination">
+                            <button class="btn" @click="firstPage" :disabled="currentPage === 1"><span class="type-label-lg"><<</span></button>
+                            <button class="btn" @click="prevPage" :disabled="currentPage === 1"><span class="type-label-lg">Previous</span></button>
+                            <button v-for="page in pageNumbers" :key="page" class="btn" @click="goToPage(page)" :class="{ active: currentPage === page }"><span class="type-label-lg">{{ page }}</span></button>
+                            <input v-if="totalPages > 5" class="btn" type="number" v-model.number="inputPage" @keyup.enter="goToInputPage" min="1" :max="totalPages" placeholder="..." />
+                            <button class="btn" @click="nextPage" :disabled="currentPage === totalPages"><span class="type-label-lg">Next</span></button>
+                            <button class="btn" @click="lastPage" :disabled="currentPage === totalPages"><span class="type-label-lg">>></span></button>
                         </div>
                     </template>
                     <p v-else-if="errors.includes('Failed to load changelog.')" class="error">Failed to load changelog.</p>
@@ -65,7 +53,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <template v-if="editors && editors.length">
-                        <h3>Staff <hr class="divider"></h3>
+                        <h2>Staff <hr class="divider"></h2>
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <img :src="\`assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role" :title="editor.role" style="cursor: help;">

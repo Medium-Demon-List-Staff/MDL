@@ -34,9 +34,9 @@
     <div class="root" :class="{ dark: store.dark, shitty: store.shitty }">
         <header class="surface">
             <router-link class="logo" to="/">
-                <img v-if="store.shitty" src="assets/april-logo.png" alt="TMDL Logo" />
+                <img v-if="store.shitty" src="/assets/april-logo.png" alt="TMDL Logo" />
                 <template v-else>
-                    <img src="assets/tmdl_icon.png" style="height: 3rem; margin-top: 0.5rem;" />
+                    <img src="/assets/tmdl_icon.png" style="height: 3rem; margin-top: 0.5rem; margin-left: 0.5rem;" />
                     <h2 style="line-height: 4rem;">TMDL</h2>
                     <p style="line-height: 4rem;">v1.4</p>
                 </template>
