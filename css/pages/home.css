@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    min-height: 0;
+    align-self: start;
 }
 
 .page-home .meta-container {
@@ -87,8 +87,6 @@
 .changelog-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-height: 0;
 }
 .changelog-container h2 {
     text-align: left;
@@ -103,7 +101,6 @@
 ol.changelog {
     display: flex;
     flex-direction: column;
-    flex: 1;
     gap: 1.5rem;
     list-style: none;
     padding: 0;
