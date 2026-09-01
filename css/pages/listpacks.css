@@ -83,7 +83,7 @@ main.pack-list > .meta-container {
   grid-row: 2;
   min-height: 0;
   overflow-y: auto;
-  padding-block: 2rem;
+  padding: 2rem 1.5rem;
   align-self: stretch;
   background: var(--color-section-background, var(--color-background-hover));
   border: 1px solid var(--color-primary);
@@ -93,7 +93,6 @@ main.pack-list > .meta-container {
 main.pack-list > .list-container {
   grid-column: 1;
   grid-row: 2;
-  padding-inline: 1rem;
 }
 
 main.pack-list > .level-container {
@@ -105,7 +104,6 @@ main.pack-list > .level-container {
 main.pack-list > .meta-container {
   grid-column: 3;
   grid-row: 2;
-  padding-right: 2rem;
 }
 
 /* Optional: disable right column scroll if you want */

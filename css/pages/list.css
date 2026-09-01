@@ -18,16 +18,10 @@ main.page-list > .meta-container {
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
-    padding-block: 2rem;
+    padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
-}
-.page-list .list-container {
-    padding-inline: 1rem;
-}
-.page-list .meta-container {
-    padding-right: 2rem;
 }
 
 .page-list .list {

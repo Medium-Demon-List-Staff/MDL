@@ -25,13 +25,10 @@
 .page-leaderboard .board-container,
 .page-leaderboard .player-container {
     grid-row: 2;
-    padding-block: 2rem;
+    padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
-}
-.page-leaderboard .board-container {
-    padding-inline: 1rem;
 }
 .page-leaderboard .board {
     table-layout: auto;
