@@ -50,7 +50,7 @@
     width: 100%;
 }
 .page-leaderboard .board .user button {
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;
@@ -113,30 +113,25 @@
     color: orange;
 }
 
-.page-leaderboard .list-container::-webkit-scrollbar,
-.page-leaderboard .level-container::-webkit-scrollbar,
-.page-leaderboard .meta-container::-webkit-scrollbar {
+.page-leaderboard .board-container::-webkit-scrollbar,
+.page-leaderboard .player-container::-webkit-scrollbar {
   width: 6px;
 }
-.page-leaderboard .list-container::-webkit-scrollbar-track,
-.page-leaderboard .level-container::-webkit-scrollbar-track,
-.page-leaderboard .meta-container::-webkit-scrollbar-track {
+.page-leaderboard .board-container::-webkit-scrollbar-track,
+.page-leaderboard .player-container::-webkit-scrollbar-track {
   background: transparent;
 }
-.page-leaderboard .list-container::-webkit-scrollbar-thumb,
-.page-leaderboard .level-container::-webkit-scrollbar-thumb,
-.page-leaderboard .meta-container::-webkit-scrollbar-thumb {
+.page-leaderboard .board-container::-webkit-scrollbar-thumb,
+.page-leaderboard .player-container::-webkit-scrollbar-thumb {
   background: rgba(160, 160, 160, 0.6);
   border-radius: 999px;
 }
-.page-leaderboard .list-container::-webkit-scrollbar-thumb:hover,
-.page-leaderboard .level-container::-webkit-scrollbar-thumb:hover,
-.page-leaderboard .meta-container::-webkit-scrollbar-thumb:hover {
+.page-leaderboard .board-container::-webkit-scrollbar-thumb:hover,
+.page-leaderboard .player-container::-webkit-scrollbar-thumb:hover {
   background: rgba(160, 160, 160, 0.8);
 }
-.page-leaderboard .list-container::-webkit-scrollbar-button,
-.page-leaderboard .level-container::-webkit-scrollbar-button,
-.page-leaderboard .meta-container::-webkit-scrollbar-button {
+.page-leaderboard .board-container::-webkit-scrollbar-button,
+.page-leaderboard .player-container::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;
