@@ -30,11 +30,13 @@ export default {
                 <div class="changelog-container">
                     <template v-if="changelog && changelog.length">
                         <h2>Changelog <hr class="divider"></h2>
-                        <ol class="changelog">
-                            <li v-for="entry in paginatedChangelog" :key="entry.id">
-                                <p class="type-label-md" v-html="formatEntryText(entry.date, entry.text)"></p>
-                            </li>
-                        </ol>
+                        <div class="changelog-content">
+                            <ol class="changelog">
+                                <li v-for="entry in paginatedChangelog" :key="entry.id">
+                                    <p class="type-label-md" v-html="formatEntryText(entry.date, entry.text)"></p>
+                                </li>
+                            </ol>
+                        </div>
                        <div class="pagination">
                             <button class="btn" @click="firstPage" :disabled="currentPage === 1"><span class="type-label-lg"><<</span></button>
                             <button class="btn" @click="prevPage" :disabled="currentPage === 1"><span class="type-label-lg">Previous</span></button>
