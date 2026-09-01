@@ -59,7 +59,7 @@ export default {
                                 <h2>Staff <hr class="divider"></h2>
                                 <ol class="editors">
                                     <li v-for="editor in editors">
-                                        <img :src="`assets/${roleIconMap[editor.role]}${store.dark ? '-dark' : ''}.svg`" :alt="editor.role" :title="editor.role" style="cursor: help;">
+                                        <img :src="\`assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role" :title="editor.role" style="cursor: help;">
                                         <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
                                         <p v-else>{{ editor.name }}</p>
                                     </li>
