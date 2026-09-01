@@ -24,6 +24,7 @@ main.page-home {
     gap: 2rem;
     text-align: center;
     height: 100%;
+    justify-content: center;
 }
 .page-home .meta .errors {
     display: flex;
