@@ -125,25 +125,25 @@
     color: orange;
 }
 
-.page-leaderboard .board-container::-webkit-scrollbar,
-.page-leaderboard .player-container::-webkit-scrollbar {
+.page-leaderboard .board-content::-webkit-scrollbar,
+.page-leaderboard .player-content::-webkit-scrollbar {
   width: 6px;
 }
-.page-leaderboard .board-container::-webkit-scrollbar-track,
-.page-leaderboard .player-container::-webkit-scrollbar-track {
+.page-leaderboard .board-content::-webkit-scrollbar-track,
+.page-leaderboard .player-content::-webkit-scrollbar-track {
   background: transparent;
 }
-.page-leaderboard .board-container::-webkit-scrollbar-thumb,
-.page-leaderboard .player-container::-webkit-scrollbar-thumb {
+.page-leaderboard .board-content::-webkit-scrollbar-thumb,
+.page-leaderboard .player-content::-webkit-scrollbar-thumb {
   background: rgba(160, 160, 160, 0.6);
   border-radius: 999px;
 }
-.page-leaderboard .board-container::-webkit-scrollbar-thumb:hover,
-.page-leaderboard .player-container::-webkit-scrollbar-thumb:hover {
+.page-leaderboard .board-content::-webkit-scrollbar-thumb:hover,
+.page-leaderboard .player-content::-webkit-scrollbar-thumb:hover {
   background: rgba(160, 160, 160, 0.8);
 }
-.page-leaderboard .board-container::-webkit-scrollbar-button,
-.page-leaderboard .player-container::-webkit-scrollbar-button {
+.page-leaderboard .board-content::-webkit-scrollbar-button,
+.page-leaderboard .player-content::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;

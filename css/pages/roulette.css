@@ -36,7 +36,9 @@
 .page-roulette .levels-container {
     grid-row: 1;
     grid-column: 2 / span 2;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
@@ -46,7 +48,10 @@
 .page-roulette .levels {
     display: flex;
     flex-direction: column;
-    padding-block: 2rem;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 1rem;
     gap: 2rem;
 }
 
@@ -101,7 +106,6 @@
     margin-top: 1rem;
 }
 .page-roulette .toasts-container {
-    overflow-y: auto;
     grid-column: 2 / span 2;
     grid-row: 1;
     align-self: start;
@@ -135,30 +139,25 @@
         align-self: stretch;
     }
 
-    .page-roulette .sidebar::-webkit-scrollbar,
-    .page-roulette .levels-container::-webkit-scrollbar,
-    .page-roulette .toasts-container::-webkit-scrollbar {
+    .page-roulette .levels::-webkit-scrollbar,
+    .page-roulette .toasts::-webkit-scrollbar {
     width: 6px;
     }
-    .page-roulette .sidebar::-webkit-scrollbar-track,
-    .page-roulette .levels-container::-webkit-scrollbar-track,
-    .page-roulette .toasts-container::-webkit-scrollbar-track {
+    .page-roulette .levels::-webkit-scrollbar-track,
+    .page-roulette .toasts::-webkit-scrollbar-track {
     background: transparent;
     }
-    .page-roulette .sidebar::-webkit-scrollbar-thumb,
-    .page-roulette .levels-container::-webkit-scrollbar-thumb,
-    .page-roulette .toasts-container::-webkit-scrollbar-thumb {
+    .page-roulette .levels::-webkit-scrollbar-thumb,
+    .page-roulette .toasts::-webkit-scrollbar-thumb {
     background: rgba(160, 160, 160, 0.6);
     border-radius: 999px;
     }
-    .page-roulette .sidebar::-webkit-scrollbar-thumb:hover,
-    .page-roulette .levels-container::-webkit-scrollbar-thumb:hover,
-    .page-roulette .toasts-container::-webkit-scrollbar-thumb:hover {
+    .page-roulette .levels::-webkit-scrollbar-thumb:hover,
+    .page-roulette .toasts::-webkit-scrollbar-thumb:hover {
     background: rgba(160, 160, 160, 0.8);
     }
-    .page-roulette .sidebar::-webkit-scrollbar-button,
-    .page-roulette .levels-container::-webkit-scrollbar-button,
-    .page-roulette .toasts-container::-webkit-scrollbar-button {
+    .page-roulette .levels::-webkit-scrollbar-button,
+    .page-roulette .toasts::-webkit-scrollbar-button {
     display: none;
     width: 0;
     height: 0;
