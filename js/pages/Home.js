@@ -54,16 +54,18 @@ export default {
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
-                    <template v-if="editors && editors.length">
-                        <h2>Staff <hr class="divider"></h2>
-                        <ol class="editors">
-                            <li v-for="editor in editors">
-                                <img :src="\`assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role" :title="editor.role" style="cursor: help;">
-                                <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
-                                <p v-else>{{ editor.name }}</p>
-                            </li>
-                        </ol>
-                    </template>
+                        <template v-if="editors && editors.length">
+                            <div class="staff">
+                                <h2>Staff <hr class="divider"></h2>
+                                <ol class="editors">
+                                    <li v-for="editor in editors">
+                                        <img :src="`assets/${roleIconMap[editor.role]}${store.dark ? '-dark' : ''}.svg`" :alt="editor.role" :title="editor.role" style="cursor: help;">
+                                        <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
+                                        <p v-else>{{ editor.name }}</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </template>
                     <div class="og">
                         <p class="type-label-md">List Template by <a href="https://tsl.pages.dev/" target="_blank">The Shitty List</a></p>
                     </div>

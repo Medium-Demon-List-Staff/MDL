@@ -22,8 +22,7 @@ main.page-home {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: left;
-    justify-content: space-between;
+    text-align: center;
     height: 100%;
 }
 .page-home .meta .errors {
@@ -38,7 +37,7 @@ main.page-home {
     border-radius: 0.5rem;
 }
 .page-home .meta h2 {
-    text-align: left;
+    text-align: center;
 }
 .page-home .meta .editors {
     display: flex;
@@ -52,7 +51,7 @@ main.page-home {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .page-home .meta .editors li img {
     height: 1.5rem;
@@ -98,14 +97,26 @@ main.page-home {
     border-radius: 0.5rem;
 }
 
+.changelog-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+}
 ol.changelog {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 1.5rem 0 0;
     text-align: left;
+    gap: 1rem;
+}
+.changelog-container ol.changelog p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
 ol.changelog li p {
     margin: 0;
