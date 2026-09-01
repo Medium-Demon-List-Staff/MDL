@@ -98,8 +98,8 @@ main.pack-list > .meta-container {
 .pack-list .meta-content {
   flex: 1;
   min-height: 0;
-  overflow-y: auto; /* critical */
-  padding-right: 1rem;
+  overflow-y: auto;
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 
 main.pack-list > .list-container {

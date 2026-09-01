@@ -24,7 +24,7 @@ main.page-list {
     flex: 1;
     min-height: 0;
     overflow-y: auto;
-    padding-right: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0;
 }
 
 .page-list .list {
