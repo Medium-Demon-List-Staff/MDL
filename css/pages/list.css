@@ -1,27 +1,30 @@
-/* --- Lock List page to viewport and keep scroll inside columns --- */
 main.page-list {
   flex: 1;
-  height: 0;        /* critical: prevents body scroll in a flex column layout */
-  min-height: 0;    /* critical: allows children to become scroll containers */
-  overflow: hidden; /* stop page scroll; columns scroll instead */
-  background: var(--color-background);
-}
-
-/* Ensure the 3 columns can actually scroll */
-main.page-list > .list-container,
-main.page-list > .level-container,
-main.page-list > .meta-container {
+  height: 0;
   min-height: 0;
-  overflow-y: auto;
+  overflow: hidden;
+  background: var(--color-background);
 }
 
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
+}
+
+.page-list .list-content,
+.page-list .level-content,
+.page-list .meta-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 1rem;
 }
 
 .page-list .list {
@@ -160,30 +163,30 @@ main.page-list > .meta-container {
     color: rgb(128, 128, 128);
 }
 
-.page-list .list-container::-webkit-scrollbar,
-.page-list .level-container::-webkit-scrollbar,
-.page-list .meta-container::-webkit-scrollbar {
+.page-list .list-content::-webkit-scrollbar,
+.page-list .level-content::-webkit-scrollbar,
+.page-list .meta-content::-webkit-scrollbar {
   width: 6px;
 }
-.page-list .list-container::-webkit-scrollbar-track,
-.page-list .level-container::-webkit-scrollbar-track,
-.page-list .meta-container::-webkit-scrollbar-track {
+.page-list .list-content::-webkit-scrollbar-track,
+.page-list .level-content::-webkit-scrollbar-track,
+.page-list .meta-content::-webkit-scrollbar-track {
   background: transparent;
 }
-.page-list .list-container::-webkit-scrollbar-thumb,
-.page-list .level-container::-webkit-scrollbar-thumb,
-.page-list .meta-container::-webkit-scrollbar-thumb {
+.page-list .list-content::-webkit-scrollbar-thumb,
+.page-list .level-content::-webkit-scrollbar-thumb,
+.page-list .meta-content::-webkit-scrollbar-thumb {
   background: rgba(160, 160, 160, 0.6);
   border-radius: 999px;
 }
-.page-list .list-container::-webkit-scrollbar-thumb:hover,
-.page-list .level-container::-webkit-scrollbar-thumb:hover,
-.page-list .meta-container::-webkit-scrollbar-thumb:hover {
+.page-list .list-content::-webkit-scrollbar-thumb:hover,
+.page-list .level-content::-webkit-scrollbar-thumb:hover,
+.page-list .meta-content::-webkit-scrollbar-thumb:hover {
   background: rgba(160, 160, 160, 0.8);
 }
-.page-list .list-container::-webkit-scrollbar-button,
-.page-list .level-container::-webkit-scrollbar-button,
-.page-list .meta-container::-webkit-scrollbar-button {
+.page-list .list-content::-webkit-scrollbar-button,
+.page-list .level-content::-webkit-scrollbar-button,
+.page-list .meta-content::-webkit-scrollbar-button {
   display: none;
   width: 0;
   height: 0;
