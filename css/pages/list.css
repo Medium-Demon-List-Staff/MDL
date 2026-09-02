@@ -20,7 +20,7 @@ main.page-list {
 .page-list .meta-content {
     flex: 1;
     min-height: 0;
-    overflow-y: auto;
+    overflow-y: fixed;
     padding: 0.5rem 1rem 0.5rem 0;
 }
 
@@ -70,7 +70,7 @@ main.page-list {
 .page-list .level-container .level .level-authors {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-auto-rows: max-content;
+    grid-fixed-rows: max-content;
     gap: 1rem;
 }
 .page-list .level-container .level .video {
