@@ -55,17 +55,18 @@
    We mirror that here so the grid has a real height and columns can scroll. */
 main.pack-list {
   flex: 1;
-  height: 0;        /* critical in your flex layout */
-  min-height: 0;    /* critical for scrolling children */
-  overflow: hidden; /* page doesn't scroll, columns do */
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
   grid-template-rows: 56px minmax(0, 1fr);
 
-  column-gap: 2rem; /* HDL spacing */
+  column-gap: 2rem;
   row-gap: 0;
   align-items: start;
+  padding-inline: 1rem;
 
   background: var(--color-background);
 }
@@ -87,7 +88,7 @@ main.pack-list > .meta-container {
   flex-direction: column;
   min-height: 0;
   align-self: stretch;
-  margin: 1rem;
+  margin-block: 1rem;
   padding: 2rem 1.5rem;
   background: var(--color-section-background, var(--color-background-hover));
   border-radius: 20px;

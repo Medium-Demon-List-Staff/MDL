@@ -1,5 +1,6 @@
 main.page-home {
     grid-template-columns: minmax(16rem, 2fr) minmax(16rem, 1fr);
+    padding-inline: 1rem;
 }
 
 .page-home .home-container {
@@ -14,7 +15,7 @@ main.page-home {
     grid-column: 2;
     background: var(--color-section-background, var(--color-background-hover));
     border-radius: 20px;
-    margin: 1rem;
+    margin-block: 1rem;
     padding: 2rem 1.5rem;
 }
 
@@ -64,11 +65,10 @@ main.page-home {
 .text-container,
 .changelog-container {
     background: var(--color-section-background, var(--color-background-hover));
-    margin: 1rem;
+    margin-block: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 20px;
 }
-
 .text-container {
     text-align: center;
     display: flex;

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
-    margin: 1rem;
+    margin-block: 1rem;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border-radius: 20px;
@@ -35,13 +35,14 @@
 
 main.page-roulette {
     grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr);
+    padding-inline: 1rem;
 }
 
 .page-roulette .levels-container {
     grid-row: 1;
     grid-column: 2;
     overflow-y: auto;
-    margin: 1rem;
+    margin-block: 1rem;
     padding: 2rem 1.5rem;
 }
 
