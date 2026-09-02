@@ -199,18 +199,15 @@ main.page-list {
         height: auto;
         overflow: visible;
     }
+    .page-list .list-container,
     .page-list .level-container,
     .page-list .meta-container {
         min-height: 0;
+        padding: 1.5rem 1rem;
     }
+    .page-list .list-content,
     .page-list .level-content,
     .page-list .meta-content {
         overflow-y: visible;
-    }
-    .page-list .list-container {
-        max-height: 50vh;
-    }
-    .page-list .list-content {
-        overflow-y: auto;
     }
 }
