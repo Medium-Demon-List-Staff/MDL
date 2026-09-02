@@ -1,6 +1,5 @@
 main.page-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 4fr) minmax(16rem, 1fr);
 }
 
 .page-list .list-container,
