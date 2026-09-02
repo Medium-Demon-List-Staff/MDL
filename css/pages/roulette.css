@@ -1,9 +1,10 @@
 .page-roulette .sidebar {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
+    margin: 1rem;
+    padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
@@ -36,9 +37,8 @@
 .page-roulette .levels-container {
     grid-row: 1;
     grid-column: 2 / span 2;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+    overflow-y: auto;
+    margin: 1rem;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);

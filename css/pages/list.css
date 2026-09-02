@@ -12,6 +12,7 @@ main.page-list {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    margin: 1rem;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
