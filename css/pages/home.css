@@ -15,6 +15,7 @@ main.page-home {
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
+    margin: 1rem;
     padding: 2rem 1.5rem;
 }
 
