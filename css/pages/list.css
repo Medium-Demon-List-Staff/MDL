@@ -192,3 +192,21 @@ main.page-list {
   width: 0;
   height: 0;
 }
+
+@media only screen and (max-width: 1025px) {
+    main.page-list {
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+    .page-list .list-container,
+    .page-list .level-container,
+    .page-list .meta-container {
+        min-height: 0;
+    }
+    .page-list .list-content,
+    .page-list .level-content,
+    .page-list .meta-content {
+        overflow-y: visible;
+    }
+}
