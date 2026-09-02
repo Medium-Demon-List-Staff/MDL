@@ -6,7 +6,6 @@
     margin: 1rem;
     padding: 2rem 1.5rem;
     background: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
     border-radius: 20px;
 }
 .page-roulette .sidebar a {
@@ -63,7 +62,6 @@ main.page-roulette {
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
 }
 .page-roulette .levels .level .video img {
     width: 100%;
@@ -102,7 +100,6 @@ main.page-roulette {
     gap: 1rem;
     border-radius: 0.5rem;
     background-color: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
     padding: 1rem;
 }
 .page-roulette .levels .results h1 {

@@ -13,7 +13,6 @@ main.page-home {
 .page-home .meta-container {
     grid-column: 2;
     background: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
     border-radius: 20px;
     margin: 1rem;
     padding: 2rem 1.5rem;
@@ -65,7 +64,6 @@ main.page-home {
 .text-container,
 .changelog-container {
     background: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 20px;
