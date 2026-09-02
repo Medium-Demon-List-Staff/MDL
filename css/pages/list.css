@@ -1,9 +1,6 @@
 main.page-list {
-  flex: 1;
-  height: 0;
-  min-height: 0;
-  overflow: hidden;
-  background: var(--color-background);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 .page-list .list-container,
@@ -13,7 +10,7 @@ main.page-list {
     flex-direction: column;
     min-height: 0;
     margin: 1rem;
-    padding: 2rem 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
     background: var(--color-section-background, var(--color-background-hover));
     border: 1px solid var(--color-primary);
     border-radius: 20px;
@@ -191,23 +188,4 @@ main.page-list {
   display: none;
   width: 0;
   height: 0;
-}
-
-@media only screen and (max-width: 1025px) {
-    main.page-list {
-        display: block;
-        height: auto;
-        overflow: visible;
-    }
-    .page-list .list-container,
-    .page-list .level-container,
-    .page-list .meta-container {
-        min-height: 0;
-        padding: 1.5rem 1rem;
-    }
-    .page-list .list-content,
-    .page-list .level-content,
-    .page-list .meta-content {
-        overflow-y: visible;
-    }
 }
