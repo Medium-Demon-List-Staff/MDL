@@ -36,7 +36,7 @@
 
 .page-roulette .levels-container {
     grid-row: 1;
-    grid-column: 2 / span 2;
+    grid-column: 2;
     overflow-y: auto;
     margin: 1rem;
     padding: 2rem 1.5rem;
@@ -105,17 +105,20 @@
 .page-roulette .levels .results .btn {
     margin-top: 1rem;
 }
+
 .page-roulette .toasts-container {
-    grid-column: 2 / span 2;
-    grid-row: 1;
-    align-self: start;
-    margin-block: 2rem;
-    margin-right: 2rem;
+    position: fixed;
+    top: 5rem;
+    right: 1.5rem;
+    z-index: 20;
+    width: min(24rem, calc(100vw - 3rem));
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
 }
 .page-roulette .toasts {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     overflow-y: auto;
 }
 .page-roulette .toast {
@@ -124,42 +127,24 @@
     color: white;
     padding: 1rem;
     border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (min-width: 1366px) {
-    .page-roulette .levels-container {
-        grid-column: 2;
-        padding-right: 0;
-    }
-    .page-roulette .toasts-container {
-        grid-column: 3;
-        margin: 0;
-        padding-right: 2rem;
-        padding-block: 2rem;
-        align-self: stretch;
-    }
-
-    .page-roulette .levels::-webkit-scrollbar,
-    .page-roulette .toasts::-webkit-scrollbar {
-    width: 6px;
-    }
-    .page-roulette .levels::-webkit-scrollbar-track,
-    .page-roulette .toasts::-webkit-scrollbar-track {
-    background: transparent;
-    }
-    .page-roulette .levels::-webkit-scrollbar-thumb,
-    .page-roulette .toasts::-webkit-scrollbar-thumb {
-    background: rgba(160, 160, 160, 0.6);
-    border-radius: 999px;
-    }
-    .page-roulette .levels::-webkit-scrollbar-thumb:hover,
-    .page-roulette .toasts::-webkit-scrollbar-thumb:hover {
-    background: rgba(160, 160, 160, 0.8);
-    }
-    .page-roulette .levels::-webkit-scrollbar-button,
-    .page-roulette .toasts::-webkit-scrollbar-button {
-    display: none;
-    width: 0;
-    height: 0;
-    }
+.page-roulette .levels::-webkit-scrollbar {
+  width: 6px;
+}
+.page-roulette .levels::-webkit-scrollbar-track {
+  background: transparent;
+}
+.page-roulette .levels::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.6);
+  border-radius: 999px;
+}
+.page-roulette .levels::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.8);
+}
+.page-roulette .levels::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
