@@ -34,15 +34,16 @@
     gap: 1rem;
 }
 
+main.page-roulette {
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr);
+}
+
 .page-roulette .levels-container {
     grid-row: 1;
     grid-column: 2;
     overflow-y: auto;
     margin: 1rem;
     padding: 2rem 1.5rem;
-    background: var(--color-section-background, var(--color-background-hover));
-    border: 1px solid var(--color-primary);
-    border-radius: 20px;
 }
 
 .page-roulette .levels {
@@ -61,7 +62,8 @@
     grid-auto-rows: max-content;
     border-radius: 0.5rem;
     overflow: hidden;
-    background-color: var(--color-background-hover);
+    background-color: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
 }
 .page-roulette .levels .level .video img {
     width: 100%;
@@ -98,6 +100,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-section-background, var(--color-background-hover));
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
 }
 .page-roulette .levels .results h1 {
     margin-bottom: 0.5rem;
