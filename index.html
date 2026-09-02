@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/typography.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pages/home.css" />
     <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
     <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
     <link rel="stylesheet" type="text/css" href="/css/pages/listpacks.css" />
@@ -32,20 +33,16 @@
 <body id="app">
     <div class="root" :class="{ dark: store.dark, shitty: store.shitty }">
         <header class="surface">
-            <div class="logo">
-                <img v-if="store.shitty" src="assets/april-logo.png" alt="TMDL Logo" />
-                <div v-else class="logo">
-                <!--<a href="">--><img src="assets/tmdl_icon.png" style="height: 3rem; margin-top: 0.5rem; margin-left: 0.5rem;"><!--</a> This anchor will be used to link to the "Homepage."-->
-                    <h2 style="line-height: 4rem;">
-                        TMDL
-                    </h2>
-                    <p style="line-height: 4rem;">
-                        v1.4
-                    </p>
-                </div>
-            </div>
+            <router-link class="logo" to="/">
+                <img v-if="store.shitty" src="/assets/april-logo.png" alt="TMDL Logo" />
+                <template v-else>
+                    <img src="/assets/tmdl_icon.png" style="height: 3rem; margin-top: 0.5rem; margin-left: 0.5rem;" />
+                    <h2 style="line-height: 4rem;">TMDL</h2>
+                    <p style="line-height: 4rem;">v2.0</p>
+                </template>
+            </router-link>
             <nav class="nav">
-                <router-link class="nav__tab" to="/">
+                <router-link class="nav__tab" to="/list">
                     <span class="type-label-lg">List</span>
                 </router-link>
                 <router-link class="nav__tab" to="/leaderboard">
