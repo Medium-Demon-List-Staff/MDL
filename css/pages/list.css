@@ -28,6 +28,7 @@ main.page-list {
     table-layout: auto;
 }
 .page-list .list .rank {
+    width: 4rem;
     text-align: end;
     padding-right: 1rem;
 }
