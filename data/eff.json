@@ -158,12 +158,12 @@
             "percent": 100,
             "hz": 240
         },
-{
+        {
             "user": "zZuraab",
             "link": "",
             "percent": 100,
             "hz": 240
-},
+        },
         {
             "user": "halagan",
             "link": "",
@@ -346,6 +346,12 @@
         },
         {
             "user": "andrewww",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Somewildseal",
             "link": "",
             "percent": 100,
             "hz": 240
