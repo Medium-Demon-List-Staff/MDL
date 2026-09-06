@@ -71,6 +71,20 @@
         "colour": "#ffd700"
     },
     {
+        "name": "Banger Tunes Pack",
+        "levels": [
+            "tech_city",
+            "judgement",
+            "true_calamity",
+            "artificial_powder",
+            "rolling_ball",
+            "sadness",
+            "on_my_own",
+            "163"
+        ],
+        "colour": "#efd74e"
+    },
+    {
         "name": "Bossfight Pack",
         "levels": [
             "blood_sacrifice",
