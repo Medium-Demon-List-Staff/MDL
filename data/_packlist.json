@@ -496,6 +496,7 @@
             "dry_bones",
             "sparkle",
             "helix",
+            "copywolf",
             "balls15",
             "purple_splash",
             "boss_3_electro",
@@ -509,6 +510,7 @@
             "ivashka",
             "fury_of_bombcraft",
             "sparkle",
+            "sary_never_cat",
             "didi",
             "zeum_never_pass"
         ],
@@ -752,6 +754,8 @@
         "levels": [
             "gerbil",
             "nautilus",
+            "sary_never_cat",
+            "copywolf",
             "pigstep"
         ],
         "colour": "#cd7f32"
@@ -780,9 +784,9 @@
         "name": "LOUD PACK 1",
         "levels": [
             "dry_bones",
+            "sary_never_cat",
             "eyestrike",
             "balls15",
-            "toundra",
             "grinda"
         ],
         "colour": "#cd7f32"
