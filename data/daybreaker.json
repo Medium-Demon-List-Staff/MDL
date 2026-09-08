@@ -1,0 +1,72 @@
+{
+    "id": 52122745,
+    "name": "Daybreaker",
+    "author": "Fletzer",
+    "creators": [],
+    "verifier": "Fletzer",
+    "verification": "https://youtu.be/tVe0Nwil2Pc?si=g2rBnccrMEPKiP9W",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "[HUMR] Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "ItsmeWinzz",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "IlGiammo",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "AceK58",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
