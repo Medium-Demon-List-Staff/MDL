@@ -1,0 +1,78 @@
+{
+    "id": 47825466,
+    "name": "StreetWise",
+    "author": "Fletzer",
+    "creators": "Fletzer, Afelio"
+    "verifier": "Fletzer",
+    "verification": "https://youtu.be/tVNtpu5fUnM?si=JhdVCJyYzhcUVii2",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "AceK58",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "DeDe",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "ItsmeWinzz",
+            "link": "",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "IlGiammo",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "BillCipher74",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "harryxu2802",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "ZircleZ",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
