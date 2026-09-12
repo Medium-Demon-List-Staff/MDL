@@ -373,15 +373,6 @@
         "colour": "#c0c0c0"
     },
     {
-        "name": "Brightness Pack",
-        "levels": [
-            "blackout",
-            "light",
-            "dawn_of_darkness"
-        ],
-        "colour": "#c0c0c0"
-    },
-    {
         "name": "City Pack",
         "levels": [
             "tech_city",
