@@ -1,0 +1,24 @@
+{
+    "id": 1553504,
+    "name": "Piece Of CAKE",
+    "author": "DarKnix",
+    "creators": [],
+    "verifier": "DarKnix",
+    "verification": "https://www.youtube.com/watch?v=5Z885PKxbvQ",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
