@@ -65,8 +65,7 @@
             "escuro",
             "dark_matter",
             "spaced_out",
-            "dawn_of_darkness",
-            "ice_core"
+            "dawn_of_darkness"
         ],
         "colour": "#ffd700"
     },
@@ -82,7 +81,7 @@
             "on_my_own",
             "163"
         ],
-        "colour": "#efd74e"
+        "colour": "#ffd700"
     },
     {
         "name": "Bossfight Pack",
@@ -374,6 +373,15 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Brightness Pack",
+        "levels": [
+            "blackout",
+            "light",
+            "dawn_of_darkness"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "City Pack",
         "levels": [
             "tech_city",
@@ -614,6 +622,15 @@
         "colour": "#c0c0c0"
     },
     {
+        "name": "Roman Numeral Pack",
+        "levels": [
+            "burnt_toast_ii",
+            "backwash_iii",
+            "vortex_ii"
+        ],
+        "colour": "#c0c0c0"
+    },
+    {
         "name": "Rukkus Song Pack",
         "levels": [
             "fleeting_race",
@@ -690,9 +707,7 @@
         "levels": [
             "but_heres_the_kicker",
             "the_scarlet_sun",
-            "stomp_the_ground",
-            "through_the_top",
-            "the_prophetius"
+            "stomp_the_ground"
         ],
         "colour": "#c0c0c0"
     },
@@ -865,7 +880,7 @@
             "breaker",
             "biru",
             "frozen_peak",
-            "ice_core",
+
             "lightopolis",
             "left_behind"
         ],
