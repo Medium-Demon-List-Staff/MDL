@@ -114,10 +114,10 @@ export default {
                         </template>
                         <h3>Tags</h3>
                         <p>
-                            ❌ Pending Removal (Hard Demon Promotion)
-                            🔥 Trending Levels (Popular Levels)
-                            🗓️ The Current MDL Weekly
-                            📚 Desperate for Opinions (Low Victors, Inconsistent Ops)
+                            ❌ Pending Removal (Hard Demon Promotion) <br>
+                            🔥 Trending Levels (Popular Levels) <br>
+                            🗓️ The Current MDL Weekly <br>
+                            📚 Desperate for Opinions (Low Victors, Inconsistent Ops) <br>
                             👻 Banished. Just Banished.
                         </p>
                         <h3>Submission Requirements</h3>
