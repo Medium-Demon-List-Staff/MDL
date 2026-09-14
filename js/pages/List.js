@@ -14,6 +14,7 @@ const roleIconMap = {
     trial: "user-lock",
 };
 
+// Submission Information (Until line 126)
 export default {
     components: { Spinner, LevelAuthors },
     template: `
@@ -111,6 +112,16 @@ export default {
                                 </li>
                             </ol>
                         </template>
+                        <br>
+                        <h3>Tags</h3>
+                        <p>
+                            ❌ Pending Removal (Hard Demon Promotion)
+                            🔥 Trending Levels (Popular Levels)
+                            🗓️ The Current MDL Weekly
+                            📚 Desperate for Opinions (Low Victors, Inconsistent Ops)
+                            👻 Banished. Just Banished.
+                        </p>
+                        <br>
                         <h3>Submission Requirements</h3>
                         <p>
                             Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
@@ -122,7 +133,7 @@ export default {
                             Submit Records in the Discord Server
                         </p>
                         <p>
-                            Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                            Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level.
                         </p>
                     </div>
                 </div>
