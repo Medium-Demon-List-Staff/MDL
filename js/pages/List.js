@@ -112,7 +112,6 @@ export default {
                                 </li>
                             </ol>
                         </template>
-                        <br>
                         <h3>Tags</h3>
                         <p>
                             ❌ Pending Removal (Hard Demon Promotion)
@@ -121,7 +120,6 @@ export default {
                             📚 Desperate for Opinions (Low Victors, Inconsistent Ops)
                             👻 Banished. Just Banished.
                         </p>
-                        <br>
                         <h3>Submission Requirements</h3>
                         <p>
                             Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
