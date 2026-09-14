@@ -111,6 +111,13 @@ export default {
                                 </li>
                             </ol>
                         </template>
+                        <h3>Tags</h3>
+                        <p>
+                            ❌ Pending Removal <br>
+                            🔥 Trending Levels <br>
+                            📚 Desperate for Opinions <br>
+                            👻 Banished. Just Banished.
+                        </p>
                         <h3>Submission Requirements</h3>
                         <p>
                             Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
