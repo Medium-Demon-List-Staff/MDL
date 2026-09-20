@@ -1,7 +1,7 @@
 {
     "id": 70365234,
     "name": "escuro",
-    "author": "Classic10",
+    "author": "classic10",
     "creators": [],
     "verifier": "NixieHD",
     "verification": "https://www.youtube.com/watch?v=BU4qZtV6czs",
@@ -209,6 +209,12 @@
         {
             "user": "BillCipher74",
             "link": "https://www.youtube.com/watch?v=B1_B6tHPWiE",
+            "percent": 100,
+            "hz": 240    
+        },
+        {
+            "user": "luczha003",
+            "link": "",
             "percent": 100,
             "hz": 240    
         }
