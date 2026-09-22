@@ -1,0 +1,78 @@
+{
+    "id": 129919779,
+    "name": "Regime of the Beast",
+    "author": "pasiblitz",
+    "creators": ["disp", "pasiblitz"],
+    "verifier": "pasiblitz",
+    "verification": "https://www.youtube.com/watch?v=DgMcaNizJys",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "deadbush",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Zirclez",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "dragnalus",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Frogs65",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Angeb",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Beulraeki",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "sheeb",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FBITB",
+            "link": "https://www.youtube.com/watch?v=K3AJAPqschg",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "JoacoWoop",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
