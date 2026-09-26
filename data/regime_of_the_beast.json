@@ -96,7 +96,13 @@
             "user": "[HUMR] Bobbyp02",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
+        },
+        {
+            "user": "A05Polzar",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
