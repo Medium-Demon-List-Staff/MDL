@@ -1,9 +1,9 @@
 {
     "id": 90782865,
     "name": "Frame Of Mind",
-    "author": "SwtCyn",
-    "creators": ["SwtCyn, BrainETR"],
-    "verifier": "SwtCyn",
+    "author": "Calzumi",
+    "creators": ["Calzumi, BrainETR"],
+    "verifier": "Calzumi",
     "verification": "https://youtu.be/FlH40HRfAhA",
     "percentToQualify": 100,
     "records": [
@@ -316,6 +316,12 @@
         {
             "user": "BillCipher74",
             "link": "https://www.youtube.com/watch?v=CiLjx9W6rbc",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "cripencio99crip",
+            "link": "",
             "percent": 100,
             "hz": 240
         }
