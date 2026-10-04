@@ -181,6 +181,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Liverlan",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
