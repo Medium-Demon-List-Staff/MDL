@@ -1,0 +1,42 @@
+{
+    "id": 123456789,
+    "name": "Solstice (Dartling)",
+    "author": "Dartling",
+    "creators": ["Dartling", "genericqueso0"],
+    "verifier": "Dartling",
+    "verification": "https://www.youtube.com/watch?v=rVe3qx5Klmc",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "yoshi",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Chonkey",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "LifelessComputer",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "tomm",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Zirclez",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
