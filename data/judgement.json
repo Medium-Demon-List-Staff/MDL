@@ -289,6 +289,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "lv3plane",
+            "link": "https://www.bilibili.com/video/BV1hK411676s/?spm_id_from=333.1387.search.video_card.click",
+            "percent": 100,
+            "hz": 240    
         }
     ]
 }

@@ -253,6 +253,12 @@
             "link": "https://www.youtube.com/watch?v=x16EIg8PuWE",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "lv3plane",
+            "link": "https://www.bilibili.com/video/BV1C5411177d/?spm_id_from=333.1387.search.video_card.click",
+            "percent": 100,
+            "hz": 240    
         }
     ]
 }
