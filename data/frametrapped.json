@@ -193,6 +193,12 @@
             "link": "https://www.bilibili.com/video/BV1m5411D7C2/",
             "percent": 100,
             "hz": 240    
+        },
+        {
+            "user": "AndreLac",
+            "link": "https://youtu.be/elV-2jRc5-w",
+            "percent": 100,
+            "hz": 240    
         }
     ]
 }
