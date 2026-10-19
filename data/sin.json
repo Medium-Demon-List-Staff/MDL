@@ -253,6 +253,12 @@
             "link": "https://www.bilibili.com/video/BV1onpH6mESq/",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "ItsmeWinzz",
+            "link": "https://youtu.be/LMVfq7k5yC0?si=48jl44YlP3LCEc8g",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
