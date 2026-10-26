@@ -90,19 +90,19 @@
             "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Syne",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Identity",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "AndreLac",
@@ -186,7 +186,7 @@
             "user": "AgentDarius",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         }
     ]
 }

@@ -84,13 +84,13 @@
             "user": "Syne",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Bottomless",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "WKGames",
@@ -126,19 +126,19 @@
             "user": "cripencio99crip",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "shiver",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "BillCipher74",
             "link": "https://www.youtube.com/watch?v=Wv9CkLj2AJg",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         }
     ]
 }

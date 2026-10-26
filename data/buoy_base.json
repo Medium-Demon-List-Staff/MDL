@@ -258,13 +258,13 @@
             "user": "Cokmocc",
             "link": "https://www.youtube.com/watch?v=5XyWGk5HTy4",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "duck356",
             "link": "https://www.youtube.com/watch?v=ACjmts4tKKQ",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "r7qk",
@@ -329,6 +329,12 @@
         {
             "user": "kilodiv",
             "link": "https://youtu.be/21osMZp2IjE",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "MSG8819",
+            "link": "",
             "percent": 100,
             "hz": 240
         }

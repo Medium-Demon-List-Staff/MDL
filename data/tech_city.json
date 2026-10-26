@@ -108,7 +108,7 @@
             "user": "[FAIRY] Angeb",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "JoacoWoop",
@@ -240,10 +240,22 @@
             "user": "shiver",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "[HUMR] Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "shortdanhee",
+            "link": "https://youtu.be/DEDkgrr7UJo",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "AgentDarius",
             "link": "",
             "percent": 100,
             "hz": 240

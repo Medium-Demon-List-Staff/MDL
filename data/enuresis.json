@@ -138,7 +138,7 @@
             "user": "lv3plane",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "Adamecek",
@@ -150,7 +150,13 @@
             "user": "grasshopperhz",
             "link": "",
             "percent": 100,
-            "hz": 360
+            "hz": 240
+        },
+        {
+            "user": "[HUMR] Bobbyp02",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
