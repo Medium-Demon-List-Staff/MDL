@@ -17,11 +17,11 @@ export default {
         </main>
         <main v-else class="pack-list">
 
-        <div v-if="errors.length" class="surface" style="padding:12px; margin:12px; grid-column: 1 / -1;">
-            <p class="error" v-for="e in errors">{{ e }}</p>
+        <div v-if="errors.length" class="surface pack-list__notice">
+            <p class="error" v-for="e in errors" :key="e">{{ e }}</p>
         </div>
 
-        <div v-else-if="!packs || packs.length === 0" class="surface" style="padding:12px; margin:12px; grid-column: 1 / -1;">
+        <div v-else-if="!packs || packs.length === 0" class="surface pack-list__notice">
             No packs available.
         </div>
 
@@ -31,6 +31,8 @@ export default {
             <button
                 @click="switchLevels(i)"
                 v-for="(pack, i) in packs"
+                :key="pack.name"
+                type="button"
                 class="type-label-lg"
                 :style="{
                 background: pack.colour,
@@ -44,12 +46,12 @@ export default {
             <div class="list-container">
                 <div class="list-content">
                     <table class="list" v-if="selectedPackLevels && selectedPackLevels.length">
-                        <tr v-for="(level, i) in selectedPackLevels">
+                        <tr v-for="(level, i) in selectedPackLevels" :key="i">
                             <td class="rank">
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td>
                             <td class="level" :class="{ 'active': selectedLevel == i, 'error': !level || !level[0] }">
-                                <button :style="selectedLevel === i && pack ? { background: pack.colour } : {}" @click="selectedLevel = i">
+                                <button type="button" :style="selectedLevel === i && pack ? { background: pack.colour } : {}" @click="selectedLevel = i">
                                     <span class="type-label-lg">
                                         {{ (level && level[0] && level[0].level && level[0].level.name) ? level[0].level.name : ('Error (' + (level && level[1] ? level[1] : '?') + '.json)') }}
                                     </span>
@@ -79,6 +81,7 @@ export default {
                         <div class="level-packs">
                             <div
                                 v-for="pack in selectedPackLevels[selectedLevel][0].level.packs"
+                                :key="pack.name"
                                 class="tag"
                                 :style="{ background: pack.colour, color: getFontColour(pack.colour) }"
                             >
@@ -89,7 +92,8 @@ export default {
                         <iframe
                         class="video"
                         :src="embed(selectedPackLevels[selectedLevel][0].level.verification)"
-                        frameborder="0"
+                        title="Level verification video"
+                        allowfullscreen
                         ></iframe>
 
                         <ul class="stats">
@@ -110,7 +114,7 @@ export default {
                         </p>
 
                         <table class="records">
-                            <tr v-for="record in selectedPackLevels[selectedLevel][0].level.records" class="record">
+                            <tr v-for="(record, r) in selectedPackLevels[selectedLevel][0].level.records" :key="r" class="record">
                                 <td class="percent"><p>{{ record.percent }}%</p></td>
                                 <td class="user">
                                 <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
@@ -123,11 +127,10 @@ export default {
                                 />
                                 </td>
                             </tr>
-                            </table>
+                        </table>
                     </div>
-                </div>
-            </div>
 
+                    <!-- Only shown when the selected level could not be loaded -->
                     <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
                         <p>(ノಠ益ಠ)ノ彡┻━┻</p>
                     </div>
@@ -137,7 +140,7 @@ export default {
                 <div class="meta-content">
                     <div class="meta">
                         <div class="errors" v-show="errors.length > 0">
-                            <p class="error" v-for="error of errors">{{ error }}</p>
+                            <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
                         </div>
                         <h3>About the packs</h3>
                         <p>
@@ -150,6 +153,7 @@ export default {
                     </div>
                 </div>
             </div>
+        </template>
         </main>
     `,
     data: () => ({
@@ -159,7 +163,6 @@ export default {
         selectedLevel: 0,
         selectedPackLevels: [],
         loading: true,
-        loadingPack: true,
         store,
     }),
     computed: {
@@ -168,44 +171,42 @@ export default {
         },
     },
     async mounted() {
-  try {
-    this.packs = await fetchPacks();
+        try {
+            this.packs = await fetchPacks();
 
-    if (!this.packs || this.packs.length === 0) {
-      this.errors.push("No packs could be loaded (fetchPacks returned empty).");
-      return;
-    }
+            if (!this.packs || this.packs.length === 0) {
+                this.errors.push("No packs could be loaded (fetchPacks returned empty).");
+                return;
+            }
 
-    const levels = await fetchPackLevels(this.packs[this.selected].name);
+            const levels = await fetchPackLevels(this.packs[this.selected].name);
 
-    if (!levels) {
-      this.errors.push("Pack levels could not be loaded (fetchPackLevels returned null).");
-      return;
-    }
+            if (!levels) {
+                this.errors.push("Pack levels could not be loaded (fetchPackLevels returned null).");
+                return;
+            }
 
-    this.selectedPackLevels = levels;
-  } catch (e) {
-    this.errors.push(`Packs page crashed: ${(e && e.message) ? e.message : e}`);
-    console.error(e);
-  } finally {
-    this.loading = false;
-  }
-},
-
+            this.selectedPackLevels = levels;
+        } catch (e) {
+            this.errors.push(`Packs page crashed: ${(e && e.message) ? e.message : e}`);
+            console.error(e);
+        } finally {
+            this.loading = false;
+        }
+    },
     methods: {
         async switchLevels(i) {
-            this.loadingPack = true;
-
             this.selected = i;
             this.selectedLevel = 0;
-            this.selectedPackLevels = await fetchPackLevels(
-                this.packs[this.selected].name
-            );
+            const levels = await fetchPackLevels(this.packs[i].name);
 
-            this.loadingPack = false;
+            // Ignore a slow response if another pack was picked in the meantime
+            if (this.selected === i) {
+                this.selectedPackLevels = levels;
+            }
         },
         score,
         embed,
-        getFontColour
-    }
+        getFontColour,
+    },
 };

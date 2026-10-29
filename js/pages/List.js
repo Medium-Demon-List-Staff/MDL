@@ -1,20 +1,11 @@
 import { store } from "../main.js";
-import { embed } from "../util.js";
+import { embed, roleIcon } from "../util.js";
 import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
 
-const roleIconMap = {
-    owner: "crown",
-    admin: "user-gear",
-    helper: "user-shield",
-    dev: "code",
-    trial: "user-lock",
-};
-
-// Submission Information (Until line 126)
 export default {
     components: { Spinner, LevelAuthors },
     template: `
@@ -25,7 +16,7 @@ export default {
             <div class="list-container">
                 <div class="list-content">
                     <table class="list" v-if="list">
-                        <tr v-for="([level, err], i) in list">
+                        <tr v-for="([level, err], i) in list" :key="i">
                             <td class="rank">
                                 <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
                                 <p v-else class="type-label-lg">Legacy</p>
@@ -55,7 +46,7 @@ export default {
                             </div>
                         </div>
 
-                        <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
+                        <iframe class="video" id="videoframe" :src="video" title="Level verification video" allowfullscreen></iframe>
                         <ul class="stats">
                             <li>
                                 <div class="type-title-sm">Points when completed</div>
@@ -75,7 +66,7 @@ export default {
                         <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
                         <p v-else>This level does not accept new records.</p>
                         <table class="records">
-                            <tr v-for="record in level.records" class="record">
+                            <tr v-for="(record, r) in level.records" :key="r" class="record">
                                 <td class="percent">
                                     <p>{{ record.percent }}%</p>
                                 </td>
@@ -97,7 +88,7 @@ export default {
                 <div class="meta-content">
                     <div class="meta">
                         <div class="errors" v-show="errors.length > 0">
-                            <p class="error" v-for="error of errors">{{ error }}</p>
+                            <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
                         </div>
                         <div class="og">
                             <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
@@ -105,8 +96,8 @@ export default {
                         <template v-if="editors">
                             <h3>List Editors</h3>
                             <ol class="editors">
-                                <li v-for="editor in editors">
-                                    <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
+                                <li v-for="editor in editors" :key="editor.name">
+                                    <img :src="roleIcon(editor.role, store.dark)" :alt="editor.role">
                                     <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
                                     <p v-else>{{ editor.name }}</p>
                                 </li>
@@ -116,7 +107,6 @@ export default {
                         <p>
                             ❌ Pending Removal <br>
                             🔥 Trending Levels <br>
-                            🗓️ Current MDL Weekly <br>
                             📚 Desperate for Opinions <br>
                             👻 Banished. Just Banished.
                         </p>
@@ -131,7 +121,7 @@ export default {
                             Submit Records in the Discord Server
                         </p>
                         <p>
-                            Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level.
+                            Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
                         </p>
                     </div>
                 </div>
@@ -144,14 +134,18 @@ export default {
         loading: true,
         selected: 0,
         errors: [],
-        roleIconMap,
+        toggledShowcase: false,
         store
     }),
     computed: {
         level() {
-            return this.list[this.selected][0];
+            return this.list?.[this.selected]?.[0] ?? null;
         },
         video() {
+            if (!this.level) {
+                return "";
+            }
+
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
@@ -164,7 +158,6 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
@@ -186,10 +179,12 @@ export default {
             }
         }
 
+        // Hide loading spinner
         this.loading = false;
     },
     methods: {
         embed,
         score,
+        roleIcon,
     },
 };

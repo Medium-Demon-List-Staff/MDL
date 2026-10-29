@@ -1,16 +1,16 @@
 import { store } from "../main.js";
 import { fetchEditors, fetchChangelog } from "../content.js";
+import { roleIcon } from "../util.js";
 
 import Spinner from "../components/Spinner.js";
 
-const roleIconMap = {
-    owner: "crown",
-    admin: "user-gear",
-    helper: "user-shield",
-    dev: "code",
-    artist: "brush",
-    trial: "user-lock",
-};
+/** Escape text before v-html injection. */
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
 
 export default {
     components: { Spinner },
@@ -32,18 +32,18 @@ export default {
                         <h2>Changelog <hr class="divider"></h2>
                         <div class="changelog-content">
                             <ol class="changelog">
-                                <li v-for="entry in paginatedChangelog" :key="entry.id">
+                                <li v-for="(entry, i) in paginatedChangelog" :key="currentPage + '-' + i">
                                     <p class="type-label-md" v-html="formatEntryText(entry.date, entry.text)"></p>
                                 </li>
                             </ol>
                         </div>
                        <div class="pagination">
-                            <button class="btn" @click="firstPage" :disabled="currentPage === 1"><span class="type-label-lg"><<</span></button>
+                            <button class="btn" aria-label="First page" @click="firstPage" :disabled="currentPage === 1"><span class="type-label-lg">&lt;&lt;</span></button>
                             <button class="btn" @click="prevPage" :disabled="currentPage === 1"><span class="type-label-lg">Previous</span></button>
                             <button v-for="page in pageNumbers" :key="page" class="btn" @click="goToPage(page)" :class="{ active: currentPage === page }"><span class="type-label-lg">{{ page }}</span></button>
-                            <input v-if="totalPages > 5" class="btn" type="number" v-model.number="inputPage" @keyup.enter="goToInputPage" min="1" :max="totalPages" placeholder="..." />
+                            <input v-if="totalPages > 5" class="btn" type="number" aria-label="Go to page" v-model.number="inputPage" @keyup.enter="goToInputPage" min="1" :max="totalPages" placeholder="..." />
                             <button class="btn" @click="nextPage" :disabled="currentPage === totalPages"><span class="type-label-lg">Next</span></button>
-                            <button class="btn" @click="lastPage" :disabled="currentPage === totalPages"><span class="type-label-lg">>></span></button>
+                            <button class="btn" aria-label="Last page" @click="lastPage" :disabled="currentPage === totalPages"><span class="type-label-lg">&gt;&gt;</span></button>
                         </div>
                     </template>
                     <p v-else-if="errors.includes('Failed to load changelog.')" class="error">Failed to load changelog.</p>
@@ -52,14 +52,14 @@ export default {
             <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
-                        <p class="error" v-for="error of errors">{{ error }}</p>
+                        <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
                     </div>
                         <template v-if="editors && editors.length">
                             <div class="staff">
                                 <h2>Staff <hr class="divider"></h2>
                                 <ol class="editors">
-                                    <li v-for="editor in editors">
-                                        <img :src="\`assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role" :title="editor.role" style="cursor: help;">
+                                    <li v-for="editor in editors" :key="editor.name">
+                                        <img :src="roleIcon(editor.role, store.dark)" :alt="editor.role" :title="editor.role">
                                         <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
                                         <p v-else>{{ editor.name }}</p>
                                     </li>
@@ -78,7 +78,6 @@ export default {
         changelog: [],
         loading: true,
         errors: [],
-        roleIconMap,
         store,
         currentPage: 1,
         itemsPerPage: 8,
@@ -173,8 +172,10 @@ export default {
         lastPage() {
             this.currentPage = this.totalPages;
         },
+        roleIcon,
         formatEntryText(date, text) {
-            const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            // Any text in **here** falls under a technical <strong></strong> tag.
+            const formattedText = escapeHtml(text).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             return `${date} - ${formattedText}`;
         },
     },

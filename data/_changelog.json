@@ -1,4 +1,124 @@
-[
+[    
+    {
+        "date": "25-10-2026",
+        "text": "**Breaker** was lowered from #35 to #44, above **Magic Mushroom** and below **BadLands**."
+    },
+    {
+        "date": "20-10-2026",
+        "text": "**ChipWorld** has been lowered from #59 to #78, above **Evil Yeeter** and below **Sparkle**."
+    },
+    {
+        "date": "19-10-2026",
+        "text": "**STEELCORE** has been placed at #121, above **Daybreaker** and below **GRINDA**. This pushes **Trident** off the list."
+    },
+    {
+        "date": "19-10-2026",
+        "text": "**BackWash III** has been lowered from #70 to #115, above **BALLS 15** and below **Eff.**"
+    },
+    {
+        "date": "16-10-2026",
+        "text": "**Artificial Powder** has been lowered from #60 to #95, above **Frozen Peak** and below **SIMG Factorial 8.**"
+    },
+    {
+        "date": "14-10-2026",
+        "text": "**GerbiL** has been lowered from #18 to #26, above **SheolZ** and below **scarlet field.**"
+    },
+    {
+        "date": "12-10-2026",
+        "text": "**Simplicity** has been lowered from #117 to #136, above **Digital Action** and below **Gravitation Surge.**"
+    },   
+    {
+        "date": "12-10-2026",
+        "text": "**SlideTackleCirclesHi** has been placed at #129, above **Amen** and below **ReActive.** This pushes **Eunoia** into the legacy list."
+    },
+    {
+        "date": "11-10-2026",
+        "text": "**FLEETING RACE** has been lowered from #18 to #38, above **Chaoz airflow 2** and below **Balance breaker.**"
+    },
+    {
+        "date": "08-10-2026",
+        "text": "**Enuresis** has been raised from #26 to #22, above **Demon Swinging** and below **but here's the kicker.**"
+    },
+    {
+        "date": "06-10-2026",
+        "text": "**Dark Matter** has been lowered from #67 to #114, above **Eff** and below **Need You**."
+    },
+    {
+        "date": "06-10-2026",
+        "text": "**Regime of the Beast** has been removed from the list after being promoted to **Hard Demon.** This brings Chaoz Overdrive back to the #1 spot and brings **Eunoia** back to the list."
+    },
+    {
+        "date": "05-10-2026",
+        "text": "**Solstice (Dartling)** has been placed at #67, above **Dark Matter** and below **Nautilus.** This pushes **Eunoia** into the legacy list. Due to a lack of opinions, this placement is subject to change."
+    },
+    {
+        "date": "05-10-2026",
+        "text": "**BadLands** has been lowered from #41 to #45, above **Magic Mushroom** and below **Dark Heaven**."
+    },
+    {
+        "date": "02-10-2026",
+        "text": "**Gravitation Surge** has been lowered from #80 to #134, above **Digital Action** and below **Stomp The Ground**."
+    },
+    {
+        "date": "02-10-2026",
+        "text": "**Judgement** was raised from #47 to #43, above **GOOD KARMA** and below **Party Ride.**"
+    },
+    {
+        "date": "28-09-2026",
+        "text": "**ANTIHERO** has been placed at #56, above **Frametrapped** and below **Biru.** This pushes **Clubstep EX** into the legacy list."
+    },
+    {
+        "date": "26-09-2026",
+        "text": "**Lineated Pearlescent** has been raised from #125 to #110, above **Copywolf** and below **Cybernetic Umbilicus**."
+    },
+    {
+        "date": "22-09-2026",
+        "text": "Due to an overwhelming majority of opinions, **Regime of the Beast** has been placed at #1, dethroning **Chaoz Overdrive.** This pushes **Rainbow Dust V2** into the legacy list."
+    },
+    {
+        "date": "19-09-2026",
+        "text": "**Helix** has been lowered from #94 to #118, above **GRINDA** and below **Electric Landscape**."
+    },
+    {
+        "date": "18-09-2026",
+        "text": "**Digital Action** has been lowered from #113 to #133, above **Skullbreaker** and below **Stomp The Ground**."
+    },
+    {
+        "date": "15-09-2026",
+        "text": "**Skullbreaker** has been lowered from #102 to #134, above **Acousticophobia** and below **Stomp The Ground**."
+    },
+    {
+        "date": "14-09-2026",
+        "text": "**Apache Airflow** has been placed at #92, above **Rewind (mbedsun)** and below **Rolling Ball.** This pushes **Floral CatastrophE** into the legacy list. Due to a lack of opinions, this placement is subject to change."
+    },
+    {
+        "date": "09-09-2026",
+        "text": "**Hydraulics** has been raised from the legacy list to #142, above **Frame of Mind** and below **Left Behind**. This pushes **Ice Core** to the legacy list."
+    },
+    {
+        "date": "08-09-2026",
+        "text": "**StreetWise** has been placed at #136, above **Thermodynamix** and below **ZEUM NEVER PASS**. This pushes **Through The Top** to the legacy list."
+    },
+    {
+        "date": "08-09-2026",
+        "text": "**Daybreaker** has been placed at #121, above **On My Own** and below **GRINDA**. This pushes **Hydraulics** to the legacy list."
+    },
+    {
+        "date": "06-09-2026",
+        "text": "**Zuron** has been lowered from #92 to #111, above **Salvation** and below **Copywolf**."
+    },
+    {
+        "date": "06-09-2026",
+        "text": "**Frametrapped** has been lowered from #46 to #55, above **Galaxy Journey** and below **Biru**."
+    },
+    {
+        "date": "05-09-2026",
+        "text": "**but heres the kicker** has been raised from #32 to #21, above **Demon Swinging** and below **Stormfront**."
+    },
+    {
+        "date": "04-09-2026",
+        "text": "**ReActive** was lowered from #105 to #127, above **Amen** and below **Ancient Future**."    
+    },
     {
         "date": "31-08-2026",
         "text": "**SARY NEVER CAT** was placed at #90, above **Rolling Ball** and below **Elevator**. This pushes **The Prophetius** off the list. This placement is subject to change."
@@ -9,7 +129,7 @@
     },
     {
         "date": "30-08-2026",
-        "text": "**Burnt Toast II** was lowered from #46 to #67, above **ZO** and below **Dance Zone**"
+        "text": "**Burnt Toast II** was lowered from #46 to #67, above **ZO** and below **Dance Zone**."
     },
     {
         "date": "27-08-2026",
@@ -65,7 +185,7 @@
     },
     {
         "date": "03-08-2026",
-        "text": "**Salvation** has been placed at #110, above **Digital Action** and below **Cybernetic Umbilicus**. This pushes **1K** back into the legacy list <:**banished**:1530229616923381981>. > Due to a lack of opinions, this placement is subject to change."
+        "text": "**Salvation** has been placed at #110, above **Digital Action** and below **Cybernetic Umbilicus**. This pushes **1K** back into the legacy list. Due to a lack of opinions, this placement is subject to change."
     },
     {
         "date": "02-08-2026",
@@ -93,7 +213,7 @@
     },
     {
         "date": "24-07-2026",
-        "text": "**Rainbow Force Z** and **Split the System** have been removed from the list after being **promoted to Hard Demon**. This marks **Chaoz Overdrive** as the Top 1 once again and brings **Sunfall** and **Izumo** back onto the list. You can find the new top 10 of the list below. https://discord.com/channels/918535240144810054/918538362032369694/1530138962784551022"
+        "text": "**Rainbow Force Z** and **Split the System** have been removed from the list after being **promoted to Hard Demon**. This marks **Chaoz Overdrive** as the Top 1 once again and brings **Sunfall** and **Izumo** back onto the list."
     },
     {
         "date": "22-07-2026",
@@ -525,7 +645,7 @@
     },
     {
         "date": "09-01-2026",
-        "text": "**Sparkle** has been raised from #101 to #76 above **Evil Yeeter** and below **Banished**"
+        "text": "**Sparkle** has been raised from #101 to #76 above **Evil Yeeter** and below **Banished**."
     },
     {
         "date": "07-01-2026",
@@ -537,7 +657,7 @@
     },
     {
         "date": "06-01-2026",
-        "text": "**area nys15** has been lowered from #142 to Legacy. This brings **NECROSE** back to the list"
+        "text": "**area nys15** has been lowered from #142 to Legacy. This brings **NECROSE** back to the list."
     },
     {
         "date": "05-01-2026",
