@@ -192,6 +192,8 @@ input::-webkit-inner-spin-button {
 
 .page-home .meta .editors li a:hover {
     text-decoration: underline;
+    text-decoration-thickness: calc(14%);
+    color: #f984ff;
 }
 
 .og {
