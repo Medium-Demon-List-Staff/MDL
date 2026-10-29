@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* =========================================================================
+    -- READ --
+    As at v2.2, the whole site has been revamped for a "mobile first" approach.
+    Genuinely, the 2pl are to blame for this as they might have forgot that mobile phones exist son.
+    ======================================================================== */
+
 /* Allow grid/flex children to shrink instead of forcing page overflow */
 main,
 .root,
@@ -8,8 +14,10 @@ main,
 .list-container,
 .level-container,
 .meta-container {
-  min-width: 0;
+    min-width: 0;
 }
+
+/* Design tokens */
 
 :root {
     --color-background: white;
@@ -23,6 +31,7 @@ main,
     --color-on-error: white;
 }
 
+:root.dark,
 .dark.root {
     color-scheme: dark;
     --color-background: #1c1b1f;
@@ -48,15 +57,23 @@ main,
     --color-on-error: white;
 }
 
+/* Page shell */
+
 html,
-body,
-.root {
+body {
     height: 100%;
 }
 
+html {
+    background-color: var(--color-background);
+}
+
+/* `min-height`, NOT `height`: `.root` (and so its background) must grow with
+   the content. */
 .root {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
     margin: 0;
     background-color: var(--color-background);
     color: var(--color-on-background);
@@ -67,60 +84,71 @@ body,
     color: var(--color-on-background);
 }
 
-header,
-main {
-    display: grid;
-    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
-            16em,
-            1fr
-        );
-    column-gap: 2rem;
+/* Long names / URLs must wrap instead of widening the page */
+h1,
+h2,
+h3 {
+    overflow-wrap: anywhere;
 }
 
+/* Header styles. */
+
 header.surface {
-    padding: 0;
+    position: relative;
     display: flex;
-    padding-inline: calc(25vw - 10rem);
-    height: 4rem;
+    flex-wrap: wrap;
+    /* nav drops under the logo when there isn't room */
+    column-gap: 2rem;
+    /* logo <-> nav */
+    min-height: 4rem;
+    padding: 0 max(0.75rem, calc(25vw - 10rem));
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }
-@media screen and (min-width: 1366px) {
-    header {
-        display: grid;
-        padding-inline: 0;
-    }
-}
+
 header .logo {
-    justify-self: end;
     align-self: center;
     display: flex;
     align-items: flex-end;
     gap: 1rem;
 }
+
 header .logo img {
     height: 3.5rem;
+    /* April-fools logo */
 }
+
+header .logo .logo__icon {
+    height: 3rem;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+header .logo__title,
+header .logo__version {
+    line-height: 4rem;
+}
+
 header .nav {
     flex: 1;
 }
 
+/* Main content area */
+
+/* Small screens: Normal column. */
 main {
-    height: 0;
-    flex: 1;
-    display: grid;
-    grid-template-rows: minmax(0, 1fr);
-    column-gap: 2rem;
-}
-main > div:has(.pack-list) {
-  overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .spinner {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    grid-column: span 3;
+    min-height: 12rem;
 }
 
 input[type="checkbox"] {
@@ -130,29 +158,106 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-/* --- Force clickable cursor on interactive UI --- */
 button,
 a,
-[role="button"],
-.nav__tab,
-.packs-nav button,
-.pack-list .list .level button,
-.page-list .list .level button {
-  cursor: pointer;
+[role="button"] {
+    cursor: pointer;
 }
 
-/* Keep disabled / non-clickable states correct */
-button:disabled,
-.pack-list .list .level.error button,
-.page-list .list .level.error button {
-  cursor: not-allowed;
+button:disabled {
+    cursor: not-allowed;
 }
 
-/* Shitty */
+/* Scrollbar styles. */
+
+.list-content::-webkit-scrollbar,
+.level-content::-webkit-scrollbar,
+.meta-content::-webkit-scrollbar,
+.board-content::-webkit-scrollbar,
+.player-content::-webkit-scrollbar,
+.levels::-webkit-scrollbar,
+.packs-nav::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.list-content::-webkit-scrollbar-track,
+.level-content::-webkit-scrollbar-track,
+.meta-content::-webkit-scrollbar-track,
+.board-content::-webkit-scrollbar-track,
+.player-content::-webkit-scrollbar-track,
+.levels::-webkit-scrollbar-track,
+.packs-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.list-content::-webkit-scrollbar-thumb,
+.level-content::-webkit-scrollbar-thumb,
+.meta-content::-webkit-scrollbar-thumb,
+.board-content::-webkit-scrollbar-thumb,
+.player-content::-webkit-scrollbar-thumb,
+.levels::-webkit-scrollbar-thumb,
+.packs-nav::-webkit-scrollbar-thumb {
+    background: rgba(160, 160, 160, 0.6);
+    border-radius: 999px;
+}
+
+.list-content::-webkit-scrollbar-thumb:hover,
+.level-content::-webkit-scrollbar-thumb:hover,
+.meta-content::-webkit-scrollbar-thumb:hover,
+.board-content::-webkit-scrollbar-thumb:hover,
+.player-content::-webkit-scrollbar-thumb:hover,
+.levels::-webkit-scrollbar-thumb:hover,
+.packs-nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(160, 160, 160, 0.8);
+}
+
+/* removes arrow buttons on said scrollbars. */
+.list-content::-webkit-scrollbar-button,
+.level-content::-webkit-scrollbar-button,
+.meta-content::-webkit-scrollbar-button,
+.board-content::-webkit-scrollbar-button,
+.player-content::-webkit-scrollbar-button,
+.levels::-webkit-scrollbar-button,
+.packs-nav::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Desktop @media rules. (>= 1025px) */
+
+@media (min-width: 1025px) {
+
+    header.surface {
+        height: 4rem;
+        flex-wrap: nowrap;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns:
+            minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+        gap: 0 2rem;
+        /* exactly the window minus the header (100dvh where supported) */
+        flex: none;
+        height: calc(100vh - 4rem);
+        height: calc(100dvh - 4rem);
+        min-height: 0;
+        padding: 0;
+    }
+
+    .spinner {
+        grid-column: span 3;
+    }
+}
+
+/* April-fools ("shitty") theme */
 
 .shitty .surface {
     padding: 1.5rem;
-    border: 2px solid var(--color-on-background);;
+    border: 2px solid var(--color-on-background);
 }
 
 .shitty header.surface {

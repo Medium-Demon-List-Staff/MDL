@@ -1,319 +1,94 @@
-/* =========================
-   Packs tab strip (HDL look)
-   ========================= */
+/* --- Pack tab strip (HDL look) */
 
 .packs-nav {
-  z-index: 10;
-  background-color: var(--color-background-hover);
-
-  height: 56px;           /* tabs row height */
-  width: 100%;
-
-  overflow-x: auto;
-  overflow-y: hidden;
+    z-index: 10;
+    background-color: var(--color-background-hover);
+    height: 56px;
+    /* tabs row height */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.packs-nav > div {
-  height: 56px;
-  display: flex;
-  align-items: stretch;
-  gap: 0;
+.packs-nav>div {
+    height: 56px;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
 }
 
 .packs-nav button {
-  height: 56px;           /* MUST match .packs-nav height */
-  margin: 0;              /* touching */
-  border: none;
+    height: 56px;
+    /* MUST match .packs-nav height */
+    margin: 0;
+    /* touching */
+    border: none;
 
-  /* rounded “tabs” */
-  border-top-left-radius: 0.75em;
-  border-top-right-radius: 0.75em;
+    /* rounded "tabs" */
+    border-top-left-radius: 0.75em;
+    border-top-right-radius: 0.75em;
 
-  padding: 10px 25px;
-  text-align: start;
-  word-break: normal;
-  overflow-wrap: anywhere;
-  cursor: pointer;
-  flex-shrink: 0;
+    padding: 10px 25px;
+    text-align: start;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    flex-shrink: 0;
 
-  background-size: 100% 100% !important;
+    background-size: 100% 100% !important;
 }
 
 .packs-nav button p {
-  margin: 0;
-  mix-blend-mode: difference;
-  color: rgb(128, 128, 128);
+    margin: 0;
+    mix-blend-mode: difference;
+    color: rgb(128, 128, 128);
 }
 
-/* =========================
-   Packs page layout (3 cols)
-   ========================= */
+.pack-list__notice {
+    padding: 12px;
+    margin: 12px;
+    grid-column: 1 / -1;
+}
+
+.pack-list .list .rank {
+    padding-left: 0.75rem;
+}
 
 /* Key: lock the packs layout to the viewport under the 4rem header */
 /* ===== Packs page layout (scrollable columns) ===== */
 /* IMPORTANT: main.css uses main { height:0; flex:1 }.
    We mirror that here so the grid has a real height and columns can scroll. */
-main.pack-list {
-  flex: 1;
-  height: 0;        /* critical in your flex layout */
-  min-height: 0;    /* critical for scrolling children */
-  overflow: hidden; /* page doesn't scroll, columns do */
 
-  display: grid;
-  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
-  grid-template-rows: 56px minmax(0, 1fr);
+@media (min-width: 1025px) {
+    main.pack-list {
+        grid-template-rows: 56px minmax(0, 1fr);
+        align-items: start;
+        overflow: hidden;
+        padding-inline: 1rem;
+        background: var(--color-background);
+    }
 
-  column-gap: 2rem; /* HDL spacing */
-  row-gap: 0;
-  align-items: start;
+    main.pack-list>.packs-nav {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
 
-  background: var(--color-background);
-}
+    main.pack-list>.list-container,
+    main.pack-list>.level-container,
+    main.pack-list>.meta-container {
+        grid-row: 2;
+        align-self: stretch;
+    }
 
-/* packs tabs occupy row 1 */
-main.pack-list > .packs-nav {
-  grid-column: 1 / -1;
-  grid-row: 1;
-}
+    main.pack-list>.list-container {
+        grid-column: 1;
+    }
 
-/* ALL three columns occupy row 2; each is a non-scrolling bordered
-   box whose inner -content div does the actual scrolling, so the
-   scrollbar sits inset from the border rather than riding it. */
-main.pack-list > .list-container,
-main.pack-list > .level-container,
-main.pack-list > .meta-container {
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  align-self: stretch;
-  margin: 1rem;
-  padding: 2rem 1.5rem;
-  background: var(--color-section-background, var(--color-background-hover));
-  border: 1px solid var(--color-primary);
-  border-radius: 20px;
-}
+    main.pack-list>.level-container {
+        grid-column: 2;
+    }
 
-.pack-list .list-content,
-.pack-list .level-content,
-.pack-list .meta-content {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 0.5rem 1rem 0.5rem 0;
-}
-
-main.pack-list > .list-container {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-main.pack-list > .level-container {
-  grid-column: 2;
-  grid-row: 2;
-  min-width: 0;
-}
-
-main.pack-list > .meta-container {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-/* =========================
-   Existing pack styles (yours)
-   ========================= */
-
-.pack-list .list {
-  table-layout: auto;
-}
-
-.pack-list .list .rank {
-  text-align: end;
-  padding-left: 0.75rem; /* gives the rank breathing room */
-  padding-right: 1rem;
-}
-
-.pack-list .list .level {
-  width: 100%;
-}
-
-.pack-list .list .level button {
-  background-color: transparent;
-  color: var(--color-on-background);
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  text-align: start;
-  word-break: normal;
-  overflow-wrap: anywhere;
-  cursor: pointer;
-  background-size: 100% 100% !important;
-}
-
-.pack-list .list .level.error button {
-  color: var(--color-error);
-  cursor: not-allowed;
-  text-decoration: line-through;
-}
-
-.pack-list .list .level button:hover {
-  background-color: var(--color-background-hover);
-  color: var(--color-on-background-hover);
-}
-
-.pack-list .list .level.active button {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-}
-
-.pack-list .level-container .level {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 48rem;
-}
-
-.pack-list .level-container .level .level-authors {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-auto-rows: max-content;
-  gap: 1rem;
-}
-
-.pack-list .level-container .level .video {
-  aspect-ratio: 16/9;
-}
-
-.pack-list .level-container .level .stats {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  gap: 2rem;
-}
-
-.pack-list .level-container .level .stats li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.pack-list .level-container .level .records {
-  table-layout: fixed;
-}
-
-.pack-list .level-container .level .records tr td:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.pack-list .level-container .level .records .percent,
-.pack-list .level-container .level .records .user,
-.pack-list .level-container .level .records .hz {
-  padding-block: 1rem;
-}
-
-.pack-list .level-container .level .records .user {
-  width: 100%;
-}
-
-.pack-list .level-container .level .records .percent,
-.pack-list .level-container .level .records .hz {
-  text-align: end;
-}
-
-.pack-list .meta-container .og a:hover,
-.pack-list .level-container .level .records a:hover {
-  text-decoration: underline;
-}
-
-.pack-list .meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.pack-list .meta .errors {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.pack-list .meta .errors .error {
-  padding: 1rem;
-  background-color: var(--color-error);
-  color: var(--color-on-error);
-  border-radius: 0.5rem;
-}
-
-.pack-list .meta .editors {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.pack-list .meta .editors li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pack-list .meta .editors li img {
-  height: 1.25rem;
-}
-
-.pack-list .meta .editors li a:hover {
-  text-decoration: underline;
-}
-
-.tag {
-  font-family: "Lexend Deca", sans-serif;
-  display: block;
-  border-radius: 14px;
-  color: white;
-  background-color: #5d5d5d;
-  padding: 7px;
-}
-
-/* =========================
-   Thin grey scrollbars (Chrome)
-   ========================= */
-
-.pack-list .list-content::-webkit-scrollbar,
-.pack-list .level-content::-webkit-scrollbar,
-.pack-list .meta-content::-webkit-scrollbar,
-.packs-nav::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.pack-list .list-content::-webkit-scrollbar-track,
-.pack-list .level-content::-webkit-scrollbar-track,
-.pack-list .meta-content::-webkit-scrollbar-track,
-.packs-nav::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.pack-list .list-content::-webkit-scrollbar-thumb,
-.pack-list .level-content::-webkit-scrollbar-thumb,
-.pack-list .meta-content::-webkit-scrollbar-thumb,
-.packs-nav::-webkit-scrollbar-thumb {
-  background: rgba(160, 160, 160, 0.6);
-  border-radius: 999px;
-}
-
-.pack-list .list-content::-webkit-scrollbar-thumb:hover,
-.pack-list .level-content::-webkit-scrollbar-thumb:hover,
-.pack-list .meta-content::-webkit-scrollbar-thumb:hover,
-.packs-nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(160, 160, 160, 0.8);
-}
-
-/* remove the little arrow buttons */
-.pack-list .list-content::-webkit-scrollbar-button,
-.pack-list .level-content::-webkit-scrollbar-button,
-.pack-list .meta-content::-webkit-scrollbar-button,
-.packs-nav::-webkit-scrollbar-button {
-  display: none;
-  width: 0;
-  height: 0;
+    main.pack-list>.meta-container {
+        grid-column: 3;
+    }
 }
