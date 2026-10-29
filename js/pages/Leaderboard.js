@@ -10,7 +10,10 @@ export default {
     data: () => ({
         leaderboard: [],
         loading: true,
+        failed: false,
         selected: 0,
+        // Only on small screens.
+        boardOpen: false,
         err: [],
     }),
     template: `
@@ -18,16 +21,33 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-leaderboard-container">
-            <div class="page-leaderboard">
-                <div class="error-container">
-                    <p class="error" v-if="err.length > 0">
+            <div class="page-leaderboard" :class="{ 'board-open': boardOpen }">
+                <div class="error-container" v-if="failed || err.length > 0">
+                    <p class="error" v-if="failed">
+                        Failed to load the leaderboard. Retry in a few minutes or notify list staff.
+                    </p>
+                    <p class="error" v-else>
                         Leaderboard may be incorrect, as the following levels could not be loaded: {{ err.join(', ') }}
                     </p>
                 </div>
-                <div class="board-container surface">
+
+                <button
+                    v-if="entry"
+                    type="button"
+                    class="board-toggle"
+                    aria-controls="leaderboard-list"
+                    :aria-expanded="boardOpen ? 'true' : 'false'"
+                    @click="toggleBoard"
+                >
+                    <span class="board-toggle__label type-label-lg">#{{ selected + 1 }} {{ entry.user }}</span>
+                    <span class="board-toggle__total type-label-lg">{{ localize(entry.total) }}</span>
+                    <span class="board-toggle__chevron" aria-hidden="true"></span>
+                </button>
+
+                <div id="leaderboard-list" class="board-container surface">
                     <div class="board-content">
                         <table class="board">
-                            <tr v-for="(ientry, i) in leaderboard">
+                            <tr v-for="(ientry, i) in leaderboard" :key="ientry.user">
                                 <td class="rank">
                                     <p class="type-label-lg">#{{ i + 1 }}</p>
                                 </td>
@@ -35,7 +55,7 @@ export default {
                                     <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                                 </td>
                                 <td class="user" :class="{ 'active': selected == i }">
-                                    <button @click="selected = i">
+                                    <button type="button" @click="selectPlayer(i)">
                                         <span class="type-label-lg">{{ ientry.user }}</span>
                                     </button>
                                 </td>
@@ -45,13 +65,14 @@ export default {
                 </div>
                 <div class="player-container surface">
                     <div class="player-content">
-                        <div class="player">
-                            <h1 v-if="entry">#{{ selected + 1 }} {{ entry.user }}</h1>
-                            <h3 v-if="entry">{{ entry.total }}</h3>
+                        <div class="player" v-if="entry">
+                            <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                            <h3>{{ entry.total }}</h3>
 
                             <h2 v-if="entry.packs?.length">Packs</h2>
                             <div v-if="entry.packs?.length" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
                                 <div v-for="pack in entry.packs"
+                                    :key="pack.name"
                                     class="tag"
                                     :style="{
                                         background: pack.colour,
@@ -100,21 +121,41 @@ export default {
         },
     },
     async mounted() {
-    const result = await fetchLeaderboard();
+        const result = await fetchLeaderboard();
 
-    if (!result) {
-        this.err = ["Failed to load leaderboard"];
+        if (!result) {
+            this.failed = true;
+            this.loading = false;
+            return;
+        }
+
+        const [leaderboard, err] = result;
+        this.leaderboard = leaderboard;
+        this.err = err;
         this.loading = false;
-        return;
-    }
-
-    const [leaderboard, err] = result;
-    this.leaderboard = leaderboard;
-    this.err = err;
-    this.loading = false;
-},
+    },
     methods: {
         localize,
         getFontColour,
+        /** Ranking dropdown open/close for small screens. */
+        toggleBoard() {
+            this.boardOpen = !this.boardOpen;
+            if (!this.boardOpen) return;
+
+            // Opening: Brings selected player into view.
+            this.$nextTick(() => {
+                const list = document.querySelector(".board-content");
+                const active = list && list.querySelector(".user.active");
+                if (active) list.scrollTop = active.offsetTop - list.clientHeight / 2;
+            });
+        },
+        /** Ya picked a victor? Cos this shows profile and closes dropdown. */
+        selectPlayer(i) {
+            this.selected = i;
+            this.boardOpen = false;
+            window.scrollTo({ top: 0 });
+        },
     },
 };
+
+// Say "seal" in French.

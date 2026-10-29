@@ -5,9 +5,10 @@
     --color-on-primary: white;
 
     display: flex;
-    column-gap: 2rem;
+    column-gap: 0.25rem;
 }
 .nav .nav__tab {
+    min-height: 3rem; /* comfortable touch target when the nav wraps */
     padding-top: 4px;
     border-bottom: 4px solid transparent;
     display: flex;
@@ -58,9 +59,42 @@
     transform: translateY(-2px);
 }
 
+/* Desktop: the original roomy tab spacing */
+@media (min-width: 1025px) {
+    .nav {
+        column-gap: 2rem;
+    }
+}
+
+/* Phones: logo on the first row, the four tabs spread across a second row,
+   and the theme / Discord icons pinned to the top-right of the first row. */
+@media (max-width: 600px) {
+    header .nav {
+        flex-basis: 100%;
+    }
+    .nav {
+        column-gap: 0;
+    }
+    .nav .nav__tab {
+        flex: 1;
+        justify-content: center;
+        padding-inline: 0.25rem;
+    }
+    .nav .nav__tab .type-label-lg {
+        font-size: 15px;
+    }
+    .nav .nav__actions {
+        position: absolute;
+        top: 0;
+        right: 0.5rem;
+        height: 4rem;
+        flex: none;
+    }
+}
+
 /* Shitty */
 
-.shity .nav .nav__tab.router-link-active {
+.shitty .nav .nav__tab.router-link-active {
     border-color: transparent;
     color: orange;
 }

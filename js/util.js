@@ -41,12 +41,30 @@ export function shuffle(array) {
 export function getFontColour(bgColor) {
     // Simple contrast check (black/white text)
     if (!bgColor) return '#000';
-    // Remove # if present
-    const hex = bgColor.replace('#', '');
-    const r = parseInt(hex.substr(0, 2), 16);
-    const g = parseInt(hex.substr(2, 2), 16);
-    const b = parseInt(hex.substr(4, 2), 16);
+    // Remove # if present.
+    let hex = bgColor.replace('#', '');
+    if (/^[0-9a-f]{3}$/i.test(hex)) {
+        hex = [...hex].map((c) => c + c).join('');
+    }
+    if (!/^[0-9a-f]{6}$/i.test(hex)) return '#fff';
+
+    const r = parseInt(hex.slice(0, 2), 16);
+    const g = parseInt(hex.slice(2, 4), 16);
+    const b = parseInt(hex.slice(4, 6), 16);
     // Perceived brightness formula
     const brightness = (r * 299 + g * 587 + b * 114) / 1000;
     return brightness > 128 ? '#000' : '#fff';
+}
+
+const roleIcons = {
+    owner: 'crown',
+    admin: 'user-gear',
+    helper: 'user-shield',
+    dev: 'code',
+    trial: 'user-lock',
+};
+
+export function roleIcon(role, dark) {
+    const name = roleIcons[role] ?? roleIcons.helper;
+    return `/assets/${name}${dark ? '-dark' : ''}.svg`;
 }
