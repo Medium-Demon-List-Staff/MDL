@@ -10,7 +10,7 @@
         "link": "https://www.youtube.com/@ChahnkehGD"
     },
     {
-        "role": "admin",
+        "role": "owner",
         "name": "tomm",
         "link": "https://www.youtube.com/channel/UCObExuzSHQ7Y6PK78fpos_Q"
     },
@@ -48,5 +48,10 @@
         "role": "helper",
         "name": "CoriOshawott",
         "link": "https://www.youtube.com/@CoriOshawott/featured"
+    },
+    {
+        "role": "dev",
+        "name": "tomm </>",
+        "link": "https://www.youtube.com/channel/UCObExuzSHQ7Y6PK78fpos_Q"
     }
 ]
