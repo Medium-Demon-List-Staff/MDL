@@ -153,6 +153,8 @@
 
 .page-leaderboard .player .table a:hover {
     text-decoration: underline;
+    text-decoration-thickness: calc(14%);
+    color: #f984ff;
 }
 
 /* Closed: only the profile shows. Open: only the list shows. */
