@@ -1,0 +1,24 @@
+{
+    "id": 84644959,
+    "name": "Skin Liquefier",
+    "author": "Tommasso",
+    "creators": ["Epiclight, Mangosteen, imKalium, Jolx, iZapper, CounterMD, Drart, XypherGD, Tommasso, SantiagoDS, SyreNide, Sancey"],
+    "verifier": "Tommasso",
+    "verification": "https://www.youtube.com/watch?v=8JeOZ6vtHZQ",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
