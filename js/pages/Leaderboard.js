@@ -1,18 +1,23 @@
 import { fetchLeaderboard } from "../content.js";
-import { localize, getFontColour } from "../util.js";
+import { localize, getFontColour, matchesSearch } from "../util.js";
+import { store } from "../main.js";
 
 import Spinner from "../components/Spinner.js";
+import SearchBar from "../components/SearchBar.js";
 
 export default {
     components: {
         Spinner,
+        SearchBar,
     },
     data: () => ({
         leaderboard: [],
         loading: true,
         failed: false,
         selected: 0,
-        // Only on small screens.
+        searchQuery: "",
+        store,
+        // Small screens only.
         boardOpen: false,
         err: [],
     }),
@@ -30,6 +35,16 @@ export default {
                         Leaderboard may be incorrect, as the following levels could not be loaded: {{ err.join(', ') }}
                     </p>
                 </div>
+                
+                <SearchBar
+                    v-if="!failed"
+                    class="search-bar--boxed"
+                    :modelValue="searchQuery"
+                    @update:modelValue="onSearch"
+                    :dark="store.dark"
+                    label="Search players"
+                    placeholder="Search players"
+                ></SearchBar>
 
                 <button
                     v-if="entry"
@@ -45,26 +60,37 @@ export default {
                 </button>
 
                 <div id="leaderboard-list" class="board-container surface">
-                    <div class="board-content">
+                    <SearchBar
+                        v-if="!failed"
+                        class="search-bar--panel"
+                        :modelValue="searchQuery"
+                        @update:modelValue="onSearch"
+                        :dark="store.dark"
+                        label="Search players"
+                        placeholder="Search players"
+                    ></SearchBar>
+                    <div class="board-content" ref="boardContent">
                         <table class="board">
-                            <tr v-for="(ientry, i) in leaderboard" :key="ientry.user">
+                            <tr v-for="item in filteredBoard" :key="item.player.user">
                                 <td class="rank">
-                                    <p class="type-label-lg">#{{ i + 1 }}</p>
+                                    <p class="type-label-lg">#{{ item.index + 1 }}</p>
                                 </td>
                                 <td class="total">
-                                    <p class="type-label-lg">{{ localize(ientry.total) }}</p>
+                                    <p class="type-label-lg">{{ localize(item.player.total) }}</p>
                                 </td>
-                                <td class="user" :class="{ 'active': selected == i }">
-                                    <button type="button" @click="selectPlayer(i)">
-                                        <span class="type-label-lg">{{ ientry.user }}</span>
+                                <td class="user" :class="{ 'active': selected == item.index }">
+                                    <button type="button" @click="selectPlayer(item.index)">
+                                        <span class="type-label-lg">{{ item.player.user }}</span>
                                     </button>
                                 </td>
                             </tr>
                         </table>
+                        <p class="search-empty" role="status" v-if="searchQuery.trim() && filteredBoard.length === 0">No players found for "{{ searchQuery.trim() }}"</p>
                     </div>
                 </div>
                 <div class="player-container surface">
                     <div class="player-content">
+                    
                         <div class="player" v-if="entry">
                             <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                             <h3>{{ entry.total }}</h3>
@@ -119,7 +145,22 @@ export default {
         entry() {
             return this.leaderboard[this.selected];
         },
+
+        filteredBoard() {
+            return this.leaderboard
+                .map((player, index) => ({ player, index }))
+                .filter(({ player }) => matchesSearch(this.searchQuery, player.user));
+        },
     },
+
+    watch: {
+        searchQuery() {
+            if (this.$refs.boardContent) {
+                this.$refs.boardContent.scrollTop = 0;
+            }
+        },
+    },
+
     async mounted() {
         const result = await fetchLeaderboard();
 
@@ -134,28 +175,35 @@ export default {
         this.err = err;
         this.loading = false;
     },
+
     methods: {
         localize,
         getFontColour,
-        /** Ranking dropdown open/close for small screens. */
+        /** Small screens: open / close the ranking dropdown. */
         toggleBoard() {
             this.boardOpen = !this.boardOpen;
             if (!this.boardOpen) return;
 
-            // Opening: Brings selected player into view.
             this.$nextTick(() => {
                 const list = document.querySelector(".board-content");
                 const active = list && list.querySelector(".user.active");
                 if (active) list.scrollTop = active.offsetTop - list.clientHeight / 2;
             });
         },
-        /** Ya picked a victor? Cos this shows profile and closes dropdown. */
+
+        onSearch(value) {
+            this.searchQuery = value;
+            if (value.trim()) this.boardOpen = true;
+        },
+
         selectPlayer(i) {
             this.selected = i;
             this.boardOpen = false;
+            if (!window.matchMedia("(min-width: 1025px)").matches) {
+                this.searchQuery = "";
+            }
+
             window.scrollTo({ top: 0 });
         },
     },
 };
-
-// Say "seal" in French.

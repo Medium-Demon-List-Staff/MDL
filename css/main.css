@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
-/* =========================================================================
-    -- READ --
-    As at v2.2, the whole site has been revamped for a "mobile first" approach.
-    Genuinely, the 2pl are to blame for this as they might have forgot that mobile phones exist son.
-    ======================================================================== */
+/*
+* <-- READ -->
+* As at v2.2, the whole site has been revamped for a "mobile first" approach.
+*/
 
-/* Allow grid/flex children to shrink instead of forcing page overflow */
 main,
 .root,
 .page-list,
@@ -17,11 +15,15 @@ main,
     min-width: 0;
 }
 
-/* Design tokens */
-
+/* Light mode styles */
 :root {
+    /* main background */
     --color-background: white;
     --color-on-background: black;
+    /* the "sections" background */
+    --color-section-background: #dedede;
+    --color-on-section-background: #27262c;
+    /* When user hovers on the level */
     --color-background-hover: #eee;
     --color-on-background-hover: black;
     --color-primary: #ff00fb;
@@ -31,12 +33,18 @@ main,
     --color-on-error: white;
 }
 
+/* Dark mode styles */
 :root.dark,
 .dark.root {
     color-scheme: dark;
+    /* main background */
     --color-background: #1c1b1f;
     --color-on-background: white;
-    --color-background-hover: #27262c;
+    /* the "sections" background */
+    --color-section-background: #27262c;
+    --color-on-section-background: #dedede;
+    /* When user hovers on the level */
+    --color-background-hover: #424242;
     --color-on-background-hover: white;
     --color-primary: #942989;
     --color-primary-disabled: #1f213c;
@@ -45,6 +53,7 @@ main,
     --color-on-error: white;
 }
 
+/* I dunno why this code exists but I am NOT touching this. If this breaks then Fuck. */
 .shitty.root {
     --color-background: rgba(0, 0, 0, 0.7);
     --color-on-background: white;
@@ -57,8 +66,6 @@ main,
     --color-on-error: white;
 }
 
-/* Page shell */
-
 html,
 body {
     height: 100%;
@@ -68,8 +75,6 @@ html {
     background-color: var(--color-background);
 }
 
-/* `min-height`, NOT `height`: `.root` (and so its background) must grow with
-   the content. */
 .root {
     display: flex;
     flex-direction: column;
@@ -84,20 +89,16 @@ html {
     color: var(--color-on-background);
 }
 
-/* Long names / URLs must wrap instead of widening the page */
 h1,
 h2,
 h3 {
     overflow-wrap: anywhere;
 }
 
-/* Header styles. */
-
 header.surface {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    /* nav drops under the logo when there isn't room */
     column-gap: 2rem;
     /* logo <-> nav */
     min-height: 4rem;
@@ -115,7 +116,7 @@ header .logo {
 
 header .logo img {
     height: 3.5rem;
-    /* April-fools logo */
+    /* April fools logo */
 }
 
 header .logo .logo__icon {
@@ -132,9 +133,6 @@ header .nav {
     flex: 1;
 }
 
-/* Main content area */
-
-/* Small screens: Normal column. */
 main {
     display: flex;
     flex-direction: column;
@@ -167,8 +165,6 @@ a,
 button:disabled {
     cursor: not-allowed;
 }
-
-/* Scrollbar styles. */
 
 .list-content::-webkit-scrollbar,
 .level-content::-webkit-scrollbar,
@@ -212,7 +208,6 @@ button:disabled {
     background: rgba(160, 160, 160, 0.8);
 }
 
-/* removes arrow buttons on said scrollbars. */
 .list-content::-webkit-scrollbar-button,
 .level-content::-webkit-scrollbar-button,
 .meta-content::-webkit-scrollbar-button,
@@ -224,8 +219,6 @@ button:disabled {
     width: 0;
     height: 0;
 }
-
-/* Desktop @media rules. (>= 1025px) */
 
 @media (min-width: 1025px) {
 
@@ -240,7 +233,6 @@ button:disabled {
             minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
         grid-template-rows: minmax(0, 1fr);
         gap: 0 2rem;
-        /* exactly the window minus the header (100dvh where supported) */
         flex: none;
         height: calc(100vh - 4rem);
         height: calc(100dvh - 4rem);
@@ -252,8 +244,6 @@ button:disabled {
         grid-column: span 3;
     }
 }
-
-/* April-fools ("shitty") theme */
 
 .shitty .surface {
     padding: 1.5rem;

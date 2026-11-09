@@ -1,10 +1,10 @@
 import { store } from "../main.js";
-import { fetchEditors, fetchChangelog } from "../content.js";
-import { roleIcon } from "../util.js";
+import { fetchEditors, fetchChangelog, fetchWeeklyDemon } from "../content.js";
+import { roleIcon, embed, getYoutubeIdFromUrl } from "../util.js";
 
 import Spinner from "../components/Spinner.js";
 
-/** Escape text before v-html injection */
+/** Escapes before V-HTML injection */
 function escapeHtml(text) {
     return text
         .replace(/&/g, "&amp;")
@@ -49,11 +49,35 @@ export default {
                     <p v-else-if="errors.includes('Failed to load changelog.')" class="error">Failed to load changelog.</p>
                 </div>
             </div>
-            <div class="meta-container">
-                <div class="meta">
-                    <div class="errors" v-show="errors.length > 0">
-                        <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
+            <div class="side-container">
+                <div class="weekly-container" v-if="weekly">
+                    <div class="meta weekly-demon">
+                        <h2>Weekly Demon <hr class="divider"></h2>
+                        <iframe
+                            v-if="weeklyVideo"
+                            class="weekly-demon__video"
+                            :src="weeklyVideo"
+                            :title="'Video of ' + weekly.name"
+                            loading="lazy"
+                            allowfullscreen
+                        ></iframe>
+                        <div class="weekly-demon__info">
+                            <button
+                                v-if="weekly.id"
+                                type="button"
+                                :title="'Copy ID (' + weekly.id + ')'"
+                                class="weekly-demon__name"
+                                @click="copyLevelId"
+                            ><span class="type-label-lg">{{ weekly.name }}</span></button>
+                            <p class="type-label-md" aria-live="polite">{{ copyMessage || 'by ' + weekly.author }}</p>
+                        </div>
                     </div>
+                </div>
+                <div class="meta-container">
+                    <div class="meta">
+                        <div class="errors" v-show="errors.length > 0">
+                            <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
+                        </div>
                         <template v-if="editors && editors.length">
                             <div class="staff">
                                 <h2>Staff <hr class="divider"></h2>
@@ -66,8 +90,9 @@ export default {
                                 </ol>
                             </div>
                         </template>
-                    <div class="og">
-                        <p class="type-label-md">List Template by <a href="https://tsl.pages.dev/" target="_blank">The Shitty List</a></p>
+                        <div class="og">
+                            <p class="type-label-md">List Template by <a href="https://tsl.pages.dev/" target="_blank">The Shitty List</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,15 +101,23 @@ export default {
     data: () => ({
         editors: [],
         changelog: [],
+        weekly: null,
+        copyMessage: '',
+        copyTimer: null,
         loading: true,
         errors: [],
         store,
         currentPage: 1,
-        itemsPerPage: 8,
+        itemsPerPage: 10,
         welcomeText: '',
         inputPage: '',
     }),
     computed: {
+        /* YouTube URL <iframe> */
+        weeklyVideo() {
+            if (!this.weekly || !getYoutubeIdFromUrl(this.weekly.video)) return '';
+            return embed(this.weekly.video);
+        },
         paginatedChangelog() {
             const start = (this.currentPage - 1) * this.itemsPerPage;
             const end = start + this.itemsPerPage;
@@ -124,13 +157,16 @@ export default {
     async mounted() {
         this.welcomeText = this.getRandomText();
 
-        const [editors, changelog] = await Promise.all([
+        const [editors, changelog, weekly] = await Promise.all([
             fetchEditors(),
             fetchChangelog(),
+            fetchWeeklyDemon(),
         ]);
 
         this.editors = editors ?? [];
         this.changelog = changelog ?? [];
+        // Null, no box will show
+        this.weekly = weekly;
 
         if (!editors) {
             this.errors.push("Failed to load staff.");
@@ -174,9 +210,35 @@ export default {
         },
         roleIcon,
         formatEntryText(date, text) {
-            // any content in **these** is considered to be within a <strong></strong> element
+            // **bold** markers in the changelog JSON become <strong>
             const formattedText = escapeHtml(text).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             return `${date} - ${formattedText}`;
+        },
+        async copyLevelId() {
+            const id = String(this.weekly.id);
+            let copied = false;
+
+            try {
+                await navigator.clipboard.writeText(id);
+                copied = true;
+            } catch {
+                const box = document.createElement('textarea');
+                box.value = id;
+                box.style.position = 'fixed';
+                box.style.opacity = '0';
+                document.body.appendChild(box);
+                box.select();
+                try {
+                    copied = document.execCommand('copy');
+                } catch {
+                    copied = false;
+                }
+                box.remove();
+            }
+
+            this.copyMessage = copied ? 'ID copied!' : "Couldn't copy the ID";
+            clearTimeout(this.copyTimer);
+            this.copyTimer = setTimeout(() => (this.copyMessage = ''), 1000);
         },
     },
 };

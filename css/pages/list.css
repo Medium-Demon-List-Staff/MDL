@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
-    background: var(--color-section-background, var(--color-background-hover));
+    background: var(--color-section-background, var(--color-on-section-background));
     border-radius: 20px;
 }
 
@@ -58,6 +58,8 @@
     color: var(--color-on-primary);
 }
 
+/* Level details */
+
 :is(.page-list, .pack-list) .level-container .level {
     display: flex;
     flex-direction: column;
@@ -79,6 +81,7 @@
 :is(.page-list, .pack-list) .level-container .level .stats {
     display: flex;
     flex-wrap: wrap;
+    /* blocks wrap instead of overflowing a phone */
     justify-content: space-evenly;
     text-align: center;
     gap: 1rem 2rem;
@@ -127,7 +130,11 @@
 :is(.page-list, .pack-list) .meta-container .og a:hover,
 :is(.page-list, .pack-list) .level-container .level .records a:hover {
     text-decoration: underline;
+    text-decoration-thickness: calc(14%);
+    color: #f984ff;
 }
+
+/* information box */
 
 :is(.page-list, .pack-list) .meta {
     display: flex;
@@ -166,6 +173,8 @@
 
 :is(.page-list, .pack-list) .meta .editors li a:hover {
     text-decoration: underline;
+    text-decoration-thickness: calc(14%);
+    color: #f984ff;
 }
 
 .tag {
@@ -186,7 +195,39 @@
     color: rgb(128, 128, 128);
 }
 
-/* (>= 1025px width) */
+.page-list .meta .tag-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.page-list .meta .tag-filters .director {
+    font-family: "Lexend Deca", Helvetica, serif;
+    font-size: 1.1rem;
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.director:hover {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: calc(14%);
+}
+
+.page-list .meta .tag-filters .director:focus-visible {
+    outline: 2px solid rgb(0, 123, 255);
+    border-radius: 2px;
+}
+
+/* >= 1025px */
 
 @media (min-width: 1025px) {
     main.page-list {

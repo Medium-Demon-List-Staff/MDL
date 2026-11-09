@@ -5,6 +5,10 @@ import { round, score } from './score.js';
  */
 const dir = '/data';
 
+/**
+ * Fetch and parse one JSON file from the data directory.
+ * Resolves to `null` on any network, HTTP or parse failure.
+ */
 async function fetchJson(file) {
     try {
         const res = await fetch(`${dir}/${file}`);
@@ -21,6 +25,22 @@ export async function fetchChangelog() {
 
 export async function fetchEditors() {
     return fetchJson('_editors.json');
+}
+
+export async function fetchWeeklyDemon() {
+    const weekly = await fetchJson('_weekly.json');
+    if (!weekly?.level) return null;
+
+    const level = await fetchJson(`${weekly.level}.json`);
+    if (!level) return null;
+
+    return {
+        path: weekly.level,
+        id: level.id,
+        name: level.name,
+        author: level.author,
+        video: weekly.video || level.verification || '',
+    };
 }
 
 let packsRequest = null;
@@ -64,7 +84,6 @@ export async function fetchList() {
                 {
                     ...level,
                     path,
-                    // Inject packs membership (empty array if none / packs failed)
                     packs: levelToPacks[path] ?? [],
                     records: (level.records ?? [])
                         .map(({ hz, ...rest }) => rest)
@@ -123,7 +142,7 @@ export async function fetchLeaderboard() {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
-                    levelPath: level.path, // (file id)
+                    levelPath: level.path,
                     score: score(rank + 1, 100, level.percentToQualify),
                     link: record.link,
                 });
@@ -141,7 +160,6 @@ export async function fetchLeaderboard() {
         });
     });
 
-    // User & total score.
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
         const total = [verified, completed, progressed]
@@ -161,12 +179,10 @@ export async function fetchLeaderboard() {
     res.forEach((player) => {
         if (!packs) return;
 
-        // completed level file-ids (paths) from _list.json
         const completedIds = new Set(
             player.completed.map((l) => l.levelPath).filter(Boolean),
         );
 
-        // Pack is "completed" only if EVERY levelId in that pack is completed
         player.packs = packs.filter((pack) => {
             const levels = pack.levels ?? [];
             if (levels.length === 0) return false; // ignore empty packs
@@ -174,7 +190,6 @@ export async function fetchLeaderboard() {
         });
     });
 
-    // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
 }
 

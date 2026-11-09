@@ -1,5 +1,7 @@
 /* Should be more comfortable on small screens. I hope. */
 
+/* Should be more comfortable on small screens. I hope. */
+
 .page-leaderboard {
     display: flex;
     flex-direction: column;
@@ -57,6 +59,10 @@
     transform: rotate(-135deg);
 }
 
+.page-leaderboard .search-bar--panel {
+    display: none;
+}
+
 /* Player rankings. */
 
 .page-leaderboard .board-container,
@@ -87,7 +93,7 @@
 
 .page-leaderboard .board .total {
     padding: 1rem clamp(0.5rem, 2vw, 1rem);
-    /* tighter on phones & 1rem on desktop */
+    /* tighter on phones, 1rem on desktop */
     text-align: end;
 }
 
@@ -117,7 +123,7 @@
     color: var(--color-on-primary);
 }
 
-/* The profile(s) */
+/* The profiles */
 
 .page-leaderboard .player {
     display: flex;
@@ -189,7 +195,7 @@
     color: orange;
 }
 
-/* (>= 1025px width)*/
+/* >= 1025px */
 
 @media (min-width: 1025px) {
     main.page-leaderboard-container {
@@ -210,8 +216,13 @@
         min-height: 0;
     }
 
-    .page-leaderboard .board-toggle {
+    .page-leaderboard .board-toggle,
+    .page-leaderboard .search-bar--boxed {
         display: none;
+    }
+
+    .page-leaderboard .search-bar--panel {
+        display: flex;
     }
 
     .page-leaderboard .error-container {

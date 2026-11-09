@@ -1,33 +1,36 @@
 import { store } from "../main.js";
-import { embed, roleIcon } from "../util.js";
+import { embed, roleIcon, matchesSearch } from "../util.js";
 import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
+import SearchBar from "../components/SearchBar.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
 
 export default {
-    components: { Spinner, LevelAuthors },
+    components: { Spinner, SearchBar, LevelAuthors },
     template: `
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <div class="list-content">
+                <SearchBar v-model="searchQuery" :dark="store.dark" label="Search levels" placeholder="Search levels"></SearchBar>
+                <div class="list-content" ref="listContent">
                     <table class="list" v-if="list">
-                        <tr v-for="([level, err], i) in list" :key="i">
+                        <tr v-for="item in filteredList" :key="item.index">
                             <td class="rank">
-                                <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                                <p v-if="item.index + 1 <= 150" class="type-label-lg">#{{ item.index + 1 }}</p>
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button @click="selected = i">
-                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                            <td class="level" :class="{ 'active': selected == item.index, 'error': !item.level }">
+                                <button @click="selected = item.index">
+                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
                                 </button>
                             </td>
                         </tr>
                     </table>
+                    <p class="search-empty" role="status" v-if="list && searchQuery.trim() && filteredList.length === 0">No levels found for "{{ searchQuery.trim() }}"</p>
                 </div>
             </div>
             <div class="level-container">
@@ -104,12 +107,35 @@ export default {
                             </ol>
                         </template>
                         <h3>Tags</h3>
-                        <p>
-                            ❌ Pending Removal <br>
-                            🔥 Trending Levels <br>
-                            📚 Desperate for Opinions <br>
-                            👻 Banished. Just Banished.
-                        </p>
+                        <div class="tag-filters">
+                            <button
+                                type="button"
+                                class="director"
+                                :aria-pressed="searchQuery.trim() === '❌'"
+                                @click="search('❌')"
+                            >❌ Pending Removal</button>
+
+                            <button
+                                type="button"
+                                class="director"
+                                :aria-pressed="searchQuery.trim() === '🔥'"
+                                @click="search('🔥')"
+                            >🔥 Trending Levels</button>
+
+                            <button
+                                type="button"
+                                class="director"
+                                :aria-pressed="searchQuery.trim() === '📚'"
+                                @click="search('📚')"
+                            >📚 Desperate for Opinions</button>
+
+                            <button
+                                type="button"
+                                class="director"
+                                :aria-pressed="searchQuery.trim() === '👻'"
+                                @click="search('👻')"
+                            >👻 Banished. Just Banished.</button>
+                        </div>
                         <h3>Submission Requirements</h3>
                         <p>
                             Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
@@ -128,17 +154,31 @@ export default {
             </div>
         </main>
     `,
+
     data: () => ({
         list: [],
         editors: [],
         loading: true,
         selected: 0,
+        searchQuery: "",
         errors: [],
-        toggledShowcase: false,
+        toggledShowcase: false, // change to true to embed a level's showcase instead of its verification
         store
     }),
+
     computed: {
+        filteredList() {
+            if (!this.list) {
+                return [];
+            }
+            return this.list
+                .map(([level, err], index) => ({ level, err, index }))
+                .filter(({ level, err }) =>
+                    matchesSearch(this.searchQuery, level ? level.name : err, level?.id)
+                );
+        },
         level() {
+            // null while loading, or if the list (or this level) failed to load
             return this.list?.[this.selected]?.[0] ?? null;
         },
         video() {
@@ -157,6 +197,15 @@ export default {
             );
         },
     },
+
+    watch: {
+        searchQuery() {
+            if (this.$refs.listContent) {
+                this.$refs.listContent.scrollTop = 0;
+            }
+        },
+    },
+
     async mounted() {
         this.list = await fetchList();
         this.editors = await fetchEditors();
@@ -182,9 +231,18 @@ export default {
         // Hide loading spinner
         this.loading = false;
     },
+
     methods: {
         embed,
         score,
         roleIcon,
+
+        search(emoji) {
+            if (this.searchQuery.trim() === emoji) {
+                this.searchQuery = "";
+            } else {
+                this.searchQuery = emoji;
+            }
+        },
     },
 };

@@ -6,6 +6,7 @@ h1,
     line-height: clamp(32.3556px, 9.1vw, 52px);
     font-weight: 700;
     letter-spacing: -0.0388888889em;
+    /* = -2px at full size */
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -30,9 +31,12 @@ h2,
 .type-headline-md {
     font-family: "Lexend Deca", sans-serif;
     font-size: clamp(1.5rem, 6.5vw, 34.2857142857px);
+    /* 34.29px on desktop */
     line-height: clamp(28px, 7.5833vw, 40px);
+    /* same 40 / 34.29 ratio */
     font-weight: 700;
     letter-spacing: -0.0291666667em;
+    /* = -1px at full size */
     -webkit-font-smoothing: subpixel-antialiased;
 }
 

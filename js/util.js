@@ -21,13 +21,13 @@ export function getThumbnailFromId(id) {
 export function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
-    // While there remain elements to shuffle.
+    // While there remain elements to shuffle
     while (currentIndex != 0) {
-        // Pick a remaining element.
+        // Pick a remaining element
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        // And swap it with the current element.
+        // And swap it with the current element
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex],
             array[currentIndex],
@@ -37,11 +37,10 @@ export function shuffle(array) {
     return array;
 }
 
-// js/util.js
+/* Light vs Dark Mode */
 export function getFontColour(bgColor) {
-    // Simple contrast check (black/white text)
     if (!bgColor) return '#000';
-    // Remove # if present.
+
     let hex = bgColor.replace('#', '');
     if (/^[0-9a-f]{3}$/i.test(hex)) {
         hex = [...hex].map((c) => c + c).join('');
@@ -56,6 +55,7 @@ export function getFontColour(bgColor) {
     return brightness > 128 ? '#000' : '#fff';
 }
 
+/* Staff Icons */
 const roleIcons = {
     owner: 'crown',
     admin: 'user-gear',
@@ -67,4 +67,22 @@ const roleIcons = {
 export function roleIcon(role, dark) {
     const name = roleIcons[role] ?? roleIcons.helper;
     return `/assets/${name}${dark ? '-dark' : ''}.svg`;
+}
+
+/* THE Search */
+
+export function normalizeSearch(text) {
+    return String(text ?? '')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+}
+
+export function matchesSearch(query, ...fields) {
+    const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
+    if (terms.length === 0) return true;
+
+    const haystack = fields.map(normalizeSearch).join(' ');
+    return terms.every((term) => haystack.includes(term));
 }

@@ -1,5 +1,4 @@
 /* Pack tab strip (HDL look) */
-
 .packs-nav {
     z-index: 10;
     background-color: var(--color-background-hover);
@@ -35,6 +34,7 @@
     cursor: pointer;
     flex-shrink: 0;
 
+    /* pack colours may be gradients / images set inline: keep them stretched */
     background-size: 100% 100% !important;
 }
 

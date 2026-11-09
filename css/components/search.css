@@ -1,0 +1,106 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex: none;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-on-background);
+}
+
+:root[data-input="keyboard"] .search-bar:focus-within {
+    border-radius: 2px;
+    outline: 1.5px solid var(--color-on-background);
+    outline-offset: 4px;
+}
+
+.search-bar__field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+    min-height: 2.75rem;
+    cursor: text;
+}
+
+.search-bar__field img {
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.search-bar input {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 0;
+    align-self: stretch;
+    padding: 0.25rem 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1rem;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.search-bar input::-webkit-search-cancel-button,
+.search-bar input::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.search-bar__clear {
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.search-bar__clear:hover,
+.search-bar__clear:focus-visible {
+    background-color: rgba(128, 128, 128, 0.25);
+}
+
+.search-bar--boxed {
+    gap: 0;
+    margin-bottom: 0;
+    padding: 0 0.25rem 0 1.25rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 14px;
+    background: var(--color-section-background, var(--color-background-hover));
+    color: var(--color-on-background);
+}
+
+:root[data-input="keyboard"] .search-bar--boxed:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* "No results" message */
+.search-empty {
+    padding: 1rem 0;
+    opacity: 0.8;
+    overflow-wrap: anywhere;
+}
+
+@media (forced-colors: active) {
+    .search-bar:focus-within {
+        outline-color: Highlight;
+    }
+}
