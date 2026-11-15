@@ -1,0 +1,24 @@
+{
+    "id": 122008164,
+    "name": "Endless",
+    "author": "ErrorIGD",
+    "creators": [],
+    "verifier": "ErrorIGD",
+    "verification": "https://www.youtube.com/watch?v=gFIxVyctif8",
+    "showcase": "",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
