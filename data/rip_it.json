@@ -301,6 +301,12 @@
             "link": "",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Mistik",
+            "link": "https://www.youtube.com/watch?v=cciUVuUkJcc",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
