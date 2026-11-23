@@ -9,6 +9,12 @@
     "percentToQualify": 100,
     "records": [
         {
+            "user": "Syne",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "Aquatic51",
             "link": "",
             "percent": 100,
@@ -76,12 +82,6 @@
         },
         {
             "user": "Excryst",
-            "link": "",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "Syne",
             "link": "",
             "percent": 100,
             "hz": 240
